@@ -288,6 +288,90 @@
             line-height: 1.2;
         }
 
+        /* Roadmap */
+        .roadmap-section {
+            background: #141414;
+        }
+
+        .phase {
+            margin-bottom: 64px;
+        }
+
+        .phase:last-child {
+            margin-bottom: 0;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .phase-number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #AD4236;
+            white-space: nowrap;
+        }
+
+        .phase-title {
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .phase p {
+            font-size: 18px;
+            max-width: 760px;
+        }
+
+        .phase-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .phase-detail {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 8px;
+            padding: 20px 24px;
+        }
+
+        .phase-detail .detail-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .phase-detail .detail-text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .phase-arrow {
+            text-align: center;
+            font-size: 28px;
+            color: #292524;
+            margin: 48px 0;
+        }
+
+        .lock-icon {
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
         /* Footer */
         .footer {
             min-height: auto;
@@ -333,6 +417,15 @@
             .comparison td {
                 font-size: 14px;
                 padding: 14px 12px 14px 0;
+            }
+
+            .phase-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phase-header {
+                flex-direction: column;
+                gap: 4px;
             }
         }
     </style>
@@ -495,6 +588,92 @@
             <p>INSDR lives in that gap. Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.</p>
             <p>The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.</p>
             <div class="closer">We're that brand.</div>
+        </div>
+    </section>
+
+    <!-- Growth Roadmap -->
+    <section class="roadmap-section">
+        <div class="inner">
+            <div class="section-label">The Roadmap</div>
+            <h2>How INSDR grows.</h2>
+            <p style="margin-bottom: 56px;">Three phases. Each one earns the right to the next.</p>
+
+            <!-- Phase 1 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 1</span>
+                    <span class="phase-title">Launch — Two Pillars</span>
+                </div>
+                <p>Supplements and apparel. Two product lines, one philosophy. Simple enough for anyone to understand, compelling enough to buy into immediately.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Supplements</div>
+                        <div class="detail-text">Bioavailability-first formulations. Launch with 2-3 hero products. Subscription model for daily use.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Apparel</div>
+                        <div class="detail-text">100% cotton activewear. Streetwear drop model. Limited runs. Gym-to-street styling.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-arrow">&#8595;</div>
+
+            <!-- Phase 2 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 2</span>
+                    <span class="phase-title">Educate — Daily Content</span>
+                </div>
+                <p>Once the products earn trust, INSDR becomes a daily presence. Short-form wellness content designed for Instagram and TikTok — shareable, visual, and rooted in the same insider-knowledge tone as everything else.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Ingredient Deep-Dives</div>
+                        <div class="detail-text">What actually absorbs, what doesn't, and why. The stuff your current brand won't tell you.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Material Education</div>
+                        <div class="detail-text">What's really in your clothes. PFA awareness. The synthetic activewear problem.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Myth-Busting</div>
+                        <div class="detail-text">Challenge mainstream supplement and fitness claims with real data.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Now You Know</div>
+                        <div class="detail-text">Quick, unexpected wellness facts. Highly shareable. The kind of post you send to your group chat.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-arrow">&#8595;</div>
+
+            <!-- Phase 3 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 3</span>
+                    <span class="phase-title">Gatekeep — Programs & Community</span>
+                </div>
+                <p>Structured fitness and wellness programs — the kind people pay $30-$80 for everywhere else. Free for INSDR community members. You're an insider, or you're not.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">The Programs</div>
+                        <div class="detail-text">21 Day Arms. Peach Program. 30 Day Shred. Real structured programs with real results — not PDFs.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">The Flip</div>
+                        <div class="detail-text">Everyone else sells the program. INSDR gives it away — and monetizes the membership, the subscriptions, the loyalty.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">The Gate</div>
+                        <div class="detail-text">Active subscribers and community members get full access. The programs are the reward for being an insider.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">The Lock-In</div>
+                        <div class="detail-text">Programs feature INSDR supplements as part of the routine. Natural product integration, not ads. Stay subscribed, stay training.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
