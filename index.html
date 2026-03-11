@@ -59,15 +59,22 @@
             color: #a8a29e;
         }
 
+        .pill-prompt {
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #57534e;
+            margin-bottom: 20px;
+        }
+
         .play-btn {
-            margin-top: 48px;
+            margin-top: 0;
             display: inline-flex;
             align-items: center;
             gap: 10px;
             background: transparent;
-            border: 1px solid #AD4236;
-            color: #AD4236;
-            padding: 12px 28px;
+            padding: 14px 32px;
             border-radius: 100px;
             font-family: 'Inter', sans-serif;
             font-size: 12px;
@@ -78,14 +85,38 @@
             transition: all 0.3s ease;
         }
 
-        .play-btn:hover {
-            background: #AD4236;
-            color: #0a0a0a;
+        .play-btn.red-pill {
+            border: 1px solid #AD4236;
+            color: #AD4236;
         }
 
-        .play-btn.playing {
+        .play-btn.red-pill:hover {
             background: #AD4236;
             color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(173, 66, 54, 0.3);
+        }
+
+        .play-btn.red-pill.playing {
+            background: #AD4236;
+            color: #0a0a0a;
+            box-shadow: 0 0 25px rgba(173, 66, 54, 0.4);
+        }
+
+        .play-btn.blue-pill {
+            border: 1px solid #4A7FB5;
+            color: #4A7FB5;
+        }
+
+        .play-btn.blue-pill:hover {
+            background: #4A7FB5;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(74, 127, 181, 0.3);
+        }
+
+        .play-btn.blue-pill.playing {
+            background: #4A7FB5;
+            color: #0a0a0a;
+            box-shadow: 0 0 25px rgba(74, 127, 181, 0.4);
         }
 
         .play-btn .play-icon {
@@ -481,13 +512,21 @@
         <div class="inner" style="text-align: center;">
             <img src="assets/insdr-logo-signal.png" alt="INSDR" class="brand-logo">
             <div class="mantra">Invincible. Naturally Sourced. Dosed Right.</div>
-            <button class="play-btn" id="playBtn" onclick="toggleMusic()">
-                <span class="play-icon" id="playIcon">&#9654;</span>
-                <span id="playLabel">Play the theme</span>
-            </button>
+            <div style="margin-top: 48px;">
+                <div class="pill-prompt">Choose your pill</div>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <button class="play-btn red-pill" id="playBtn1" onclick="toggleMusic('btn1')">
+                        <span class="play-icon" id="playIcon1">&#9654;</span>
+                        <span id="playLabel1">Gonna Fly Now</span>
+                    </button>
+                    <button class="play-btn blue-pill" id="playBtn2" onclick="toggleMusic('btn2')">
+                        <span class="play-icon" id="playIcon2">&#9654;</span>
+                        <span id="playLabel2">Hearts on Fire</span>
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="scroll-hint">Scroll</div>
-        <div id="youtube-player"></div>
     </section>
 
     <!-- What Is INSDR -->
@@ -735,56 +774,70 @@
     </section>
 
     <script>
-        // YouTube IFrame API
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        var player;
-        var isPlaying = false;
+        var players = {};
+        var activeBtn = null;
+        var tracks = {
+            btn1: { id: 'ioE_O7Lm0I4', name: 'Gonna Fly Now' },
+            btn2: { id: 'swo51-iFOrg', name: 'Hearts on Fire' }
+        };
 
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                height: '1',
-                width: '1',
-                videoId: 'ioE_O7Lm0I4',
-                playerVars: {
-                    'autoplay': 0,
-                    'controls': 0,
-                    'disablekb': 1,
-                    'fs': 0,
-                    'modestbranding': 1
-                },
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
+            Object.keys(tracks).forEach(function(key) {
+                var container = document.createElement('div');
+                container.id = 'yt-' + key;
+                container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;';
+                document.body.appendChild(container);
+
+                players[key] = new YT.Player('yt-' + key, {
+                    height: '1',
+                    width: '1',
+                    videoId: tracks[key].id,
+                    playerVars: { autoplay: 0, controls: 0, disablekb: 1, fs: 0, modestbranding: 1 },
+                    events: {
+                        'onStateChange': function(event) {
+                            if (event.data === YT.PlayerState.ENDED) {
+                                resetBtn(key);
+                                activeBtn = null;
+                            }
+                        }
+                    }
+                });
             });
         }
 
-        function onPlayerStateChange(event) {
-            if (event.data === YT.PlayerState.ENDED) {
-                isPlaying = false;
-                document.getElementById('playIcon').innerHTML = '&#9654;';
-                document.getElementById('playLabel').textContent = 'Play the theme';
-                document.getElementById('playBtn').classList.remove('playing');
-            }
+        function resetBtn(key) {
+            document.getElementById('playIcon' + key.slice(3)).innerHTML = '&#9654;';
+            document.getElementById('playLabel' + key.slice(3)).textContent = tracks[key].name;
+            document.getElementById('playBtn' + key.slice(3)).classList.remove('playing');
         }
 
-        function toggleMusic() {
-            if (!player) return;
-            if (isPlaying) {
-                player.pauseVideo();
-                isPlaying = false;
-                document.getElementById('playIcon').innerHTML = '&#9654;';
-                document.getElementById('playLabel').textContent = 'Play the theme';
-                document.getElementById('playBtn').classList.remove('playing');
+        function setPlaying(key) {
+            var num = key.slice(3);
+            document.getElementById('playIcon' + num).innerHTML = '&#10074;&#10074;';
+            document.getElementById('playLabel' + num).textContent = 'Now playing';
+            document.getElementById('playBtn' + num).classList.add('playing');
+        }
+
+        function toggleMusic(key) {
+            if (!players[key]) return;
+
+            if (activeBtn === key) {
+                players[key].pauseVideo();
+                resetBtn(key);
+                activeBtn = null;
             } else {
-                player.playVideo();
-                isPlaying = true;
-                document.getElementById('playIcon').innerHTML = '&#10074;&#10074;';
-                document.getElementById('playLabel').textContent = 'Now playing';
-                document.getElementById('playBtn').classList.add('playing');
+                if (activeBtn) {
+                    players[activeBtn].pauseVideo();
+                    resetBtn(activeBtn);
+                }
+                players[key].playVideo();
+                setPlaying(key);
+                activeBtn = key;
             }
         }
     </script>
