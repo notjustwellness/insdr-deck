@@ -65,63 +65,126 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: #57534e;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .play-btn {
             margin-top: 0;
-            display: inline-flex;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 0;
             background: transparent;
-            padding: 14px 32px;
-            border-radius: 100px;
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            border: none;
+            padding: 0;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
         }
 
-        .play-btn.red-pill {
-            border: 1px solid #AD4236;
+        .capsule {
+            width: 52px;
+            height: 120px;
+            border-radius: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0.85;
+        }
+
+        .capsule-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
+
+        .capsule-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
+
+        .capsule-shine {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 12px;
+            height: 35px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(5deg);
+        }
+
+        .capsule-band {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        .play-btn:hover .capsule {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
+
+        .play-btn.playing .capsule {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
+
+        /* Red capsule */
+        .red-pill .capsule-top {
+            background: linear-gradient(135deg, #c9554a 0%, #AD4236 50%, #8a3028 100%);
+        }
+
+        .red-pill .capsule-bottom {
+            background: linear-gradient(135deg, #e8d5d0 0%, #f0e0da 50%, #d4b8b0 100%);
+        }
+
+        .play-btn.red-pill:hover .capsule,
+        .play-btn.red-pill.playing .capsule {
+            box-shadow: 0 8px 30px rgba(173, 66, 54, 0.4);
+        }
+
+        /* Blue capsule */
+        .blue-pill .capsule-top {
+            background: linear-gradient(135deg, #5a8fc5 0%, #4A7FB5 50%, #3a6590 100%);
+        }
+
+        .blue-pill .capsule-bottom {
+            background: linear-gradient(135deg, #d0dce8 0%, #dae5f0 50%, #b0c4d4 100%);
+        }
+
+        .play-btn.blue-pill:hover .capsule,
+        .play-btn.blue-pill.playing .capsule {
+            box-shadow: 0 8px 30px rgba(74, 127, 181, 0.4);
+        }
+
+        .capsule-label {
+            margin-top: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #78716c;
+            transition: color 0.3s ease;
+        }
+
+        .red-pill:hover .capsule-label,
+        .red-pill.playing .capsule-label {
             color: #AD4236;
         }
 
-        .play-btn.red-pill:hover {
-            background: #AD4236;
-            color: #0a0a0a;
-            box-shadow: 0 0 20px rgba(173, 66, 54, 0.3);
-        }
-
-        .play-btn.red-pill.playing {
-            background: #AD4236;
-            color: #0a0a0a;
-            box-shadow: 0 0 25px rgba(173, 66, 54, 0.4);
-        }
-
-        .play-btn.blue-pill {
-            border: 1px solid #4A7FB5;
+        .blue-pill:hover .capsule-label,
+        .blue-pill.playing .capsule-label {
             color: #4A7FB5;
-        }
-
-        .play-btn.blue-pill:hover {
-            background: #4A7FB5;
-            color: #0a0a0a;
-            box-shadow: 0 0 20px rgba(74, 127, 181, 0.3);
-        }
-
-        .play-btn.blue-pill.playing {
-            background: #4A7FB5;
-            color: #0a0a0a;
-            box-shadow: 0 0 25px rgba(74, 127, 181, 0.4);
-        }
-
-        .play-btn .play-icon {
-            font-size: 14px;
-            transition: transform 0.2s ease;
         }
 
         #youtube-player {
@@ -513,15 +576,25 @@
             <img src="assets/insdr-logo-signal.png" alt="INSDR" class="brand-logo">
             <div class="mantra">Invincible. Naturally Sourced. Dosed Right.</div>
             <div style="margin-top: 48px;">
-                <div class="pill-prompt">Choose your pill</div>
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <div class="pill-prompt">Choose your supplement</div>
+                <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-end; flex-wrap: wrap;">
                     <button class="play-btn red-pill" id="playBtn1" onclick="toggleMusic('btn1')">
-                        <span class="play-icon" id="playIcon1">&#9654;</span>
-                        <span id="playLabel1">Gonna Fly Now</span>
+                        <div class="capsule">
+                            <div class="capsule-top"></div>
+                            <div class="capsule-bottom"></div>
+                            <div class="capsule-band"></div>
+                            <div class="capsule-shine"></div>
+                        </div>
+                        <span class="capsule-label" id="playLabel1">Gonna Fly Now</span>
                     </button>
                     <button class="play-btn blue-pill" id="playBtn2" onclick="toggleMusic('btn2')">
-                        <span class="play-icon" id="playIcon2">&#9654;</span>
-                        <span id="playLabel2">Hearts on Fire</span>
+                        <div class="capsule">
+                            <div class="capsule-top"></div>
+                            <div class="capsule-bottom"></div>
+                            <div class="capsule-band"></div>
+                            <div class="capsule-shine"></div>
+                        </div>
+                        <span class="capsule-label" id="playLabel2">Hearts on Fire</span>
                     </button>
                 </div>
             </div>
@@ -811,14 +884,13 @@
         }
 
         function resetBtn(key) {
-            document.getElementById('playIcon' + key.slice(3)).innerHTML = '&#9654;';
-            document.getElementById('playLabel' + key.slice(3)).textContent = tracks[key].name;
-            document.getElementById('playBtn' + key.slice(3)).classList.remove('playing');
+            var num = key.slice(3);
+            document.getElementById('playLabel' + num).textContent = tracks[key].name;
+            document.getElementById('playBtn' + num).classList.remove('playing');
         }
 
         function setPlaying(key) {
             var num = key.slice(3);
-            document.getElementById('playIcon' + num).innerHTML = '&#10074;&#10074;';
             document.getElementById('playLabel' + num).textContent = 'Now playing';
             document.getElementById('playBtn' + num).classList.add('playing');
         }
