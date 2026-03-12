@@ -60,20 +60,33 @@ INSDR operates like a streetwear label — drops, not just launches. The brand e
 ### 5.1 Supplements
 Bioavailability-first formulations. Every ingredient chosen for how well it's absorbed, not just how good it looks on a label.
 
-**Potential product formats** (to be developed):
-- Daily wellness stacks
-- Performance / recovery
-- Sleep & calm
-- Immunity & inflammation
-- Longevity
-- Single-ingredient essentials (magnesium, vitamin D, etc.)
+**Recommended launch products** (based on proven category demand):
+- **Calm** — stress reduction, cortisol regulation, mood (daily use, high retention)
+- **Sleep** — deep rest without drowsiness, recovery (nightly use, high retention)
+- **Energy** — sustained energy, no crash, cognitive support (daily use, replaces existing habits)
+- **Restore** — hydration, electrolytes, recovery (post-workout, high frequency)
+
+**Product formats:**
+- Sticks — portable, premium price point ($2.86–$3.43/serving)
+- Bags — value option, home use ($2.39/serving)
+- Sizes: 7 (trial), 14, 28 (standard), 56, 84 (bulk)
+
+**Stacks (phase 2 expansion):**
+- Curated bundles for specific goals (Longevity, Immunity, Hormone + Metabolism, etc.)
 
 **Key differentiators vs. competitors:**
-- Enhanced absorption delivery methods (liposomal, chelated minerals, patented bioavailable forms)
+- Enhanced absorption with specific data on every ingredient (e.g., "8x more absorbable" — not vague claims)
+- Multiple delivery technologies: liposomal encapsulation, chelation, nano-delivery (right tech per nutrient)
+- Branded/patented ingredients: Capsoil, Sensoril, PharmaGABA, CurcuWin Ultra+, etc.
 - Transparent labeling — full doses, no proprietary blends
 - Clean formulas — no unnecessary fillers, dyes, or artificial sweeteners
 
-*Reference: The Absorption Company (absorbmore.com) — strong execution on the bioavailability angle with clean branding, subscription model, stick/bag format options, and curated stacks. INSDR can learn from their product architecture while differentiating through culture, apparel, and brand voice.*
+**Subscription model:**
+- 25–30% off first order
+- 10% recurring discount
+- Flexible delivery: 30, 45, 60, 120-day cycles
+
+*See Section 7 for full Absorption Company competitive analysis.*
 
 ### 5.2 Apparel — "Stop Sweating in Plastic"
 
@@ -149,16 +162,108 @@ Most activewear is made from polyester and nylon — thermoplastics derived from
 
 | Brand                     | Overlap           | What INSDR Can Learn                          | Where INSDR Differentiates                    |
 |--------------------------|-------------------|-----------------------------------------------|-----------------------------------------------|
-| The Absorption Company   | Bioavailability   | Product architecture, clean branding, stacks  | Culture, apparel, streetwear positioning       |
+| The Absorption Company   | Bioavailability   | Product architecture, branded ingredients, data-backed claims | Culture, apparel, streetwear positioning, education content, gated community |
+| IM8 Health               | Premium supps     | Founder-as-proof, ruthless product focus, equity-for-reach partnerships, DTC discipline | No apparel, celebrity-dependent, no community programs, no education content |
 | Momentous               | Premium supps     | Sports/performance credibility                | Less clinical, more cultural                   |
 | Gorpcore brands (Satisfy, District Vision) | Aesthetic activewear | Merging performance with style | Cotton-only, anti-synthetic stance             |
 | Supreme / Kith           | Streetwear model  | Drop culture, brand heat                      | INSDR is wellness-native, not fashion-first    |
+
+### Deep Dive: The Absorption Company (absorbmore.com)
+
+**Founded:** 2023 (launched Jan 2024) by Ian Somerhalder, Nikki Reed, Zeke Bronfman, Nate Medow
+**Traction:** $800K Q1 revenue, 228K Instagram followers at launch, Erewhon placement
+**Pricing:** $24–$49 per product, sticks priced at premium over bags
+
+**What They Do Right:**
+
+1. **The name IS the differentiator** — "The Absorption Company" instantly communicates the value prop. Domain (absorbmore.com) reinforces it.
+
+2. **Specific bioavailability data** — they put real numbers on claims:
+   - Curcumin (CurcuWin Ultra+): 149x more absorbable
+   - CoQ10: 10x better absorption
+   - Magnesium Glycinate: 8x more absorbable
+   - Berberine: 6.2x more absorbable
+   - Vitamin D3+K2: ~2x better absorption
+
+3. **Multiple delivery technologies** — liposomal encapsulation, chelation, nano-delivery, proprietary dispersion. Right tech for each nutrient, not one gimmick.
+
+4. **Branded/patented ingredients** — Capsoil, Sensoril, PharmaGABA, Zembrin, Sabroxy, CurcuWin Ultra+. Signals quality and provides third-party credibility.
+
+5. **Clean product architecture:**
+   - 4 core products: Calm, Sleep, Energy, Restore
+   - Curated stacks: Longevity, Hormone + Metabolism, Immunity + Inflammation, etc.
+   - Multiple formats: sticks (portable, $2.86–$3.43/serving) and bags (value, $2.39/serving)
+   - Multiple sizes: 7, 14, 28, 56, 84 servings
+   - Subscription model: 25–30% first order discount, 10% recurring
+
+6. **Celebrity + business credibility** — Somerhalder/Reed for reach, Bronfman/Medow (Forbes 30U30) for business legitimacy.
+
+**Where They Leave a Gap (INSDR's Opportunity):**
+
+| Absorption Co. | INSDR |
+|---|---|
+| Vibrant, LA lifestyle branding | Streetwear credibility, darker/editorial aesthetic |
+| Celebrity-led marketing | Community-led, insider culture |
+| Supplements only | Supplements + 100% cotton apparel |
+| Aspirational wellness tone | Informed, skeptical, "if you know you know" |
+| No education content strategy | Phase 2: daily content (ingredient deep-dives, myth-busting) |
+| No community/programs | Phase 3: gated fitness programs for members |
+| Fun and approachable | Confident and knowing |
+
+**Key Principles to Adopt:**
+- Put specific absorption multipliers on every ingredient (e.g., "8x more absorbable")
+- Use branded/patented ingredients — they do the credibility work for you
+- Launch with 3–4 hero products in intuitive categories
+- Offer sticks AND bags (portability vs. value)
+- Subscription from day one with meaningful discounts
+
+### Deep Dive: IM8 Health (im8health.com)
+
+**Founded:** 2024 by David Beckham + Danny Yeung (CEO of Prenetics)
+**Traction:** $100M ARR in 11 months. 350,000+ customers. 10M+ servings. Fastest-growing supplement brand in history.
+**Products:** Just 2 — Daily Ultimate Essentials (92 ingredients, all-in-one) + Daily Ultimate Longevity
+**Advisory Board:** Mayo Clinic, NASA, Yale scientists
+**Athlete Partners:** Aryna Sabalenka (World #1 tennis), Ollie Bearman (F1)
+
+**What They Do Right:**
+
+1. **Celebrity as proof, not just promotion** — Beckham spent a year in labs, rejected hundreds of formulations, uses it daily. At 50, he IS the product demo. The credibility is "he built it," not "he endorses it."
+
+2. **Ruthless product focus** — 2 products. That's it. No decision fatigue, no bloated catalog. Constraint = perceived quality + scarcity.
+
+3. **Science-first marketing** — Site leads with doctors and clinical studies, not influencer testimonials. 12-week clinical study: 95% of participants reported more energy. Out-sciences AG1 instead of out-marketing them.
+
+4. **Equity-for-reach partnerships** — Sabalenka became a shareholder and ambassador. Her US Open Instagram push hit 233M views at $0 marketing spend. They traded equity for distribution.
+
+5. **DTC discipline** — Stayed direct-to-consumer to control experience, build trust, protect margins. Retail expansion only after proving the model.
+
+6. **Premium visual identity** — Burgundy/gold palette, cinematic photography, custom typography. Feels luxury, not wellness. Signals "this is different."
+
+**How INSDR Replicates This Without Millions:**
+
+| IM8's Playbook | INSDR's Version (No Beckham Required) |
+|---|---|
+| Beckham as founder/proof point | INSDR founder visibly lives the brand — trains in the cotton, takes the supps, documents it daily. $0 cost. |
+| 2 products, ruthless focus | Launch 2-3 max. Constraint = credibility. |
+| Mayo Clinic / NASA advisory board | Use branded/patented ingredients (come with existing clinical data) + partner with 1-2 nutritionists or sports scientists as advisors |
+| Sabalenka equity partnership (233M views) | 5-10 micro-influencers or gym figures (10K-100K followers) with equity/founding member status. Authentic, free, organic. |
+| $100M paid media infrastructure | Phase 2 content play: daily Instagram/TikTok (ingredient deep-dives, myth-busting, "Now You Know"). Content compounds and costs nothing. |
+| "Inner Circle" ambassador program | "Insider" community — the brand name IS the community. Referral codes, early drop access, gated programs. Word of mouth is cheapest + most trusted channel. |
+| DTC + subscription | Same. Own the customer. Subscriptions = recurring revenue. High margins. Direct feedback loop. |
+| Premium visual identity | Already in motion — Signal palette, editorial aesthetic, INSDR wordmark. Streetwear credibility > celebrity polish. |
+
+**The edge INSDR has that IM8 doesn't:**
+- Apparel line = visible, wearable brand presence in every gym (IM8 has no physical brand touchpoint beyond the product)
+- Community programs (gated fitness programs for members)
+- Education content strategy
+- Streetwear drop culture creates organic hype without ad spend
+- Anti-synthetic apparel positioning is a conversation starter that markets itself
 
 ---
 
 ## 8. Visual Identity (Direction — TBD)
 
-- **Palette:** Neutral, earthy tones — think matte blacks, off-whites, warm grays, natural tans
+- **Palette:** Signal (#AD4236) as primary accent, Rose Linen (#F6EFEA) as light background, Deep Evening (#1A1410) as dark base. Earthy, warm, grounded.
 - **Typography:** Clean sans-serif, editorial weight. Confident, not decorative.
 - **Photography:** Real textures — cotton close-ups, raw ingredients, gym environments with natural light. Not overly produced.
 - **Packaging:** Minimal, tactile, premium feel. Supplement packaging should feel closer to skincare than to GNC.
@@ -175,7 +280,54 @@ Most activewear is made from polyester and nylon — thermoplastics derived from
 
 ---
 
-## 10. Open Questions & Next Steps
+## 10. Growth Roadmap
+
+### Phase 1: Launch — Two Pillars
+Supplements + Apparel. Two product lines, one philosophy. Simple for customers to understand, easy to buy into.
+
+### Phase 2: Expand — Education & Content
+Once the products have earned trust, INSDR becomes a daily presence through educational content. Think short-form wellness facts, routines, ingredient breakdowns, myth-busting — shareable, visual, designed for Instagram and TikTok.
+
+**The model:** Accounts like Healf (@healf) that post consistently about wellness facts — interesting, bite-sized, and highly shareable. INSDR's version stays on-brand: confident, not preachy, rooted in the same "insider knowledge" tone as everything else.
+
+**Content categories:**
+- Ingredient deep-dives (what actually absorbs, what doesn't, and why)
+- Material education (what's in your clothes, PFA awareness)
+- Routines and stacks (morning, pre-workout, recovery, sleep)
+- Myth-busting (challenge mainstream supplement and fitness claims)
+- "Now You Know" series — quick, unexpected wellness facts
+
+**Why this works:**
+- Keeps INSDR in the feed daily without being salesy
+- Positions the brand as the knowledgeable friend, not the billboard
+- Builds trust that converts into product sales organically
+- Content is the cheapest, most scalable marketing channel
+- "If you know, you know" naturally extends to "here's something you should know"
+
+### Phase 3: Programs & Gated Community
+
+**The idea:** Fitness and wellness programs — the kind people already pay $30–$80 for elsewhere — offered free to INSDR community members. 21 Day Arms, Peach Program, 30 Day Shred, etc. Real structured programs with real results.
+
+**The flip:** Everyone else monetizes the program. INSDR monetizes the *membership*. The programs are the incentive to join and stay in the community — which drives supplement subscriptions, apparel purchases, and long-term loyalty.
+
+**Gatekeeping options (TBD):**
+- Subscription-based community (paid tier unlocks programs)
+- Purchase-gated (spend X on products, unlock program access)
+- Points/loyalty system (earn access through purchases and engagement)
+- App-based with member login
+- Free for subscribers (active supplement subscription = full access)
+
+**Why this works:**
+- Programs people would pay for elsewhere → free inside INSDR = perceived value is massive
+- Drives recurring revenue through community membership or product subscriptions
+- Keeps members engaged between purchases
+- Creates a reason to stay vs. one-time buyers who churn
+- The brand name literally means insider access — this is the payoff
+- Programs can feature INSDR supplements as part of the routine (natural product integration, not ads)
+
+---
+
+## 11. Open Questions & Next Steps
 
 - [x] ~~Finalize brand name~~ — INSDR is short for Insider (not an acronym)
 - [ ] Define initial supplement product lineup (which 2-3 products to launch with?)
