@@ -669,6 +669,179 @@
             margin-right: 8px;
         }
 
+        /* Moodboard */
+        .moodboard-section {
+            background: #141414;
+        }
+
+        .ref-brands {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+            margin-bottom: 64px;
+        }
+
+        .ref-brand {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 36px 32px;
+        }
+
+        .ref-brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .ref-brand-sub {
+            font-size: 13px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 20px;
+        }
+
+        .ref-brand p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .cross-section {
+            margin-top: 64px;
+        }
+
+        .cross-section h3 {
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        .dna-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .dna-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .dna-item .dna-num {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 10px;
+        }
+
+        .dna-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .dna-item p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .whitespace-callout {
+            text-align: center;
+            margin-top: 56px;
+            padding: 48px 32px;
+            background: #0a0a0a;
+            border: 1px solid #292524;
+            border-radius: 16px;
+        }
+
+        .whitespace-callout p {
+            font-size: 17px;
+            color: #78716c;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+
+        .whitespace-callout .callout-line {
+            font-size: clamp(20px, 3vw, 26px);
+            font-weight: 700;
+            color: #f5f2ed;
+            margin-bottom: 0;
+        }
+
+        .pos-map {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #292524;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pos-quadrant {
+            background: #1c1917;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .pos-quadrant .quad-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #57534e;
+            margin-bottom: 12px;
+        }
+
+        .pos-quadrant .quad-brands {
+            font-size: 15px;
+            font-weight: 400;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .pos-quadrant.insdr-quad {
+            background: #1a1512;
+            border: 1px solid rgba(173, 66, 54, 0.3);
+        }
+
+        .pos-quadrant.insdr-quad .quad-brands {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .pos-quadrant.insdr-quad .quad-label {
+            color: #AD4236;
+        }
+
+        @media (max-width: 768px) {
+            .ref-brands {
+                grid-template-columns: 1fr;
+            }
+
+            .dna-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pos-map {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Program Teaser */
         .program-teaser {
             background: #0a0a0a;
@@ -1355,6 +1528,93 @@
                         <div class="lbl">Equipment</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moodboard -->
+    <section class="moodboard-section">
+        <div class="inner">
+            <div class="section-label">The Aesthetic</div>
+            <h2>Three brands. One DNA.</h2>
+            <p>INSDR's apparel language draws from the intersection of these three references — not copying any, but capitalizing on where they converge.</p>
+
+            <div class="ref-brands">
+                <div class="ref-brand">
+                    <div class="ref-brand-name">Y-3</div>
+                    <div class="ref-brand-sub">Yohji Yamamoto &times; Adidas</div>
+                    <p>Monochrome as philosophy. Texture over color. Construction is the design language. The adidas stripes, subverted every season. Typography-only branding. Assumed authority — never explains itself.</p>
+                </div>
+                <div class="ref-brand">
+                    <div class="ref-brand-name">H-O-R-S-E</div>
+                    <div class="ref-brand-sub">Cotton workout essentials</div>
+                    <p>16 SKUs. Zero logos on clothing. GOTS-certified organic cotton from Japan, Peru, Portugal. "Cotton Clothes for Working Out" — five words, zero spin. The anti-synthetic original.</p>
+                </div>
+                <div class="ref-brand">
+                    <div class="ref-brand-name">1989 Studio</div>
+                    <div class="ref-brand-sub">Grown-up streetwear</div>
+                    <p>Culturally accessible luxury. Narrative-driven collections. Warm earth-tone palette. Heavyweight cotton as a premium material. Anti-trend: every piece an instant classic. Inclusive sizing to 3XL.</p>
+                </div>
+            </div>
+
+            <div class="cross-section">
+                <h3>The cross-section — INSDR's apparel DNA.</h3>
+                <div class="dna-grid">
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 01</div>
+                        <h4>Material Is Identity</h4>
+                        <p>100% cotton isn't a constraint — it's the entire design language. Different weights, weaves, washes, and finishes become the palette. When everything is cotton, the texture tells the story.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 02</div>
+                        <h4>Anti-Logo Confidence</h4>
+                        <p>Recognized through silhouette, material quality, and construction — not a chest logo. The INSDR wordmark lives on internal labels and subtle details. If you know, you know.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 03</div>
+                        <h4>Construction Over Decoration</h4>
+                        <p>Invest in how it's built, not what's printed on it. Stitching, cut, hardware, seam placement. The anti-synthetic stance means the craft speaks louder than the graphic.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 04</div>
+                        <h4>Assumed Intelligence</h4>
+                        <p>Don't explain why cotton matters on the garment — that's what the content does. The clothes just ARE. Speak to the informed consumer, not the mass market.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 05</div>
+                        <h4>Curated Restraint</h4>
+                        <p>Launch tight. A small, intentional collection that's sold out beats a large catalog that sits. The Tee. The Crew. The Short. The Hood. That's it.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 06</div>
+                        <h4>Typography as the Only Mark</h4>
+                        <p>No icons, no crests, no mascots. A bold, condensed wordmark that gains power through restraint. INSDR — or I-N-S-D-R — is the mark.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pos-map">
+                <div class="pos-quadrant">
+                    <div class="quad-label">Loud + Performance</div>
+                    <p class="quad-brands">Nike, Adidas, Under Armour</p>
+                </div>
+                <div class="pos-quadrant">
+                    <div class="quad-label">Loud + Culture</div>
+                    <p class="quad-brands">Supreme, Kith, Stüssy</p>
+                </div>
+                <div class="pos-quadrant">
+                    <div class="quad-label">Quiet + Performance</div>
+                    <p class="quad-brands">H-O-R-S-E, Satisfy, District Vision</p>
+                </div>
+                <div class="pos-quadrant insdr-quad">
+                    <div class="quad-label">Quiet + Culture</div>
+                    <p class="quad-brands">INSDR &larr; lives here<br>Y-3, 1989 Studio</p>
+                </div>
+            </div>
+
+            <div class="whitespace-callout">
+                <p>Y-3 is fashion-sport. H-O-R-S-E is nostalgic cotton basics. 1989 Studio is grown-up streetwear. None of them are wellness-native.</p>
+                <p class="callout-line">Nobody owns anti-synthetic activewear + supplement culture + streetwear credibility.</p>
             </div>
         </div>
     </section>
