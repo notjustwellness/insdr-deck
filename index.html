@@ -669,6 +669,195 @@
             margin-right: 8px;
         }
 
+        /* Program Teaser */
+        .program-teaser {
+            background: #0a0a0a;
+            border-top: 1px solid #1c1917;
+        }
+
+        .teaser-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .teaser-header {
+            padding: 48px 48px 32px;
+        }
+
+        .teaser-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            border: 1px solid rgba(173, 66, 54, 0.4);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .teaser-header h3 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .teaser-header .teaser-sub {
+            font-size: 17px;
+            font-weight: 300;
+            color: #a8a29e;
+            margin-bottom: 0;
+        }
+
+        .teaser-holds {
+            padding: 0 48px 8px;
+        }
+
+        .teaser-hold {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #1c1917;
+        }
+
+        .teaser-hold:last-child {
+            border-bottom: none;
+        }
+
+        .hold-num {
+            font-size: 12px;
+            font-weight: 700;
+            color: #AD4236;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .hold-name {
+            font-size: 17px;
+            font-weight: 500;
+            color: #f5f2ed;
+        }
+
+        .hold-target {
+            font-size: 14px;
+            font-weight: 300;
+            color: #78716c;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        .teaser-fade {
+            position: relative;
+            padding: 0 48px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .teaser-fade::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, #141414);
+            pointer-events: none;
+        }
+
+        .teaser-fade p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.7;
+        }
+
+        .teaser-cta {
+            padding: 32px 48px 48px;
+            text-align: center;
+        }
+
+        .teaser-cta a {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #f5f2ed;
+            background: #AD4236;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .teaser-cta a:hover {
+            background: #c9554a;
+        }
+
+        .teaser-context {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .teaser-context p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #78716c;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .teaser-context p strong {
+            color: #a8a29e;
+            font-weight: 500;
+        }
+
+        .teaser-stats {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .teaser-stat {
+            text-align: center;
+        }
+
+        .teaser-stat .num {
+            font-size: 28px;
+            font-weight: 800;
+            color: #AD4236;
+        }
+
+        .teaser-stat .lbl {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #57534e;
+        }
+
+        @media (max-width: 768px) {
+            .teaser-header,
+            .teaser-holds,
+            .teaser-fade,
+            .teaser-cta {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .hold-target {
+                display: none;
+            }
+        }
+
         /* Footer */
         .footer {
             min-height: auto;
@@ -1093,6 +1282,77 @@
                     <div class="phase-detail">
                         <div class="detail-label">The Lock-In</div>
                         <div class="detail-text">Programs feature INSDR supplements as part of the routine. Natural product integration, not ads. Stay subscribed, stay training.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Teaser -->
+    <section class="program-teaser">
+        <div class="inner">
+            <div class="section-label">Insider Programs</div>
+            <h2>This is what gated looks like.</h2>
+            <p style="max-width: 660px; margin-bottom: 48px;">Real programs. Real education. Free for INSDR community members. Here's a sample of what's inside — our commitment to helping build a better, stronger you as we all age.</p>
+
+            <div class="teaser-card">
+                <div class="teaser-header">
+                    <div class="teaser-badge">Sample Program</div>
+                    <h3>ISO Holds</h3>
+                    <p class="teaser-sub">Tendon training eliminates the weakness that makes strong men fragile.</p>
+                </div>
+
+                <div class="teaser-holds">
+                    <div class="teaser-hold">
+                        <span class="hold-num">01</span>
+                        <span class="hold-name">Standing Calf Raise Hold</span>
+                        <span class="hold-target">Achilles tendon</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">02</span>
+                        <span class="hold-name">Spanish Squat Hold</span>
+                        <span class="hold-target">Patellar tendon</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">03</span>
+                        <span class="hold-name">Deep Push-Up Isometric Hold</span>
+                        <span class="hold-target">Elbow &amp; wrist tendons</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">04</span>
+                        <span class="hold-name">Wall External Rotation Hold</span>
+                        <span class="hold-target">Rotator cuff</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">05</span>
+                        <span class="hold-name">Active Dead Hang</span>
+                        <span class="hold-target">Grip, shoulders, spine</span>
+                    </div>
+                </div>
+
+                <div class="teaser-fade">
+                    <p>Your muscles get stronger fast. Your tendons adapt three times slower. After 40, this gap becomes dangerous. One awkward movement and you're dealing with a torn Achilles, blown rotator cuff, or knee pain that won't quit for months. These five isometric holds force your tendons to handle sustained tension at their most vulnerable positions...</p>
+                </div>
+
+                <div class="teaser-cta">
+                    <a href="programs/iso-holds.html">Read the full program</a>
+                </div>
+            </div>
+
+            <div class="teaser-context">
+                <p>Programs like this are the reward for being an insider. <strong>Structured, science-backed, and designed to keep you moving with confidence for decades.</strong></p>
+                <div class="teaser-stats">
+                    <div class="teaser-stat">
+                        <div class="num">3x</div>
+                        <div class="lbl">Per week</div>
+                    </div>
+                    <div class="teaser-stat">
+                        <div class="num">10</div>
+                        <div class="lbl">Minutes</div>
+                    </div>
+                    <div class="teaser-stat">
+                        <div class="num">0</div>
+                        <div class="lbl">Equipment</div>
                     </div>
                 </div>
             </div>

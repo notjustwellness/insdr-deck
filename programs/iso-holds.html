@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Holds — INSDR Program</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #f5f2ed;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 24px;
+            left: 24px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #78716c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-link:hover {
+            color: #AD4236;
+        }
+
+        /* Hero */
+        .program-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+        }
+
+        .program-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            border: 1px solid #AD4236;
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin-bottom: 32px;
+        }
+
+        .program-hero h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .program-hero .subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 300;
+            color: #a8a29e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .program-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 40px 120px;
+        }
+
+        .program-intro {
+            font-size: clamp(18px, 2.2vw, 22px);
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.8;
+            margin-bottom: 64px;
+            padding-bottom: 64px;
+            border-bottom: 1px solid #1c1917;
+        }
+
+        .program-intro strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        /* Exercise blocks */
+        .exercise {
+            margin-bottom: 80px;
+        }
+
+        .exercise-number {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 12px;
+        }
+
+        .exercise h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 32px;
+        }
+
+        .exercise h3 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .exercise p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .exercise p strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .exercise .callout {
+            background: #141414;
+            border-left: 3px solid #AD4236;
+            border-radius: 0 8px 8px 0;
+            padding: 24px 28px;
+            margin: 28px 0;
+        }
+
+        .exercise .callout p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        .mistake {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+        }
+
+        .mistake-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #78716c;
+            margin-bottom: 6px;
+        }
+
+        .mistake p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        .exercise-divider {
+            width: 40px;
+            height: 2px;
+            background: #292524;
+            margin: 80px 0;
+        }
+
+        /* Protocol */
+        .protocol {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            margin-top: 80px;
+        }
+
+        .protocol h2 {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .protocol p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .protocol p:last-child {
+            margin-bottom: 0;
+        }
+
+        .protocol p strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .protocol-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .protocol-stat {
+            text-align: center;
+            padding: 20px;
+            background: #1c1917;
+            border-radius: 10px;
+        }
+
+        .protocol-stat .number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #AD4236;
+            margin-bottom: 4px;
+        }
+
+        .protocol-stat .label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #78716c;
+        }
+
+        /* Footer */
+        .program-footer {
+            text-align: center;
+            padding: 80px 40px;
+        }
+
+        .program-footer img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        .program-footer .mantra {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #78716c;
+        }
+
+        @media (max-width: 768px) {
+            .program-content {
+                padding: 0 24px 80px;
+            }
+
+            .program-hero {
+                padding: 100px 24px 60px;
+            }
+
+            .protocol {
+                padding: 32px 24px;
+            }
+
+            .protocol-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">&larr; Back to Deck</a>
+
+    <div class="program-hero">
+        <div>
+            <div class="program-badge">INSDR Program</div>
+            <h1>ISO Holds</h1>
+            <p class="subtitle">Tendon training eliminates the weakness that makes strong men fragile. Five holds. Ten minutes. Three times a week.</p>
+        </div>
+    </div>
+
+    <div class="program-content">
+
+        <div class="program-intro">
+            Many guys can move serious weight in the gym but get wrecked picking up a dropped phone. That disconnect reveals something most fitness advice completely misses.<br><br>
+            <strong>Your muscles get stronger fast. Your tendons adapt three times slower.</strong> After 40, this gap becomes dangerous. One awkward movement and you're dealing with a torn Achilles, blown rotator cuff, or knee pain that won't quit for months.<br><br>
+            The standard response is backing off from activities. Taking it easy. Accepting that your body just can't handle stress anymore. That's exactly backwards. <strong>Weak tendons need controlled stress to adapt, not protection from stress.</strong><br><br>
+            Five specific isometric holds create that adaptation. They force your tendons to handle sustained tension at their most vulnerable positions. Ten minutes, three times weekly. The results show up in everyday movement, not just gym performance.
+        </div>
+
+        <!-- Exercise 1 -->
+        <div class="exercise">
+            <div class="exercise-number">Hold 01</div>
+            <h2>Standing Calf Raise Hold</h2>
+            <p>Your Achilles tendon handles massive loads with every step. When it fails, you lose explosive power and develop that shuffling gait that screams fragility. The injury happens suddenly but the weakness builds over years.</p>
+            <p>Eccentric loading builds tendon strength better than any other method. Tendons respond to <strong>time under tension</strong>, not repetition count. The stretched position creates the most adaptation signal.</p>
+
+            <h3>How to do it</h3>
+            <p>Stand on the balls of your feet at a step edge. Rise up high, then lower slowly until you feel a deep stretch in your calves. This stretched bottom position is where you hold. Your calves burn. Your Achilles feels the tension. That discomfort signals collagen remodeling in the tendon fibers.</p>
+
+            <div class="callout">
+                <p><strong>Start with 30 seconds.</strong> Add 15 seconds weekly until you reach two minutes. This takes six weeks of consistent work.</p>
+            </div>
+
+            <h3>Common mistakes</h3>
+            <div class="mistake">
+                <div class="mistake-label">Mistake 1</div>
+                <p>Holding at the top instead of the stretched bottom. The stretched position creates tendon stress. The top position just works your calves without targeting the Achilles effectively.</p>
+            </div>
+            <div class="mistake">
+                <div class="mistake-label">Mistake 2</div>
+                <p>Bouncing to relieve tension. Stay completely still. The sustained tension forces adaptation. Bouncing turns this into a calf exercise instead of tendon training.</p>
+            </div>
+            <div class="mistake">
+                <div class="mistake-label">Mistake 3</div>
+                <p>Rushing progression. Adding too much time too fast creates inflammation instead of adaptation. Your tendons need gradual stress increases to remodel properly.</p>
+            </div>
+
+            <h3>The payoff</h3>
+            <p>Your Achilles becomes capable of handling sudden direction changes and explosive movements. Stairs become effortless. You can sprint without fear. Your balance improves because ankle stability increases.</p>
+            <p><strong>No equipment needed. Just a step and two minutes.</strong></p>
+        </div>
+
+        <div class="exercise-divider"></div>
+
+        <!-- Exercise 2 -->
+        <div class="exercise">
+            <div class="exercise-number">Hold 02</div>
+            <h2>Spanish Squat Hold</h2>
+            <p>Knee pain is nearly universal after 40. The standard advice is avoiding squats and accepting weak knees as inevitable. That thinking creates the exact problem it claims to prevent.</p>
+            <p>The issue isn't the knee joint itself. It's <strong>weak patellar tendons</strong> that can't handle basic loads. Traditional squats train the muscles but miss the tendons. The Spanish squat hold isolates patellar tendon stress while eliminating joint compression.</p>
+
+            <h3>How to do it</h3>
+            <p>Place a resistance band around your knees. Stand with your back against a wall. Slide down until your thighs are parallel to the floor. Your knees should be directly over your ankles, not pushed forward.</p>
+            <p>The band pulls your knees inward. Your patellar tendons resist that force while supporting your body weight. This creates tendon adaptation without grinding your knee joints.</p>
+            <p>The angle matters enormously. Too shallow and you miss the tendon stress. Too deep and you create joint compression. <strong>Parallel thighs hit the zone where your patellar tendons work hardest while your knees stay protected.</strong></p>
+
+            <div class="callout">
+                <p><strong>Start with 30 seconds</strong> using light band tension. Increase hold time first, then band resistance. Work up to 90 seconds over six weeks. Sharp knee pain means you're too deep or progressing too aggressively.</p>
+            </div>
+
+            <h3>The payoff</h3>
+            <p>Your patellar tendons become load-tolerant. They can handle squats, lunges, and sudden direction changes without inflammation. Stairs stop being a negotiation with pain. Getting out of bed doesn't require momentum and groaning.</p>
+            <p><strong>Strong tendons mean strong knees. Strong knees mean confident movement. Confident movement means staying active and independent for decades.</strong></p>
+        </div>
+
+        <div class="exercise-divider"></div>
+
+        <!-- Exercise 3 -->
+        <div class="exercise">
+            <div class="exercise-number">Hold 03</div>
+            <h2>Deep Push-Up Isometric Hold</h2>
+            <p>Elbow and wrist pain destroy your ability to push, press, and grip. Desk work creates forward head posture that overloads your forearms. Repetitive stress from typing inflames your tendons. The result is tennis elbow, golfer's elbow, and carpal tunnel that makes basic tasks torture.</p>
+            <p>The deep push-up isometric hold targets the exact problem. You're loading your elbow and wrist tendons at their most vulnerable position while building resilience through controlled stress.</p>
+
+            <h3>How to do it</h3>
+            <p>Get into a push-up position and lower yourself to the bottom. Your chest should be one to two inches from the floor. Your elbows stay close to your body, not flared wide. This bottom position creates maximum stretch on your elbow and wrist tendons.</p>
+            <p><strong>End range loading is the key insight.</strong> Tendons are weakest where they stretch the most. By holding at the bottom position, you're forcing adaptation at the exact point where injuries happen.</p>
+            <p>If you can't hold a full push position, start from your knees. Same principles apply. Progress from knees to full plank over four to six weeks as your tendon strength improves.</p>
+
+            <div class="callout">
+                <p><strong>Start with 20 seconds.</strong> Your arms shake. Your wrists feel the stretch. That's the signal for tendon remodeling. Add 10 seconds weekly until you reach 60 seconds. Don't rush this progression.</p>
+            </div>
+
+            <h3>The payoff</h3>
+            <p>The nagging elbow pain that makes lifting coffee cups uncomfortable disappears. Your wrist tendons become resilient to repetitive stress. Tennis elbow and golfer's elbow disappear because your tendons can handle the loads that previously caused inflammation.</p>
+            <p><strong>Pushing doors becomes effortless. Lifting objects overhead doesn't create elbow pain. Your grip strength improves because your forearm tendons support better force transmission.</strong></p>
+        </div>
+
+        <div class="exercise-divider"></div>
+
+        <!-- Exercise 4 -->
+        <div class="exercise">
+            <div class="exercise-number">Hold 04</div>
+            <h2>Wall External Rotation Hold</h2>
+            <p>Shoulder impingement and rotator cuff tears are the most common upper body injuries after 40. Forward head posture from desk work destroys shoulder mechanics. Your rotator cuff tendons get pinched between bones with every overhead movement. Eventually they tear.</p>
+            <p>The wall external rotation hold targets the weakest link in shoulder stability. Your rotator cuff has four muscles but <strong>external rotation is always the weakest</strong>. When it fails, your shoulder becomes unstable and pain follows every movement.</p>
+
+            <h3>How to do it</h3>
+            <p>Stand arm's length from a wall. Place your right elbow against the wall at shoulder height. Your elbow should be bent 90 degrees with your forearm parallel to the floor. Press your hand backward against the wall as if you're trying to rotate your arm away from your body.</p>
+            <p>This specific angle targets the posterior rotator cuff tendons that stabilize your shoulder blade. These are the muscles that pull your shoulders back and counteract forward head posture.</p>
+            <p>The wall provides perfect resistance. You control the pressure, which means you control the load on your tendons. Start with light pressure and focus on the feeling of your shoulder blade pulling back toward your spine.</p>
+
+            <div class="callout">
+                <p><strong>Begin with 30 seconds</strong> using moderate pressure. You should feel the work in the back of your shoulder and between your shoulder blades. Increase pressure first, then hold time. Work up to 60 seconds over six weeks.</p>
+            </div>
+
+            <h3>The payoff</h3>
+            <p>Your rotator cuff tendons become strong enough to stabilize your shoulder during overhead activities. Sleep becomes comfortable again because your shoulders can relax in proper position. Reaching overhead stops causing sharp pain. Your posture improves because your shoulders can hold themselves back.</p>
+            <p><strong>You're not waiting for a rotator cuff tear to force you into physical therapy. You're building the tendon strength that prevents tears from happening.</strong></p>
+        </div>
+
+        <div class="exercise-divider"></div>
+
+        <!-- Exercise 5 -->
+        <div class="exercise">
+            <div class="exercise-number">Hold 05</div>
+            <h2>Active Dead Hang</h2>
+            <p><strong>Grip strength predicts cardiovascular health, cognitive function, and lifespan better than any other single measurement.</strong> When your grip fails, everything else follows.</p>
+            <p>The active dead hang isn't just hanging from a bar like dead weight. You're actively engaging your lats and shoulders to decompress your spine while building grip and upper chain tendon strength. This is compound tendon training.</p>
+            <p>The difference matters. A passive hang lets your shoulders sink into their sockets. An active hang engages your lats to pull your shoulders down and back. You're creating space between your vertebrae while strengthening every tendon from your fingertips to your spine.</p>
+
+            <h3>How to do it</h3>
+            <p>Find a pull-up bar or sturdy overhead structure. Grab with both hands shoulder-width apart. Instead of just hanging, think about pulling your shoulders away from your ears. Your lats should engage, creating a slight hollow in your torso. This is active hanging.</p>
+            <p>Start with assisted hangs if needed. Use a resistance band around your feet or stand on a box to reduce body weight. The goal is building time under tension, not ego lifting.</p>
+
+            <div class="callout">
+                <p><strong>Progress from 15 second assisted hangs to 60 second full body weight hangs over six weeks.</strong></p>
+            </div>
+
+            <h3>The payoff</h3>
+            <p>This reverses decades of desk posture damage. Your spine decompresses, relieving pressure on discs and nerves. Your grip tendons adapt to supporting your full body weight. Your shoulder and elbow tendons get strengthened through the entire kinetic chain.</p>
+            <p><strong>Your grip becomes vice-like. Your shoulders decompress and pain disappears. Your posture improves because your lats learn to hold your shoulders in proper position. You eliminate the forward head posture that creates neck pain and headaches.</strong></p>
+        </div>
+
+        <!-- Protocol -->
+        <div class="protocol">
+            <h2>The Protocol</h2>
+            <div class="protocol-stats">
+                <div class="protocol-stat">
+                    <div class="number">3x</div>
+                    <div class="label">Per week</div>
+                </div>
+                <div class="protocol-stat">
+                    <div class="number">10</div>
+                    <div class="label">Minutes total</div>
+                </div>
+                <div class="protocol-stat">
+                    <div class="number">6</div>
+                    <div class="label">Week progression</div>
+                </div>
+            </div>
+            <p>Start with the minimum hold times and progress weekly. Your tendons adapt slowly but permanently when you respect the timeline.</p>
+            <p>Research shows <strong>collagen synthesis peaks 72 hours after tendon loading</strong>. That's why three times per week works perfectly. You're giving your tendons the stress they need with the recovery time they require.</p>
+            <p>Most training programs focus on muscle hypertrophy and ignore tendon adaptation. That creates strong muscles attached to weak tendons. The result is predictable. One awkward movement and something tears.</p>
+            <p>These five holds reverse that imbalance. Your tendons become as strong as your muscles. You can handle sudden stress without injury. Your movement stays athletic and confident instead of cautious and protective.</p>
+            <p><strong>Your body becomes resilient instead of fragile. Strong tendons mean confident movement. Confident movement means staying active for decades.</strong></p>
+        </div>
+
+    </div>
+
+    <div class="program-footer">
+        <img src="../assets/insdr-logo-signal.png" alt="INSDR">
+        <div class="mantra">Invincible. Naturally Sourced. Dosed Right.</div>
+    </div>
+
+</body>
+</html>
