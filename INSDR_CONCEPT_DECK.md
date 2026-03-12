@@ -128,4 +128,34 @@ The customer already exists. They're buying supplements from one brand, cotton b
 
 ---
 
+## Why Both — Not One or the Other
+
+The obvious question: supplements AND apparel? Isn't that spreading too thin?
+
+No. Dropping either vertical makes INSDR forgettable. The combination is the moat.
+
+### Apparel solves the supplement brand's biggest problem: visibility.
+
+Supplement brands are invisible. The product lives in a cabinet. Nobody sees it. Nobody asks "what are you taking?" But someone wearing INSDR in the gym? That's a billboard that walks, trains, and starts conversations. Every shirt sold is a customer acquisition channel for supplements — at zero ongoing cost.
+
+### Supplements solve the apparel brand's biggest problem: retention.
+
+Clothing purchases are infrequent — maybe 2–4 times a year. Supplement subscriptions are monthly recurring revenue. The apparel brings people in. The supplements keep them paying. One vertical drives acquisition, the other drives lifetime value.
+
+### The anti-synthetic narrative only works with both.
+
+"Stop sweating in plastic" is powerful. But if you're only selling cotton tees, you're a cotton brand. Add "and stop swallowing fillers your body can't absorb" — now you own a worldview. The customer who cares about PFAs in their clothes is the same customer who reads supplement labels. This isn't two audiences. It's one audience, served completely.
+
+### The combination is un-copyable.
+
+There are hundreds of supplement brands. There are hundreds of cotton activewear brands. There is exactly zero that ties them together under a single philosophy. The moment you drop one vertical, you become just another supplement company or just another clothing label. Together, they create a position no one else occupies.
+
+### The execution: sequence, don't split.
+
+Launch the Foundation Stack as the revenue engine — subscriptions, recurring revenue, high margins. Alongside it, drop a tight apparel capsule — three to five pieces. Not a full clothing line. A statement. Enough cotton in the gym to make people ask "what's INSDR?" and find the supplements.
+
+The apparel at launch isn't a separate business — it's a brand-building tool. As supplement subscriptions build revenue, expand the apparel drops. Each drop creates a hype cycle that drives traffic to the supplement store. The two verticals feed each other — and that flywheel is something a single-vertical brand can never build.
+
+---
+
 *INSDR — Invincible. Naturally Sourced. Dosed Right.*
