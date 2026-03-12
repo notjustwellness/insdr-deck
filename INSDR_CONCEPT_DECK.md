@@ -27,61 +27,34 @@ INSDR says no to both.
 
 ---
 
-## The Brand Plays Like Streetwear
+## The Market
 
-This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills.
+Two massive markets. Both growing fast. Both broken in the same way — the mainstream players prioritize marketing over substance.
 
-INSDR operates like a **streetwear label** — with the credibility, the drops, and the culture to match.
+### Supplements
 
-- **Drops, not just launches.** Limited runs. When it's gone, it's gone.
-- **The clothes are the marketing.** Someone wearing INSDR in the gym is the best ad we'll ever run.
-- **Insider access.** The name writes itself — early access, community input, behind-the-formula content.
-- **Earned credibility.** We don't buy our way into culture. We earn it by being right about what matters.
-
----
-
-## Who Is This For?
-
-People who read ingredient labels AND clothing tags.
-
-They're 22–40. They train. They're into wellness but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.
-
-They don't need to be convinced. They just need someone to finally make the thing they've been looking for.
-
----
-
-## The Manifesto
-
-You read the label before the marketing.
-You know what's in it — and what shouldn't be.
-You stopped trusting "proprietary blends" a long time ago.
-
-You don't wear plastic to the gym.
-You don't put fillers in your body.
-You don't cut corners on the things that compound over time.
-
-You source better. You dose right. You absorb more.
-Not because someone told you to — because you figured it out yourself.
-
-That's the edge. Not louder. Not more.
-Just dialed in. Every input. Every day.
-
-Naturally sourced. Dosed right.
-And when it all clicks —
-
-**Invincible.**
-
----
-
-## How We're Different
-
-| Everyone Else | INSDR |
+| Metric | Value |
 |---|---|
-| Overdosed labels, under-absorbed formulas | Bioavailability-first — your body uses what we give it |
-| Synthetic "performance" fabrics full of plastic | 100% cotton. Period. |
-| Supplements OR apparel | Both — because it's the same philosophy |
-| Mass-market wellness branding | Streetwear energy, drop culture, insider access |
-| Sells to everyone | Built for people who already know |
+| **US market** | $67B (2024) → $130B+ by 2033 |
+| **CAGR** | 8.5% |
+| **Clean label segment** | $28.2B, growing at 12.2% — 50% faster than the category |
+| **DTC / personalized** | $11.8B, growing at 16.2% — the fastest-growing channel |
+| **DTC share of supplement sales** | 65% and rising |
+
+### Activewear
+
+| Metric | Value |
+|---|---|
+| **Global market** | $407B (2024) → $677B by 2030 |
+| **CAGR** | 9% |
+| **Sustainable athleisure** | $89B, growing at 12.5% — outpacing the broader market by 40% |
+| **PFAS contamination** | 25% of activewear tested positive for forever chemicals |
+
+### Where INSDR Fits
+
+The fastest-growing segments in both markets — clean label, DTC, sustainable materials — are exactly where INSDR lives. We're not entering crowded mainstream categories. We're entering the high-growth edges where the market is moving and incumbents are slowest to adapt.
+
+The PFAS awareness wave is just beginning. When it hits activewear the way it hit cookware, the demand for proven-clean alternatives will spike. INSDR is already there.
 
 ---
 
@@ -114,17 +87,25 @@ This isn't a trend play. It's a foundation — what your body actually needs and
 
 ---
 
-## The Opportunity
+## Who Is This For?
 
-The wellness market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
+People who read ingredient labels AND clothing tags.
 
-**INSDR lives in that gap.**
+They're 22–40. They train. They're into wellness but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.
 
-Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.
+They don't need to be convinced. They just need someone to finally make the thing they've been looking for.
 
-The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.
+---
 
-**We're that brand.**
+## How We're Different
+
+| Everyone Else | INSDR |
+|---|---|
+| Overdosed labels, under-absorbed formulas | Bioavailability-first — your body uses what we give it |
+| Synthetic "performance" fabrics full of plastic | 100% cotton. Period. |
+| Supplements OR apparel | Both — because it's the same philosophy |
+| Mass-market wellness branding | Streetwear energy, drop culture, insider access |
+| Sells to everyone | Built for people who already know |
 
 ---
 
@@ -155,6 +136,113 @@ There are hundreds of supplement brands. There are hundreds of cotton activewear
 Launch the Foundation Stack as the revenue engine — subscriptions, recurring revenue, high margins. Alongside it, drop a tight apparel capsule — three to five pieces. Not a full clothing line. A statement. Enough cotton in the gym to make people ask "what's INSDR?" and find the supplements.
 
 The apparel at launch isn't a separate business — it's a brand-building tool. As supplement subscriptions build revenue, expand the apparel drops. Each drop creates a hype cycle that drives traffic to the supplement store. The two verticals feed each other — and that flywheel is something a single-vertical brand can never build.
+
+---
+
+## The Business Model
+
+### Supplements: the recurring revenue engine.
+
+DTC subscription. Monthly delivery. High margins, predictable revenue.
+
+| Metric | Target |
+|---|---|
+| **Foundation Stack (3 products)** | $39–$49/mo per product, $99–$119/mo for the full stack |
+| **Gross margin** | 70–80% (standard for premium DTC supplements) |
+| **Subscription retention** | 67%+ at 12 months (industry benchmark for quality brands) |
+| **LTV vs. one-time** | Subscribers generate 200–300% higher lifetime value |
+| **Compliance effect** | 89% adherence with subscriptions vs. ~50% without — customers feel results, stay longer |
+
+The subscription model isn't just a revenue play — it's a product-market fit play. Supplements only work if people take them consistently. Subscriptions drive compliance. Compliance drives results. Results drive retention. The flywheel is built into the business model.
+
+### Apparel: the brand-building engine.
+
+Streetwear drop model. Limited runs. No standing inventory.
+
+| Metric | Target |
+|---|---|
+| **Launch capsule** | 3–5 pieces (The Tee, The Crew, The Short, The Hood) |
+| **Price range** | $45–$120 (premium cotton, not luxury markup) |
+| **Drop cadence** | Quarterly capsules, limited quantities |
+| **Inventory risk** | Near-zero — produce to demand, scarcity by design |
+| **Customer acquisition cost** | Every garment in the gym is a zero-cost billboard |
+
+### The flywheel in numbers.
+
+Apparel creates visibility → visibility drives supplement trials → trials convert to subscriptions → subscriptions fund the next apparel drop → repeat.
+
+A customer who buys one tee and one supplement subscription generates ~$600–$1,400 in year-one revenue. The tee brought them in. The subscription keeps them paying. The next drop gives them a reason to come back and share.
+
+---
+
+## Growth Roadmap
+
+### Phase 1 — Launch: Two Pillars
+Supplements and apparel. Two product lines, one philosophy. Simple enough for anyone to understand, compelling enough to buy into immediately.
+
+- **The Foundation Stack:** Three synergistic complexes. Deficiency-first. Subscription model.
+- **Apparel:** 100% cotton activewear. Streetwear drop model. Limited runs. Gym-to-street styling.
+
+### Phase 2 — Educate: Daily Content
+Once the products earn trust, INSDR becomes a daily presence. Short-form wellness content designed for Instagram and TikTok — shareable, visual, and rooted in the same insider-knowledge tone.
+
+- Ingredient deep-dives, myth-busting, PFA awareness, "Now You Know" posts.
+
+### Phase 3 — Gatekeep: Programs & Community
+Structured fitness and wellness programs — the kind people pay $30–$80 for everywhere else. Free for INSDR community members. You're an insider, or you're not.
+
+- Programs feature INSDR supplements as part of the routine. Natural integration, not ads.
+- Stay subscribed, stay training. The programs are the reward for being an insider.
+
+---
+
+## The Opportunity
+
+The wellness market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
+
+**INSDR lives in that gap.**
+
+Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.
+
+The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.
+
+**We're that brand.**
+
+---
+
+## The Brand Plays Like Streetwear
+
+This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills.
+
+INSDR operates like a **streetwear label** — with the credibility, the drops, and the culture to match.
+
+- **Drops, not just launches.** Limited runs. When it's gone, it's gone.
+- **The clothes are the marketing.** Someone wearing INSDR in the gym is the best ad we'll ever run.
+- **Insider access.** The name writes itself — early access, community input, behind-the-formula content.
+- **Earned credibility.** We don't buy our way into culture. We earn it by being right about what matters.
+
+---
+
+## The Manifesto
+
+You read the label before the marketing.
+You know what's in it — and what shouldn't be.
+You stopped trusting "proprietary blends" a long time ago.
+
+You don't wear plastic to the gym.
+You don't put fillers in your body.
+You don't cut corners on the things that compound over time.
+
+You source better. You dose right. You absorb more.
+Not because someone told you to — because you figured it out yourself.
+
+That's the edge. Not louder. Not more.
+Just dialed in. Every input. Every day.
+
+Naturally sourced. Dosed right.
+And when it all clicks —
+
+**Invincible.**
 
 ---
 

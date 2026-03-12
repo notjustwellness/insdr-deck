@@ -757,6 +757,253 @@
             }
         }
 
+        /* Market Section */
+        .market-section {
+            background: #141414;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .market-column {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 40px 36px;
+        }
+
+        .market-column-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 32px;
+        }
+
+        .market-stat {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #292524;
+        }
+
+        .market-stat:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .market-stat .stat-number {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: #AD4236;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .market-stat .stat-label {
+            font-size: 15px;
+            font-weight: 400;
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .market-stat .stat-label strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .market-closing {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-left: 3px solid #AD4236;
+            border-radius: 12px;
+            padding: 40px 36px;
+        }
+
+        .market-closing p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .market-column {
+                padding: 32px 24px;
+            }
+
+            .market-closing {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Business Model Section */
+        .biz-model-section {
+            background: #0a0a0a;
+        }
+
+        .biz-model-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            margin-bottom: 32px;
+        }
+
+        .biz-model-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 40px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .biz-model-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #AD4236;
+        }
+
+        .biz-model-card-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 12px;
+        }
+
+        .biz-model-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .biz-metric {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #1c1917;
+        }
+
+        .biz-metric:last-child {
+            border-bottom: none;
+        }
+
+        .biz-metric .metric-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #78716c;
+            white-space: nowrap;
+            min-width: 100px;
+        }
+
+        .biz-metric .metric-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f5f2ed;
+        }
+
+        .biz-metric .metric-value .accent {
+            color: #AD4236;
+            font-weight: 700;
+        }
+
+        .biz-flywheel {
+            background: #141414;
+            border: 1px solid #292524;
+            border-left: 3px solid #AD4236;
+            border-radius: 12px;
+            padding: 40px 36px;
+            margin-bottom: 32px;
+        }
+
+        .biz-flywheel h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .biz-flywheel p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .biz-key-stat {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .biz-key-stat .stat-number {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: #AD4236;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .biz-key-stat p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #a8a29e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .biz-model-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .biz-model-card {
+                padding: 32px 24px;
+            }
+
+            .biz-flywheel {
+                padding: 32px 24px;
+            }
+
+            .biz-key-stat {
+                padding: 32px 24px;
+            }
+
+            .biz-metric {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .biz-metric .metric-label {
+                min-width: auto;
+            }
+        }
+
         /* Moodboard */
         .moodboard-section {
             background: #141414;
@@ -1377,7 +1624,7 @@
 </head>
 <body>
 
-    <!-- Hero -->
+    <!-- 1. Hero -->
     <section class="hero">
         <div class="inner" style="text-align: center;">
             <img src="assets/insdr-logo-signal.png" alt="INSDR" class="brand-logo">
@@ -1409,7 +1656,7 @@
         <div class="scroll-hint">Scroll</div>
     </section>
 
-    <!-- What Is INSDR -->
+    <!-- 2. The Concept (What Is INSDR) -->
     <section>
         <div class="inner">
             <div class="section-label">The Concept</div>
@@ -1428,7 +1675,7 @@
         </div>
     </section>
 
-    <!-- Why This Wins -->
+    <!-- 3. Why This Wins -->
     <section>
         <div class="inner">
             <div class="section-label">Why This Wins</div>
@@ -1445,109 +1692,65 @@
         </div>
     </section>
 
-    <!-- Streetwear Model -->
-    <section>
+    <!-- 4. The Market (NEW) -->
+    <section class="market-section">
         <div class="inner">
-            <div class="section-label">The Model</div>
-            <h2>The brand plays like streetwear.</h2>
-            <p>This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills. INSDR operates like a streetwear label — with the credibility, the drops, and the culture to match.</p>
-            <ul class="play-list">
-                <li><strong>Drops, not just launches.</strong> Limited runs. When it's gone, it's gone.</li>
-                <li><strong>The clothes are the marketing.</strong> Someone wearing INSDR in the gym is the best ad we'll ever run.</li>
-                <li><strong>Insider access.</strong> The name writes itself — early access, community input, behind-the-formula content.</li>
-                <li><strong>Earned credibility.</strong> We don't buy our way into culture. We earn it by being right about what matters.</li>
-            </ul>
-        </div>
-    </section>
+            <div class="section-label">The Market</div>
+            <h2>Two massive markets. Both broken.</h2>
 
-    <!-- Audience -->
-    <section>
-        <div class="inner">
-            <div class="section-label">The Customer</div>
-            <div class="audience-headline">People who read ingredient labels AND clothing tags.</div>
-            <p>They're 22–40. They train. They're into wellness but not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.</p>
-            <div class="trait-grid">
-                <div class="trait">Health-conscious but never preachy</div>
-                <div class="trait">Culturally aware — streetwear, music, design</div>
-                <div class="trait">Skeptical of mainstream supplement marketing</div>
-                <div class="trait">Willing to pay more for quality and transparency</div>
-                <div class="trait">Care about materials and sourcing</div>
-                <div class="trait">Don't need convincing — need the right product</div>
+            <div class="market-grid">
+                <div class="market-column">
+                    <div class="market-column-label">Supplements</div>
+                    <div class="market-stat">
+                        <div class="stat-number">$67B &rarr; $130B+</div>
+                        <div class="stat-label">US market (2024) projected by 2033</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">8.5%</div>
+                        <div class="stat-label">Category CAGR</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">$28.2B</div>
+                        <div class="stat-label"><strong>Clean label segment</strong> &mdash; growing at <strong>12.2%</strong>, 50% faster than the category</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">$11.8B</div>
+                        <div class="stat-label"><strong>DTC / personalized</strong> &mdash; growing at <strong>16.2%</strong></div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">65%</div>
+                        <div class="stat-label">DTC share of supplement sales &mdash; and rising</div>
+                    </div>
+                </div>
+
+                <div class="market-column">
+                    <div class="market-column-label">Activewear</div>
+                    <div class="market-stat">
+                        <div class="stat-number">$407B &rarr; $677B</div>
+                        <div class="stat-label">Global market (2024) projected by 2030</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">9%</div>
+                        <div class="stat-label">Category CAGR</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">$89B</div>
+                        <div class="stat-label"><strong>Sustainable athleisure</strong> &mdash; growing at <strong>12.5%</strong>, outpacing broader market by 40%</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number">25%</div>
+                        <div class="stat-label"><strong>PFAS contamination:</strong> 1 in 4 activewear pieces tested positive for forever chemicals</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-closing">
+                <p>The fastest-growing segments — clean label, DTC, sustainable materials — are exactly where INSDR lives. We're not entering crowded mainstream categories. We're entering the high-growth edges where incumbents are slowest to adapt.</p>
             </div>
         </div>
     </section>
 
-    <!-- Manifesto -->
-    <section class="manifesto-section">
-        <div class="inner">
-            <div class="section-label">The Manifesto</div>
-            <div class="manifesto-text">
-                <div class="stanza">
-                    You read the label before the marketing.<br>
-                    You know what's in it — and what shouldn't be.<br>
-                    You stopped trusting "proprietary blends" a long time ago.
-                </div>
-                <div class="stanza">
-                    You don't wear plastic to the gym.<br>
-                    You don't put fillers in your body.<br>
-                    You don't cut corners on the things that compound over time.
-                </div>
-                <div class="stanza">
-                    You source better. You dose right. You absorb more.<br>
-                    Not because someone told you to — because you figured it out yourself.
-                </div>
-                <div class="stanza">
-                    That's the edge. Not louder. Not more.<br>
-                    Just dialed in. Every input. Every day.
-                </div>
-                <div class="stanza">
-                    Naturally sourced. Dosed right.<br>
-                    And when it all clicks —
-                </div>
-                <div class="payoff">Invincible.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison -->
-    <section>
-        <div class="inner">
-            <div class="section-label">The Difference</div>
-            <h2>INSDR vs. Everyone Else</h2>
-            <table class="comparison">
-                <thead>
-                    <tr>
-                        <th>Everyone Else</th>
-                        <th>INSDR</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Overdosed labels, under-absorbed formulas</td>
-                        <td>Bioavailability-first — your body uses what we give it</td>
-                    </tr>
-                    <tr>
-                        <td>Synthetic "performance" fabrics full of plastic</td>
-                        <td>100% cotton. Period.</td>
-                    </tr>
-                    <tr>
-                        <td>Supplements OR apparel</td>
-                        <td>Both — because it's the same philosophy</td>
-                    </tr>
-                    <tr>
-                        <td>Mass-market wellness branding</td>
-                        <td>Streetwear energy, drop culture, insider access</td>
-                    </tr>
-                    <tr>
-                        <td>Sells to everyone</td>
-                        <td>Built for people who already know</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- The Foundation Stack -->
+    <!-- 5. The Stack (Foundation Stack) -->
     <section>
         <div class="inner">
             <div class="stack-intro">
@@ -1649,19 +1852,62 @@
         </div>
     </section>
 
-    <!-- Opportunity -->
-    <section class="opportunity-section">
+    <!-- 6. The Customer (Who Is This For) -->
+    <section>
         <div class="inner">
-            <div class="section-label">The Opportunity</div>
-            <h2>Nobody owns the middle.</h2>
-            <p>The wellness market is massive and growing. But it's split — clinical supplement brands on one side, hype-driven lifestyle brands on the other.</p>
-            <p>INSDR lives in that gap. Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.</p>
-            <p>The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.</p>
-            <div class="closer">We're that brand.</div>
+            <div class="section-label">The Customer</div>
+            <div class="audience-headline">People who read ingredient labels AND clothing tags.</div>
+            <p>They're 22–40. They train. They're into wellness but not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.</p>
+            <div class="trait-grid">
+                <div class="trait">Health-conscious but never preachy</div>
+                <div class="trait">Culturally aware — streetwear, music, design</div>
+                <div class="trait">Skeptical of mainstream supplement marketing</div>
+                <div class="trait">Willing to pay more for quality and transparency</div>
+                <div class="trait">Care about materials and sourcing</div>
+                <div class="trait">Don't need convincing — need the right product</div>
+            </div>
         </div>
     </section>
 
-    <!-- Why Both -->
+    <!-- 7. The Difference (How We're Different) -->
+    <section>
+        <div class="inner">
+            <div class="section-label">The Difference</div>
+            <h2>INSDR vs. Everyone Else</h2>
+            <table class="comparison">
+                <thead>
+                    <tr>
+                        <th>Everyone Else</th>
+                        <th>INSDR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Overdosed labels, under-absorbed formulas</td>
+                        <td>Bioavailability-first — your body uses what we give it</td>
+                    </tr>
+                    <tr>
+                        <td>Synthetic "performance" fabrics full of plastic</td>
+                        <td>100% cotton. Period.</td>
+                    </tr>
+                    <tr>
+                        <td>Supplements OR apparel</td>
+                        <td>Both — because it's the same philosophy</td>
+                    </tr>
+                    <tr>
+                        <td>Mass-market wellness branding</td>
+                        <td>Streetwear energy, drop culture, insider access</td>
+                    </tr>
+                    <tr>
+                        <td>Sells to everyone</td>
+                        <td>Built for people who already know</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 8. The Case for Both (Why Both) -->
     <section class="why-both-section">
         <div class="inner">
             <div class="section-label">The Case for Both</div>
@@ -1694,7 +1940,73 @@
         </div>
     </section>
 
-    <!-- Growth Roadmap -->
+    <!-- 9. The Business Model (NEW) -->
+    <section class="biz-model-section">
+        <div class="inner">
+            <div class="section-label">The Business Model</div>
+            <h2>Two engines. One flywheel.</h2>
+
+            <div class="biz-model-grid">
+                <div class="biz-model-card">
+                    <div class="biz-model-card-label">Supplements</div>
+                    <h3>The Recurring Revenue Engine</h3>
+                    <div class="biz-metric">
+                        <span class="metric-label">Foundation Stack</span>
+                        <span class="metric-value"><span class="accent">$39–$49</span>/mo per product, <span class="accent">$99–$119</span>/mo full stack</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Gross margin</span>
+                        <span class="metric-value"><span class="accent">70–80%</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Retention</span>
+                        <span class="metric-value"><span class="accent">67%+</span> at 12 months</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">LTV</span>
+                        <span class="metric-value">Subscribers generate <span class="accent">200–300%</span> higher lifetime value</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Compliance</span>
+                        <span class="metric-value"><span class="accent">89%</span> adherence with subscriptions vs. ~50% without</span>
+                    </div>
+                </div>
+
+                <div class="biz-model-card">
+                    <div class="biz-model-card-label">Apparel</div>
+                    <h3>The Brand-Building Engine</h3>
+                    <div class="biz-metric">
+                        <span class="metric-label">Launch capsule</span>
+                        <span class="metric-value"><span class="accent">3–5</span> pieces</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Price range</span>
+                        <span class="metric-value"><span class="accent">$45–$120</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Drop cadence</span>
+                        <span class="metric-value">Quarterly, <span class="accent">limited quantities</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Inventory risk</span>
+                        <span class="metric-value"><span class="accent">Near-zero</span> — produce to demand, scarcity by design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="biz-flywheel">
+                <h3>The Flywheel</h3>
+                <p>Apparel creates visibility &rarr; visibility drives supplement trials &rarr; trials convert to subscriptions &rarr; subscriptions fund the next drop &rarr; repeat.</p>
+            </div>
+
+            <div class="biz-key-stat">
+                <div class="stat-number">$600–$1,400</div>
+                <p>Year-one revenue from a single customer who buys one tee and one supplement subscription.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. The Roadmap -->
     <section class="roadmap-section">
         <div class="inner">
             <div class="section-label">The Roadmap</div>
@@ -1780,7 +2092,66 @@
         </div>
     </section>
 
-    <!-- Program Teaser -->
+    <!-- 11. The Opportunity -->
+    <section class="opportunity-section">
+        <div class="inner">
+            <div class="section-label">The Opportunity</div>
+            <h2>Nobody owns the middle.</h2>
+            <p>The wellness market is massive and growing. But it's split — clinical supplement brands on one side, hype-driven lifestyle brands on the other.</p>
+            <p>INSDR lives in that gap. Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.</p>
+            <p>The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.</p>
+            <div class="closer">We're that brand.</div>
+        </div>
+    </section>
+
+    <!-- 12. The Manifesto -->
+    <section class="manifesto-section">
+        <div class="inner">
+            <div class="section-label">The Manifesto</div>
+            <div class="manifesto-text">
+                <div class="stanza">
+                    You read the label before the marketing.<br>
+                    You know what's in it — and what shouldn't be.<br>
+                    You stopped trusting "proprietary blends" a long time ago.
+                </div>
+                <div class="stanza">
+                    You don't wear plastic to the gym.<br>
+                    You don't put fillers in your body.<br>
+                    You don't cut corners on the things that compound over time.
+                </div>
+                <div class="stanza">
+                    You source better. You dose right. You absorb more.<br>
+                    Not because someone told you to — because you figured it out yourself.
+                </div>
+                <div class="stanza">
+                    That's the edge. Not louder. Not more.<br>
+                    Just dialed in. Every input. Every day.
+                </div>
+                <div class="stanza">
+                    Naturally sourced. Dosed right.<br>
+                    And when it all clicks —
+                </div>
+                <div class="payoff">Invincible.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. The Model (Streetwear) -->
+    <section>
+        <div class="inner">
+            <div class="section-label">The Model</div>
+            <h2>The brand plays like streetwear.</h2>
+            <p>This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills. INSDR operates like a streetwear label — with the credibility, the drops, and the culture to match.</p>
+            <ul class="play-list">
+                <li><strong>Drops, not just launches.</strong> Limited runs. When it's gone, it's gone.</li>
+                <li><strong>The clothes are the marketing.</strong> Someone wearing INSDR in the gym is the best ad we'll ever run.</li>
+                <li><strong>Insider access.</strong> The name writes itself — early access, community input, behind-the-formula content.</li>
+                <li><strong>Earned credibility.</strong> We don't buy our way into culture. We earn it by being right about what matters.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 14. Program Teaser (Insider Programs) -->
     <section class="program-teaser">
         <div class="inner">
             <div class="section-label">Insider Programs</div>
@@ -1851,7 +2222,7 @@
         </div>
     </section>
 
-    <!-- Moodboard -->
+    <!-- 15. The Aesthetic (Moodboard + Signal) -->
     <section class="moodboard-section">
         <div class="inner">
             <div class="section-label">The Aesthetic</div>
@@ -2003,7 +2374,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 16. Footer -->
     <section class="footer">
         <div class="inner">
             <img src="assets/insdr-logo-signal.png" alt="INSDR" style="max-width: 200px; height: auto; margin-bottom: 16px;">
