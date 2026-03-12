@@ -159,7 +159,42 @@ Most activewear is made from polyester and nylon — thermoplastics derived from
 - Drop model — limited runs, not endless inventory
 - No synthetic materials, period
 
-**Apparel Categories (to be developed):**
+**The Signal — Color as Brand Mark:**
+
+INSDR apparel carries no visible logos. Instead, the brand identifier is Signal (#AD4236) — a muted, warm red applied as a subtle, consistent detail across every SKU. The color replaces the logo. If you know, you know.
+
+*The approach:*
+- **Exterior: Signal bar tack** — a small bar tack stitch (6–8mm) in Signal red at the bottom left hem of every garment. Tees, crews, hoodies, shorts, joggers. Always the same spot. The kind of detail you'd only notice if someone pointed it out — and then you'd never stop seeing it. This is the Margiela four-stitch play.
+- **Interior: Signal label** — a woven neck label in Signal red with the provenance line: "100% Cotton. No Synthetics. No PFAs." Invisible when worn. Visible when you pull a garment over your head — a flash of red. The detail you discover when you own it.
+- **Nothing else.** No Signal panels, no Signal stripes, no color blocking. Two details only. The restraint is the point. If you over-apply, it becomes branding. If you keep it to two details, it becomes a code.
+
+*How it scales:*
+- Day one: Only INSDR wearers know the bar tack. It's a secret handshake.
+- Phase 2 content: "The Signal" becomes an education moment — a post, a reel, a "Now You Know" about why every INSDR garment carries a red stitch.
+- Phase 3 community: Spotting the Signal in the wild becomes the insider experience. User-generated content: "Caught a Signal at the gym today."
+
+*Precedent:* Maison Margiela (four white stitches), Bottega Veneta (dropped logos, color green IS the brand), Hermès (orange), Acne Studios (face patch). The most powerful brand identifiers in luxury aren't logos — they're details only the informed recognize.
+
+**Apparel Design Direction:**
+
+*Aesthetic references:* Y-3 (construction confidence, monochrome philosophy), H-O-R-S-E (cotton purity, anti-logo, extreme curation), 1989 Studio (grown-up streetwear, warm earth tones, narrative collections). See MOODBOARD.md for full analysis.
+
+*Silhouettes:* Relaxed, oversized fits — gym-functional but not gym-coded. No performance seaming, no reflective hits. The same hoodie works at the gym and at dinner.
+
+*Naming:* The Tee. The Crew. The Short. The Jogger. The Hood. Simple, definitive. No invented words, no "Pro" or "Elite" suffixes.
+
+*Colors:* Earthy, warm — black, off-white, slate, warm grey, clay. Texture over color: different cotton weights and finishes (brushed, ribbed, french terry, jersey, waffle knit) create variety within a tight color range.
+
+*Branding on garment:* Near-invisible externally (Signal bar tack only). Internal Signal label with provenance. That's it.
+
+**Launch Capsule (3–5 pieces):**
+- The Tee
+- The Crew
+- The Short
+- The Hood (Phase 1b)
+- The Jogger (Phase 1b)
+
+**Apparel Categories (expansion):**
 - Training tees & tanks
 - Hoodies & crew necks
 - Joggers & shorts
@@ -318,13 +353,14 @@ Most activewear is made from polyester and nylon — thermoplastics derived from
 
 ---
 
-## 8. Visual Identity (Direction — TBD)
+## 8. Visual Identity
 
 - **Palette:** Signal (#AD4236) as primary accent, Rose Linen (#F6EFEA) as light background, Deep Evening (#1A1410) as dark base. Earthy, warm, grounded.
-- **Typography:** Clean sans-serif, editorial weight. Confident, not decorative.
-- **Photography:** Real textures — cotton close-ups, raw ingredients, gym environments with natural light. Not overly produced.
-- **Packaging:** Minimal, tactile, premium feel. Supplement packaging should feel closer to skincare than to GNC.
-- **Logo:** "INSDR" — the wordmark is the mark. Designed to work on apparel, labels, and digital.
+- **Signal as identifier:** The brand color IS the brand mark on apparel. Signal red appears as a bar tack stitch (exterior) and woven label (interior) on every garment. No logos on clothing — the color is the signal.
+- **Typography:** Clean sans-serif, editorial weight. Confident, not decorative. Consider I-N-S-D-R hyphenated treatment for select applications.
+- **Photography:** Real textures — cotton close-ups, raw ingredients, gym environments with natural light. Not overly produced. Named fit references on apparel: "Van is 5'11 and wears a Medium."
+- **Packaging:** Minimal, tactile, premium feel. Supplement packaging should feel closer to skincare than to GNC. Apparel ships in cotton drawstring bags, not plastic polybags. "100% Cotton. 0% Plastic." on packaging.
+- **Logo:** "INSDR" — the wordmark is the mark. Designed to work on labels, digital, and packaging. Near-invisible on garments (internal label only).
 
 ---
 

@@ -209,4 +209,42 @@ INSDR sits in the lower-right quadrant: culture-forward, quiet branding, materia
 
 ---
 
+## The Signal — Color as Brand Mark
+
+INSDR apparel carries no visible logos. The brand identifier is **Signal (#AD4236)** — applied as a subtle, consistent detail across every SKU. The color replaces the logo.
+
+### The Detail System
+
+| Element | Placement | Visibility | Purpose |
+|---|---|---|---|
+| **Signal bar tack** | Bottom left hem, every garment | Exterior — subtle, 6–8mm | The identifier. Spotted across the gym by those who know. |
+| **Signal woven label** | Inside neck | Interior — hidden when worn | The provenance mark. "100% Cotton. No Synthetics. No PFAs." |
+
+**Nothing else.** No Signal panels, stripes, or color blocking. Two details only. Restraint is the point.
+
+### Precedent
+
+| Brand | Detail | Lesson |
+|---|---|---|
+| Maison Margiela | Four white stitches on back collar | A stitch became more recognizable than any logo |
+| Bottega Veneta | Dropped all logos; the intrecciato weave + green IS the brand | A texture and a color can replace an entire identity system |
+| Hermès | Orange | You see the color across a room and you know |
+| Acne Studios | Face patch | Tiny, consistent, unmistakable |
+
+### How The Signal Scales
+
+- **Day one:** Only INSDR wearers know the bar tack. Secret handshake.
+- **Phase 2:** "The Signal" becomes shareable content — "Now You Know" posts about the red stitch, what it means, why it's there.
+- **Phase 3:** Spotting the Signal in the wild becomes the insider experience. User-generated: "Caught a Signal at the gym today." The community identifies itself through a color, not a logo.
+
+### Reference Images
+
+- [Maison Margiela four white stitches](https://www.google.com/search?q=maison+margiela+four+white+stitches+collar) — the original "if you know, you know" garment detail
+- [Bottega Veneta green](https://www.google.com/search?q=bottega+veneta+green+brand+color) — how a color became the identity after removing logos
+- [Hermès orange box](https://www.google.com/search?q=hermes+orange+box) — color recognition across a room
+- [Acne Studios face patch](https://www.google.com/search?q=acne+studios+face+patch+detail) — small, consistent, unmistakable
+- [Bar tack stitch detail on premium garments](https://www.google.com/search?q=bar+tack+stitch+detail+premium+garment) — the construction detail INSDR would use
+
+---
+
 *This moodboard should guide all apparel design, photography, and packaging decisions.*
