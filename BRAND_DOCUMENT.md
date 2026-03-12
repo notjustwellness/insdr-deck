@@ -46,12 +46,15 @@ INSDR operates like a streetwear label — drops, not just launches. The brand e
 
 **Primary:** Men and women, 22–40, who are into fitness and wellness but also care about aesthetics, culture, and what they wear outside the gym. They read ingredient labels. They know what PFAs are. They'd rather own fewer, better things.
 
+**Secondary (reached through primary):** Parents and older family members of the primary demo. Not marketed to directly — reached through family referral. The same foundation stack that supports a 28-year-old's recovery supports a 60-year-old's bone density, heart health, and cognitive function. The product bridges generations; the brand doesn't have to.
+
 **Psychographics:**
 - Health-conscious but not preachy about it
 - Culturally aware — follow streetwear drops, music, design
 - Skeptical of mainstream supplement marketing
 - Willing to pay more for quality and transparency
 - Care about materials and sourcing (food AND clothing)
+- Put their family on what works — "if I'm taking it, my parents should be too"
 
 ---
 
@@ -60,24 +63,77 @@ INSDR operates like a streetwear label — drops, not just launches. The brand e
 ### 5.1 Supplements
 Bioavailability-first formulations. Every ingredient chosen for how well it's absorbed, not just how good it looks on a label.
 
-**Recommended launch products** (based on proven category demand):
-- **Calm** — stress reduction, cortisol regulation, mood (daily use, high retention)
-- **Sleep** — deep rest without drowsiness, recovery (nightly use, high retention)
-- **Energy** — sustained energy, no crash, cognitive support (daily use, replaces existing habits)
-- **Restore** — hydration, electrolytes, recovery (post-workout, high frequency)
+**Launch products — The Foundation Stack (3 products):**
+
+The launch strategy is deficiency-based, not trend-based. These are what most people are actually missing — not adaptogens, nootropics, or category plays. Basics that compound over time. Each product is a synergistic complex, not a single ingredient in a better wrapper.
+
+#### 1. Magnesium Complex
+
+*Body + brain + the key that unlocks both.*
+
+Sleep, stress, recovery, heart health, cognitive function, bone density. The most common mineral deficiency. Most people take magnesium oxide — which has as low as 4% bioavailability (Firoz & Graber, 2001). INSDR uses a dual-form approach:
+
+- **Glycinate** — body: sleep, muscle relaxation, stress reduction. Well-absorbed, significantly lower GI side effects than other forms (confirmed in meta-analyses).
+- **Threonate (Magtein)** — brain: the most clinically studied magnesium form for cognitive outcomes. Patented (AIDP, developed from MIT research), with multiple published RCTs showing improvements in memory, cognitive performance, and sleep quality. Effectively crosses the blood-brain barrier and has been shown to increase brain magnesium levels ~15%.
+- **B6 (P5P)** — cofactor that enhances magnesium cellular uptake. A 2018 RCT (Pouteau et al.) showed magnesium + B6 was superior to magnesium alone for reducing severe stress. The relationship is synergistic — they facilitate each other's function.
+
+#### 2. Mito Complex (CoQ10 + PQQ)
+
+*Powers your existing mitochondria. Builds new ones.*
+
+Cellular energy, cardiovascular health, antioxidant protection, neuroprotection. CoQ10 is what your mitochondria use to produce ATP — it's not a stimulant, it's the raw material for cellular energy. Natural levels peak around age 25 and decline measurably by 30. The heart has the highest CoQ10 concentration of any organ (114 μg/g tissue), reflecting its extraordinary metabolic demand.
+
+- **CoQ10 as Ubiquinol (Kaneka)** — the reduced, active form. Kaneka is the gold standard with 85+ clinical studies. The body cycles between ubiquinone and ubiquinol (a redox cycle), but the enzymes driving this conversion decline with age — by 40, conversion capacity may drop by roughly half. Formulation quality is critical: a well-formulated ubiquinol delivers meaningfully better absorption, particularly in older adults and cardiac patients. Statin users are especially relevant — statins deplete plasma CoQ10 by 25–50% as a biochemical side effect (they block the same mevalonate pathway that produces both cholesterol and CoQ10).
+- **PQQ** — triggers mitochondrial biogenesis via the SIRT1/PGC-1alpha signaling pathway (the master regulator of new mitochondria creation). Also stimulates nerve growth factor (NGF) synthesis and has documented neuroprotective effects. The CoQ10 + PQQ pairing: more mitochondria (PQQ) × better-powered mitochondria (CoQ10) = compounding cellular energy output.
+
+*The vitality angle:* This is the product customers feel. Sustained energy, better exercise performance, faster recovery. Longevity and vitality in the same formula.
+
+*The multigenerational angle:* A 28-year-old takes it for gym performance. Their parent on a statin is CoQ10-depleted and doesn't know it. Same product, different context, natural referral.
+
+#### 3. D3+K2 Complex
+
+*Fat-soluble vitamin that comes with its own fat. Plus the mineral nobody's talking about yet.*
+
+Up to 42% of US adults have vitamin D levels below 20 ng/mL (NHANES data). Immune function, bone density, mood, cardiovascular health. K2 completes the picture by activating the proteins (osteocalcin and Matrix GLA Protein) that promote bone mineralization and inhibit arterial calcification.
+
+- **D3** — the foundation. Fat-soluble, so absorption is enhanced ~30% when taken with dietary fat. INSDR solves this by building the fat carrier directly into the formula.
+- **K2 as MK-7** — the long-acting form with a half-life of approximately 68–72 hours, vs MK-4's 4–8 hours. Once-daily dosing at 100–200 mcg is effective (MK-4 requires much higher doses multiple times daily). Higher K2 intake correlates with a 57% reduction in cardiovascular mortality risk (Rotterdam Study).
+- **Boron** — supports bone mineral density (confirmed in postmenopausal women studies), supports vitamin D utilization (inhibits 24-hydroxylase, the enzyme that breaks down active vitamin D metabolites), and has emerging research on healthy hormone levels. Small dose, significant impact, and almost no one else includes it.
+- **Built-in lipid delivery** — MCT oil base or liposomal encapsulation. Clinical evidence shows liposomal D3 achieves superior plasma levels even after a 12-hour fast. This removes the meal-timing requirement entirely — the absorption technology is built into the product.
+
+**Why these three:**
+- Every product has a clear, scientifically validated absorption story
+- All daily-use = high subscription retention, no cycling
+- Every product addresses both vitality (energy, performance, mood) and longevity (cardiovascular, cognitive, bone health)
+- Universal across age groups (see multigenerational positioning below)
+
+**Multigenerational positioning:**
+INSDR markets to the 22–40 primary demo. But these three products are equally critical for an older population — bone density, heart health, cognitive decline, cellular energy. The play: the primary buyer discovers the stack for themselves (recovery, sleep, daily foundation), then realizes their parents should be on it too. Magnesium for your sleep becomes magnesium for her bone density. Mito Complex for your gym performance becomes Mito Complex for his CoQ10-depleted heart. D3+K2 for your immune system becomes D3+K2 for their osteoporosis prevention.
+
+This creates:
+- A natural family referral loop without any "senior" marketing
+- Gift/subscription gifting as a purchase path (buy for yourself, send to parents)
+- Two subscribers per household instead of one
+- The most trusted marketing channel: family word of mouth
+- "If you know, you know" extends to "now put your parents on"
+
+The brand stays young and culturally sharp. The product just happens to be universal.
+
+**Phase 2 expansion:**
+- Curated stacks and bundles for specific goals (Longevity, Immunity, Hormone + Metabolism, etc.)
+- Single-ingredient essentials and performance products (creatine, omega-3, etc.)
 
 **Product formats:**
 - Sticks — portable, premium price point ($2.86–$3.43/serving)
 - Bags — value option, home use ($2.39/serving)
 - Sizes: 7 (trial), 14, 28 (standard), 56, 84 (bulk)
 
-**Stacks (phase 2 expansion):**
-- Curated bundles for specific goals (Longevity, Immunity, Hormone + Metabolism, etc.)
-
 **Key differentiators vs. competitors:**
-- Enhanced absorption with specific data on every ingredient (e.g., "8x more absorbable" — not vague claims)
-- Multiple delivery technologies: liposomal encapsulation, chelation, nano-delivery (right tech per nutrient)
-- Branded/patented ingredients: Capsoil, Sensoril, PharmaGABA, CurcuWin Ultra+, etc.
+- Deficiency-first formulation philosophy — not trend-chasing, not kitchen-sink dosing
+- Synergistic complexes, not single ingredients — each product pairs a primary with an amplifier and a cofactor
+- Branded/patented ingredient forms: Magtein (magnesium threonate), Kaneka (ubiquinol)
+- Specific, citation-backed absorption data on every ingredient — not vague "more absorbable" claims
+- Built-in delivery technologies per nutrient: chelation, lipid carriers, active-form selection
 - Transparent labeling — full doses, no proprietary blends
 - Clean formulas — no unnecessary fillers, dyes, or artificial sweeteners
 
@@ -85,6 +141,7 @@ Bioavailability-first formulations. Every ingredient chosen for how well it's ab
 - 25–30% off first order
 - 10% recurring discount
 - Flexible delivery: 30, 45, 60, 120-day cycles
+- Family/gift subscriptions (Phase 2)
 
 *See Section 7 for full Absorption Company competitive analysis.*
 
@@ -330,7 +387,7 @@ Once the products have earned trust, INSDR becomes a daily presence through educ
 ## 11. Open Questions & Next Steps
 
 - [x] ~~Finalize brand name~~ — INSDR is short for Insider (not an acronym)
-- [ ] Define initial supplement product lineup (which 2-3 products to launch with?)
+- [x] ~~Define initial supplement product lineup~~ — Foundation Stack: Magnesium Complex, Mito Complex (CoQ10+PQQ), D3+K2 Complex
 - [ ] Source 100% cotton apparel manufacturers / blanks
 - [ ] Develop visual identity system (logo, type, color palette)
 - [ ] Build out brand story / founder narrative

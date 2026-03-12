@@ -85,6 +85,35 @@ And when it all clicks —
 
 ---
 
+## The Foundation Stack
+
+Three products. Three deficiencies most people don't know they have. Every product has a **primary ingredient**, a **synergistic amplifier**, and a **story that educates**.
+
+### Magnesium Complex
+*Body + brain + the key that unlocks both.*
+
+Most people take magnesium oxide — as low as 4% bioavailability. INSDR pairs **glycinate** (body: sleep, stress, recovery) with **threonate/Magtein** (brain: the most clinically studied magnesium for cognitive health) and adds **B6** to enhance cellular uptake. Two forms doing different jobs, plus the cofactor that makes both work harder.
+
+### Mito Complex — CoQ10 + PQQ
+*Powers your existing mitochondria. Builds new ones.*
+
+CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **ubiquinol (Kaneka)**, the active form backed by 85+ clinical studies, paired with **PQQ**, which triggers the creation of entirely new mitochondria. More engines × better fuel = compounding cellular energy. This is the product customers feel.
+
+### D3+K2 Complex
+*Fat-soluble vitamin that comes with its own fat.*
+
+Up to 42% of US adults are vitamin D deficient. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone density and vitamin D utilization. Built-in **lipid delivery** means it absorbs without food. No meal timing. No guesswork.
+
+### Why This Stack
+
+This isn't a trend play. It's a foundation — what your body actually needs and isn't getting.
+
+- **Longevity + vitality.** Every product supports long-term health AND daily performance. Live longer and feel it.
+- **Multigenerational.** A 28-year-old takes these for recovery and energy. Their parents need the same stack for bone density, heart health, and cognitive function. One product line, two generations, zero "senior" marketing.
+- **Every product educates.** The science behind each formula is shareable content — ingredient deep-dives, myth-busting, "your body can't use what it can't absorb." The stack doesn't just sell. It teaches.
+
+---
+
 ## The Opportunity
 
 The wellness market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
