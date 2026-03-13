@@ -174,7 +174,7 @@ The two verticals feed each other — and that flywheel is something a single-ve
 
 This isn't a celebrity endorsement. It's a **founder-as-proof** play.
 
-Vanness Wu has been training for 20+ years. He's seen the supplement industry from the inside — the bad formulations, the plastic "performance" fabrics, the brands that spend more on marketing than on what's in the bottle. At 42, he IS the product demo. Not a spokesperson reading a script — the guy who formulated it, wears it, and takes it every day.
+Vanness Wu has been training for 20+ years. He's seen the supplement industry from the inside — the bad formulations, the plastic "performance" fabrics, the brands that spend more on marketing than on what's in the bottle. At 47, he IS the product demo. Not a spokesperson reading a script — the guy who formulated it, wears it, and takes it every day.
 
 **Why this matters:**
 - **Credibility is built in.** He didn't license his name to a brand. He built the brand because he couldn't find what he wanted. That story is the marketing.

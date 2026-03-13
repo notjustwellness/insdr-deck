@@ -357,12 +357,12 @@ INSDR apparel carries no visible logos. Instead, the brand identifier is Signal 
 
 The most important unfilled piece. INSDR isn't a celebrity endorsement — it's a **founder-as-proof** play.
 
-**The core question the brand answers:** *"Why did Vanness Wu, at 42, build a supplement and clothing brand instead of just endorsing one?"*
+**The core question the brand answers:** *"Why did Vanness Wu, at 47, build a supplement and clothing brand instead of just endorsing one?"*
 
 **The answer:** He's been training for 20+ years. He's seen the industry from the inside — the bad formulations, the plastic "performance" fabrics, the brands that spend more on marketing than on what's in the bottle. He knows what's real and what's marketing. He built the thing he couldn't find.
 
 **How this shows up:**
-- **Vanness IS the product demo.** At 42, he is visible proof the stack works. Not a spokesperson reading a script — the guy who formulated it, wears it, and takes it every day.
+- **Vanness IS the product demo.** At 47, he is visible proof the stack works. Not a spokesperson reading a script — the guy who formulated it, wears it, and takes it every day.
 - **Daily documentation.** Training in the cotton. Taking the stack. Not polished ads — real routines. The content strategy is just Vanness living the brand.
 - **Multigenerational bridge.** Vanness putting his parents on the same stack he takes. "The Stack I Put My Mom On" isn't a marketing concept — it's a real story. In Asian markets where filial care is deeply cultural, this hits different.
 - **"INSDR" literally means he's the insider.** The entire brand should feel like Vanness putting you on to what he actually uses. Not selling to you — sharing with you.
