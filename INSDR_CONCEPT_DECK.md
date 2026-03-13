@@ -6,7 +6,7 @@
 
 ## What Is INSDR?
 
-INSDR is a wellness brand built on one idea: **what you put in your body and what you put on it are the same conversation.**
+INSDR is a human performance brand built on one idea: **what you put in your body and what you put on it are the same conversation.**
 
 Two product lines. One philosophy.
 
@@ -91,7 +91,7 @@ This isn't a trend play. It's a foundation — what your body actually needs and
 
 People who read ingredient labels AND clothing tags.
 
-They're 22–40. They train. They're into wellness but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.
+They're 22–40. They train. They care about performance and longevity but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.
 
 They don't need to be convinced. They just need someone to finally make the thing they've been looking for.
 
@@ -104,7 +104,7 @@ They don't need to be convinced. They just need someone to finally make the thin
 | Overdosed labels, under-absorbed formulas | Bioavailability-first — your body uses what we give it |
 | Synthetic "performance" fabrics full of plastic | 100% cotton. Period. |
 | Supplements OR apparel | Both — because it's the same philosophy |
-| Mass-market wellness branding | Streetwear energy, drop culture, insider access |
+| Generic "wellness" positioning — no one believes it anymore | Streetwear energy, drop culture, insider access |
 | Sells to everyone | Built for people who already know |
 
 ---
@@ -184,12 +184,12 @@ Supplements and apparel. Two product lines, one philosophy. Simple enough for an
 - **Apparel:** 100% cotton activewear. Streetwear drop model. Limited runs. Gym-to-street styling.
 
 ### Phase 2 — Educate: Daily Content
-Once the products earn trust, INSDR becomes a daily presence. Short-form wellness content designed for Instagram and TikTok — shareable, visual, and rooted in the same insider-knowledge tone.
+Once the products earn trust, INSDR becomes a daily presence. Short-form performance content designed for Instagram and TikTok — shareable, visual, and rooted in the same insider-knowledge tone.
 
 - Ingredient deep-dives, myth-busting, PFA awareness, "Now You Know" posts.
 
 ### Phase 3 — Gatekeep: Programs & Community
-Structured fitness and wellness programs — the kind people pay $30–$80 for everywhere else. Free for INSDR community members. You're an insider, or you're not.
+Structured fitness and performance programs — the kind people pay $30–$80 for everywhere else. Free for INSDR community members. You're an insider, or you're not.
 
 - Programs feature INSDR supplements as part of the routine. Natural integration, not ads.
 - Stay subscribed, stay training. The programs are the reward for being an insider.
@@ -198,7 +198,7 @@ Structured fitness and wellness programs — the kind people pay $30–$80 for e
 
 ## The Opportunity
 
-The wellness market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
+The human performance market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
 
 **INSDR lives in that gap.**
 
