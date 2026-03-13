@@ -1204,6 +1204,12 @@
             background: #AD4236;
             border-radius: 50%;
             flex-shrink: 0;
+            animation: pulse-signal 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-signal {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(173, 66, 54, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(173, 66, 54, 0); }
         }
 
         .signal-subtitle {
@@ -1620,9 +1626,138 @@
                 gap: 4px;
             }
         }
+
+        /* ============================================
+           FEATURE 1: SCROLL-TRIGGERED ANIMATIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           FEATURE 3: MARQUEE TICKER
+           ============================================ */
+        .marquee-track {
+            overflow: hidden;
+            background: #AD4236;
+            padding: 12px 0;
+            white-space: nowrap;
+        }
+        .marquee-inner {
+            display: inline-flex;
+            gap: 0;
+            animation: marquee 28s linear infinite;
+        }
+        .marquee-inner span {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #f5f2ed;
+            padding: 0 32px;
+        }
+        .marquee-inner .marquee-dot {
+            color: rgba(245, 242, 237, 0.4);
+            padding: 0;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ============================================
+           FEATURE 4: SCROLL PROGRESS BAR
+           ============================================ */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: #AD4236;
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* ============================================
+           FEATURE 5: PULL QUOTES
+           ============================================ */
+        .pull-quote {
+            background: #0f0e0c;
+            text-align: center;
+        }
+        .pull-quote blockquote {
+            font-size: clamp(28px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #f5f2ed;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .pull-quote blockquote::before {
+            display: block;
+            content: '';
+            width: 40px;
+            height: 3px;
+            background: #AD4236;
+            margin: 0 auto 32px;
+        }
+
+        /* ============================================
+           FEATURE 6: COMPARISON TABLE ROW HOVER
+           ============================================ */
+        .comparison tr:hover td {
+            background: rgba(173, 66, 54, 0.06);
+            transition: background 0.2s ease;
+        }
+
+        /* ============================================
+           FEATURE 7: FLOATING MINI PLAYER
+           ============================================ */
+        #mini-player {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        #mini-player.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .mini-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            background: #1a1816;
+            border: 1px solid #2a2825;
+        }
+        .mini-btn:hover { transform: scale(1.1); }
+        .mini-btn.active { border-color: #AD4236; }
+
     </style>
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
     <!-- 1. Hero -->
     <section class="hero">
@@ -1656,9 +1791,31 @@
         <div class="scroll-hint">Scroll</div>
     </section>
 
+    <!-- MARQUEE TICKER (between Hero and Concept) -->
+    <div class="marquee-track">
+        <div class="marquee-inner">
+            <span>Stop Sweating in Plastic</span>
+            <span class="marquee-dot">·</span>
+            <span>Your Body Can't Use What It Can't Absorb</span>
+            <span class="marquee-dot">·</span>
+            <span>If You Know, You Know</span>
+            <span class="marquee-dot">·</span>
+            <span>Invincible. Naturally Sourced. Dosed Right.</span>
+            <span class="marquee-dot">·</span>
+            <span>Stop Sweating in Plastic</span>
+            <span class="marquee-dot">·</span>
+            <span>Your Body Can't Use What It Can't Absorb</span>
+            <span class="marquee-dot">·</span>
+            <span>If You Know, You Know</span>
+            <span class="marquee-dot">·</span>
+            <span>Invincible. Naturally Sourced. Dosed Right.</span>
+            <span class="marquee-dot">·</span>
+        </div>
+    </div>
+
     <!-- 2. The Concept (What Is INSDR) -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Concept</div>
             <h2>What you put in your body and what you put on it are the same conversation.</h2>
             <p>INSDR is a wellness brand with two product lines and one philosophy.</p>
@@ -1677,7 +1834,7 @@
 
     <!-- 3. Why This Wins -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">Why This Wins</div>
             <h2>Two industries. Two dirty secrets.</h2>
             <div class="problem-card">
@@ -1692,9 +1849,16 @@
         </div>
     </section>
 
+    <!-- PULL QUOTE: After "Why This Wins", before "The Market" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>The rest is expensive urine.</blockquote>
+        </div>
+    </section>
+
     <!-- 4. The Market (NEW) -->
     <section class="market-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Market</div>
             <h2>Two massive markets. Both broken.</h2>
 
@@ -1702,23 +1866,23 @@
                 <div class="market-column">
                     <div class="market-column-label">Supplements</div>
                     <div class="market-stat">
-                        <div class="stat-number">$67B &rarr; $130B+</div>
+                        <div class="stat-number" data-target="67" data-format="dollar-arrow" data-suffix="130B+">$67B &rarr; $130B+</div>
                         <div class="stat-label">US market (2024) projected by 2033</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">8.5%</div>
+                        <div class="stat-number" data-target="8.5" data-format="percent">8.5%</div>
                         <div class="stat-label">Category CAGR</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">$28.2B</div>
+                        <div class="stat-number" data-target="28.2" data-format="dollar-b">$28.2B</div>
                         <div class="stat-label"><strong>Clean label segment</strong> &mdash; growing at <strong>12.2%</strong>, 50% faster than the category</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">$11.8B</div>
+                        <div class="stat-number" data-target="11.8" data-format="dollar-b">$11.8B</div>
                         <div class="stat-label"><strong>DTC / personalized</strong> &mdash; growing at <strong>16.2%</strong></div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">65%</div>
+                        <div class="stat-number" data-target="65" data-format="percent">65%</div>
                         <div class="stat-label">DTC share of supplement sales &mdash; and rising</div>
                     </div>
                 </div>
@@ -1726,19 +1890,19 @@
                 <div class="market-column">
                     <div class="market-column-label">Activewear</div>
                     <div class="market-stat">
-                        <div class="stat-number">$407B &rarr; $677B</div>
+                        <div class="stat-number" data-target="407" data-format="dollar-arrow" data-suffix="677B">$407B &rarr; $677B</div>
                         <div class="stat-label">Global market (2024) projected by 2030</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">9%</div>
+                        <div class="stat-number" data-target="9" data-format="percent">9%</div>
                         <div class="stat-label">Category CAGR</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">$89B</div>
+                        <div class="stat-number" data-target="89" data-format="dollar-b">$89B</div>
                         <div class="stat-label"><strong>Sustainable athleisure</strong> &mdash; growing at <strong>12.5%</strong>, outpacing broader market by 40%</div>
                     </div>
                     <div class="market-stat">
-                        <div class="stat-number">25%</div>
+                        <div class="stat-number" data-target="25" data-format="percent">25%</div>
                         <div class="stat-label"><strong>PFAS contamination:</strong> 1 in 4 activewear pieces tested positive for forever chemicals</div>
                     </div>
                 </div>
@@ -1752,7 +1916,7 @@
 
     <!-- 5. The Stack (Foundation Stack) -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="stack-intro">
                 <div class="section-label">The Stack</div>
                 <h2>Three deficiencies. Three complexes.</h2>
@@ -1852,9 +2016,16 @@
         </div>
     </section>
 
+    <!-- PULL QUOTE: After "The Foundation Stack", before "The Customer" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>Your body can't use what it can't absorb.</blockquote>
+        </div>
+    </section>
+
     <!-- 6. The Customer (Who Is This For) -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Customer</div>
             <div class="audience-headline">People who read ingredient labels AND clothing tags.</div>
             <p>They're 22–40. They train. They're into wellness but not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.</p>
@@ -1871,7 +2042,7 @@
 
     <!-- 7. The Difference (How We're Different) -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Difference</div>
             <h2>INSDR vs. Everyone Else</h2>
             <table class="comparison">
@@ -1909,7 +2080,7 @@
 
     <!-- 8. The Case for Both (Why Both) -->
     <section class="why-both-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Case for Both</div>
             <div class="why-both-section section-question">Supplements AND apparel — isn't that spreading too thin?</div>
             <h2>The combination is the moat.</h2>
@@ -1940,9 +2111,16 @@
         </div>
     </section>
 
+    <!-- PULL QUOTE: After "Why Both", before "The Business Model" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>The combination is un-copyable.</blockquote>
+        </div>
+    </section>
+
     <!-- 9. The Business Model (NEW) -->
     <section class="biz-model-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Business Model</div>
             <h2>Two engines. One flywheel.</h2>
 
@@ -2000,7 +2178,7 @@
             </div>
 
             <div class="biz-key-stat">
-                <div class="stat-number">$600–$1,400</div>
+                <div class="stat-number" data-target="600" data-format="dollar-range" data-suffix="–$1,400">$600–$1,400</div>
                 <p>Year-one revenue from a single customer who buys one tee and one supplement subscription.</p>
             </div>
         </div>
@@ -2008,7 +2186,7 @@
 
     <!-- 10. The Roadmap -->
     <section class="roadmap-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Roadmap</div>
             <h2>How INSDR grows.</h2>
             <p style="margin-bottom: 56px;">Three phases. Each one earns the right to the next.</p>
@@ -2092,9 +2270,16 @@
         </div>
     </section>
 
+    <!-- PULL QUOTE: After "The Roadmap", before "The Opportunity" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>Nobody owns the middle.</blockquote>
+        </div>
+    </section>
+
     <!-- 11. The Opportunity -->
     <section class="opportunity-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Opportunity</div>
             <h2>Nobody owns the middle.</h2>
             <p>The wellness market is massive and growing. But it's split — clinical supplement brands on one side, hype-driven lifestyle brands on the other.</p>
@@ -2106,7 +2291,7 @@
 
     <!-- 12. The Manifesto -->
     <section class="manifesto-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Manifesto</div>
             <div class="manifesto-text">
                 <div class="stanza">
@@ -2138,7 +2323,7 @@
 
     <!-- 13. The Model (Streetwear) -->
     <section>
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Model</div>
             <h2>The brand plays like streetwear.</h2>
             <p>This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills. INSDR operates like a streetwear label — with the credibility, the drops, and the culture to match.</p>
@@ -2153,7 +2338,7 @@
 
     <!-- 14. Program Teaser (Insider Programs) -->
     <section class="program-teaser">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">Insider Programs</div>
             <h2>This is what gated looks like.</h2>
             <p style="max-width: 660px; margin-bottom: 48px;">Real programs. Real education. Free for INSDR community members. Here's a sample of what's inside — our commitment to helping build a better, stronger you as we all age.</p>
@@ -2224,7 +2409,7 @@
 
     <!-- 15. The Aesthetic (Moodboard + Signal) -->
     <section class="moodboard-section">
-        <div class="inner">
+        <div class="inner reveal">
             <div class="section-label">The Aesthetic</div>
             <h2>Three brands. One DNA.</h2>
             <p>INSDR's apparel language draws from the intersection of these three references — not copying any, but capitalizing on where they converge.</p>
@@ -2382,7 +2567,16 @@
         </div>
     </section>
 
+    <!-- Floating Mini Player -->
+    <div id="mini-player">
+        <button class="mini-btn" id="miniBtn1" onclick="toggleMusic('btn1')" title="Gonna Fly Now">🔴</button>
+        <button class="mini-btn" id="miniBtn2" onclick="toggleMusic('btn2')" title="Eye of the Tiger">🔵</button>
+    </div>
+
     <script>
+        // ============================================
+        // YOUTUBE PLAYER (unchanged)
+        // ============================================
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -2412,6 +2606,7 @@
                             if (event.data === YT.PlayerState.ENDED) {
                                 resetBtn(key);
                                 activeBtn = null;
+                                syncMiniPlayer();
                             }
                         }
                     }
@@ -2431,6 +2626,11 @@
             document.getElementById('playBtn' + num).classList.add('playing');
         }
 
+        function syncMiniPlayer() {
+            document.getElementById('miniBtn1').classList.toggle('active', activeBtn === 'btn1');
+            document.getElementById('miniBtn2').classList.toggle('active', activeBtn === 'btn2');
+        }
+
         function toggleMusic(key) {
             if (!players[key]) return;
 
@@ -2447,7 +2647,161 @@
                 setPlaying(key);
                 activeBtn = key;
             }
+            syncMiniPlayer();
         }
+
+        // ============================================
+        // FEATURE 4: SCROLL PROGRESS BAR
+        // ============================================
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = progress + '%';
+        });
+
+        // ============================================
+        // FEATURE 1: SCROLL-TRIGGERED REVEAL ANIMATIONS
+        // ============================================
+        (function() {
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                revealObserver.observe(el);
+            });
+        })();
+
+        // ============================================
+        // FEATURE 2: COUNTING STATS
+        // ============================================
+        (function() {
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function animateCount(el) {
+                if (el.dataset.counted) return;
+                el.dataset.counted = 'true';
+
+                var target = parseFloat(el.dataset.target);
+                var format = el.dataset.format;
+                var suffix = el.dataset.suffix || '';
+                var duration = 1500;
+                var startTime = null;
+
+                function formatValue(val, fmt) {
+                    if (fmt === 'percent') {
+                        var decimals = (target % 1 !== 0) ? 1 : 0;
+                        return val.toFixed(decimals) + '%';
+                    } else if (fmt === 'dollar-b') {
+                        var dec = (target % 1 !== 0) ? 1 : 0;
+                        return '$' + val.toFixed(dec) + 'B';
+                    } else if (fmt === 'dollar-arrow') {
+                        return '$' + Math.round(val) + 'B';
+                    } else if (fmt === 'dollar-range') {
+                        return '$' + Math.round(val);
+                    }
+                    return val;
+                }
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var elapsed = timestamp - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+                    var eased = easeOutQuart(progress);
+                    var current = eased * target;
+
+                    if (progress < 1) {
+                        el.innerHTML = formatValue(current, format);
+                        requestAnimationFrame(step);
+                    } else {
+                        // Show final display value (original HTML with arrows/ranges)
+                        if (format === 'dollar-arrow') {
+                            el.innerHTML = '$' + Math.round(target) + 'B &rarr; $' + suffix;
+                        } else if (format === 'dollar-range') {
+                            el.innerHTML = '$600&ndash;$1,400';
+                        } else {
+                            el.innerHTML = formatValue(target, format);
+                        }
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            var statObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var statsInSection = entry.target.querySelectorAll('.stat-number[data-target]');
+                        statsInSection.forEach(function(statEl) {
+                            animateCount(statEl);
+                        });
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe market section and biz-key-stat
+            var marketSection = document.querySelector('.market-section');
+            var bizSection = document.querySelector('.biz-model-section');
+            if (marketSection) statObserver.observe(marketSection);
+            if (bizSection) statObserver.observe(bizSection);
+        })();
+
+        // ============================================
+        // FEATURE 6: FLYWHEEL CARD STAGGER
+        // ============================================
+        (function() {
+            var flywheelEl = document.querySelector('.flywheel');
+            if (!flywheelEl) return;
+
+            var flywheelObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var cards = entry.target.querySelectorAll('.flywheel-card');
+                        cards.forEach(function(card, index) {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(24px)';
+                            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                            setTimeout(function() {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, index * 120);
+                        });
+                        flywheelObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            flywheelObserver.observe(flywheelEl);
+        })();
+
+        // ============================================
+        // FEATURE 7: FLOATING MINI PLAYER VISIBILITY
+        // ============================================
+        (function() {
+            var heroSection = document.querySelector('.hero');
+            var miniPlayer = document.getElementById('mini-player');
+            if (!heroSection || !miniPlayer) return;
+
+            var heroObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        miniPlayer.classList.remove('visible');
+                    } else {
+                        miniPlayer.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0 });
+
+            heroObserver.observe(heroSection);
+        })();
     </script>
 </body>
 </html>
