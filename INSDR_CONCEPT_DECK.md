@@ -13,6 +13,8 @@ Two product lines. One philosophy.
 **Supplements** — formulated for what your body actually absorbs, not what looks good on a label.
 **Apparel** — 100% cotton activewear. No polyester. No plastic. No compromise.
 
+Launching in Taiwan. Expanding across Southeast Asia. Built for the Asia-Pacific market.
+
 ---
 
 ## Why This Wins
@@ -29,32 +31,32 @@ INSDR says no to both.
 
 ## The Market
 
-Two massive markets. Both growing fast. Both broken in the same way — the mainstream players prioritize marketing over substance.
+Two massive markets. Both growing fast across Asia-Pacific. Both broken in the same way — the mainstream players prioritize marketing over substance.
 
-### Supplements
-
-| Metric | Value |
-|---|---|
-| **US market** | $67B (2024) → $130B+ by 2033 |
-| **CAGR** | 8.5% |
-| **Clean label segment** | $28.2B, growing at 12.2% — 50% faster than the category |
-| **DTC / personalized** | $11.8B, growing at 16.2% — the fastest-growing channel |
-| **DTC share of supplement sales** | 65% and rising |
-
-### Activewear
+### Supplements — Asia-Pacific
 
 | Metric | Value |
 |---|---|
-| **Global market** | $407B (2024) → $677B by 2030 |
-| **CAGR** | 9% |
-| **Sustainable athleisure** | $89B, growing at 12.5% — outpacing the broader market by 40% |
-| **PFAS contamination** | 25% of activewear tested positive for forever chemicals |
+| **Asia-Pacific market** | $78B (2025) → $149B by 2033 — the largest regional market globally |
+| **CAGR** | 8.4% |
+| **Taiwan** | $4.8B (2024) → $8.9B by 2033, 68% of adults take supplements (vs. 52% global average) |
+| **Southeast Asia** | $10B (2025) → $17.3B by 2035 — Indonesia, Thailand, Vietnam leading growth |
+| **Clean label (APAC)** | $50.1B, growing at 14.6% CAGR — fastest clean label growth globally |
 
-### Where INSDR Fits
+### Activewear — Asia-Pacific
 
-The fastest-growing segments in both markets — clean label, DTC, sustainable materials — are exactly where INSDR lives. We're not entering crowded mainstream categories. We're entering the high-growth edges where the market is moving and incumbents are slowest to adapt.
+| Metric | Value |
+|---|---|
+| **Southeast Asia** | $16.6B (2024) → $37.6B by 2033 |
+| **CAGR** | 8.7% |
+| **Taiwan athleisure** | Growing at 10.5% CAGR — outpacing overall sportswear by nearly 3× |
+| **PFAS contamination** | 25% of activewear tested positive for forever chemicals. No major brand in APAC has addressed this. |
 
-The PFAS awareness wave is just beginning. When it hits activewear the way it hit cookware, the demand for proven-clean alternatives will spike. INSDR is already there.
+### Why Taiwan First
+
+Taiwan is the perfect launch pad. 23.5M people with high purchasing power. 68% supplement adoption — the most supplement-aware market in Asia. A mature e-commerce infrastructure with Shopee, LINE commerce, and 13,000+ convenience stores for last-mile pickup. And a founder who is a household name here.
+
+The clean label and PFAS awareness waves are just beginning in Asia. INSDR is already positioned on the right side of both.
 
 ---
 
@@ -75,14 +77,14 @@ CoQ10 is what your cells use to make energy — and your levels drop every year 
 ### D3+K2 Complex
 *Fat-soluble vitamin that comes with its own fat.*
 
-Up to 42% of US adults are vitamin D deficient. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone density and vitamin D utilization. Built-in **lipid delivery** means it absorbs without food. No meal timing. No guesswork.
+Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone density and vitamin D utilization. Built-in **lipid delivery** means it absorbs without food. No meal timing. No guesswork.
 
 ### Why This Stack
 
 This isn't a trend play. It's a foundation — what your body actually needs and isn't getting.
 
 - **Longevity + vitality.** Every product supports long-term health AND daily performance. Live longer and feel it.
-- **Multigenerational.** A 28-year-old takes these for recovery and energy. Their parents need the same stack for bone density, heart health, and cognitive function. One product line, two generations, zero "senior" marketing.
+- **Multigenerational.** A 28-year-old takes these for recovery and energy. Their parents need the same stack for bone density, heart health, and cognitive function. Taiwan becomes a super-aged society this year — 20%+ over 65. One product line, two generations, zero "senior" marketing.
 - **Every product educates.** The science behind each formula is shareable content — ingredient deep-dives, myth-busting, "your body can't use what it can't absorb." The stack doesn't just sell. It teaches.
 
 ---
@@ -93,7 +95,7 @@ People who read ingredient labels AND clothing tags.
 
 They're 22–40. They train. They care about performance and longevity but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.
 
-They don't need to be convinced. They just need someone to finally make the thing they've been looking for.
+This customer is concentrated in Taipei, Bangkok, Singapore, Kuala Lumpur, Jakarta, Manila — urban, connected, fitness-conscious, and already buying supplements. They don't need to be convinced. They just need someone to finally make the thing they've been looking for.
 
 ---
 
@@ -143,11 +145,11 @@ The apparel at launch isn't a separate business — it's a brand-building tool. 
 
 ### Supplements: the recurring revenue engine.
 
-DTC subscription. Monthly delivery. High margins, predictable revenue.
+DTC subscription via Shopee, LINE commerce, and direct e-commerce — with 7-Eleven and convenience store pickup built in from day one. Taiwan's 13,000+ convenience stores become our last-mile network.
 
 | Metric | Target |
 |---|---|
-| **Foundation Stack (3 products)** | $39–$49/mo per product, $99–$119/mo for the full stack |
+| **Foundation Stack (3 products)** | Pricing calibrated to Taiwan premium supplement market — competitive with imported brands, justified by formulation quality |
 | **Gross margin** | 70–80% (standard for premium DTC supplements) |
 | **Subscription retention** | 67%+ at 12 months (industry benchmark for quality brands) |
 | **LTV vs. one-time** | Subscribers generate 200–300% higher lifetime value |
@@ -162,7 +164,7 @@ Streetwear drop model. Limited runs. No standing inventory.
 | Metric | Target |
 |---|---|
 | **Launch capsule** | 3–5 pieces (The Tee, The Crew, The Short, The Hood) |
-| **Price range** | $45–$120 (premium cotton, not luxury markup) |
+| **Price range** | Calibrated to Taiwan/SEA premium streetwear market |
 | **Drop cadence** | Quarterly capsules, limited quantities |
 | **Inventory risk** | Near-zero — produce to demand, scarcity by design |
 | **Customer acquisition cost** | Every garment in the gym is a zero-cost billboard |
@@ -171,40 +173,46 @@ Streetwear drop model. Limited runs. No standing inventory.
 
 Apparel creates visibility → visibility drives supplement trials → trials convert to subscriptions → subscriptions fund the next apparel drop → repeat.
 
-A customer who buys one tee and one supplement subscription generates ~$600–$1,400 in year-one revenue. The tee brought them in. The subscription keeps them paying. The next drop gives them a reason to come back and share.
+### The distribution advantage.
+
+Taiwan has the highest convenience store density in the world — one for every 2,000 people. Shopee dominates mobile commerce at 49% market share. LINE has 21M users (near-universal adoption). Social commerce is growing at 22.7% CAGR. INSDR doesn't need to build distribution infrastructure — it needs to plug into what already exists.
 
 ---
 
 ## Growth Roadmap
 
-### Phase 1 — Launch: Two Pillars
-Supplements and apparel. Two product lines, one philosophy. Simple enough for anyone to understand, compelling enough to buy into immediately.
+### Phase 1 — Taiwan Launch
+Supplements and apparel. Two product lines, one philosophy. Taiwan is the beachhead — high supplement adoption, mature e-commerce, and a founder who is a household name.
 
-- **The Foundation Stack:** Three synergistic complexes. Deficiency-first. Subscription model.
+- **The Foundation Stack:** Three synergistic complexes. Deficiency-first. Subscription model via Shopee, LINE commerce, and convenience store logistics.
 - **Apparel:** 100% cotton activewear. Streetwear drop model. Limited runs. Gym-to-street styling.
+- **Content:** Vanness-led launch content across Instagram and LINE. Build the insider community from day one.
 
-### Phase 2 — Educate: Daily Content
-Once the products earn trust, INSDR becomes a daily presence. Short-form performance content designed for Instagram and TikTok — shareable, visual, and rooted in the same insider-knowledge tone.
+### Phase 2 — Southeast Asia Expansion
+Thailand and Singapore first — highest purchasing power, English-accessible, strong fitness culture. Then Indonesia, Malaysia, Philippines.
 
-- Ingredient deep-dives, myth-busting, PFA awareness, "Now You Know" posts.
+- Adapt distribution for each market (Shopee is already dominant across SEA).
+- Localize content but keep the brand voice consistent.
+- Use Taiwan proof of concept to de-risk each market entry.
 
-### Phase 3 — Gatekeep: Programs & Community
-Structured fitness and performance programs — the kind people pay $30–$80 for everywhere else. Free for INSDR community members. You're an insider, or you're not.
+### Phase 3 — Greater China
+The prize — but treat it separately. Enter with revenue, brand equity, and a proven playbook behind you.
 
-- Programs feature INSDR supplements as part of the routine. Natural integration, not ads.
-- Stay subscribed, stay training. The programs are the reward for being an insider.
+- Separate regulatory pathway, local platform strategy (WeChat, Tmall, Douyin), likely a local JV partner.
+- Vanness's 63M+ Weibo following is the distribution channel waiting to be activated.
+- Don't rush this. Get Taiwan and SEA right first.
 
 ---
 
 ## The Opportunity
 
-The human performance market is massive and growing. But it's split — you've got clinical supplement brands on one side and hype-driven lifestyle brands on the other. Nobody owns the middle.
+The human performance market in Asia-Pacific is $78B and growing at 8.4%. Taiwan alone is $4.8B with the highest supplement adoption rate in the region. But the market is split — clinical supplement brands on one side, hype-driven lifestyle brands on the other. Nobody owns the middle.
 
 **INSDR lives in that gap.**
 
 Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.
 
-The customer already exists. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.
+The customer already exists across Taipei, Bangkok, Singapore, Jakarta, and Manila. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.
 
 **We're that brand.**
 
