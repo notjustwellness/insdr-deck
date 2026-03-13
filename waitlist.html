@@ -285,76 +285,70 @@
     </div>
 
     <script>
-        // ── Waitlist form handler ──
-        // Currently stores signups in localStorage for testing.
-        // To go live: replace with Formspree, Tally, or Google Sheets integration.
-        // See comments below for setup instructions.
+        // ── INSDR Waitlist ──
+        // Sends signups to Google Sheets via Apps Script.
+        // Setup: see WAITLIST_SETUP.md
+        // Replace YOUR_GOOGLE_SCRIPT_URL below with your deployed Apps Script URL.
+
+        var GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL';
 
         var form = document.getElementById('waitlistForm');
         var successMsg = document.getElementById('successMsg');
         var counterEl = document.getElementById('counter');
         var countEl = document.getElementById('count');
+        var submitBtn = form.querySelector('button');
 
-        // Load existing signups
+        // Local duplicate check
         var signups = JSON.parse(localStorage.getItem('insdr_waitlist') || '[]');
         updateCounter();
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            var email = form.querySelector('input[type="email"]').value;
+            var email = form.querySelector('input[type="email"]').value.trim().toLowerCase();
 
             if (!email) return;
 
-            // Check for duplicate
+            // Duplicate check
             if (signups.indexOf(email) !== -1) {
                 successMsg.querySelector('h3').textContent = "You're already in.";
                 successMsg.querySelector('p').textContent = "We've got your email. Stay tuned.";
-                form.style.display = 'none';
-                document.querySelector('.form-note').style.display = 'none';
-                successMsg.style.display = 'block';
+                showSuccess();
                 return;
             }
+
+            // Disable button while submitting
+            submitBtn.textContent = '...';
+            submitBtn.disabled = true;
 
             // Store locally
             signups.push(email);
             localStorage.setItem('insdr_waitlist', JSON.stringify(signups));
 
-            // ── UNCOMMENT ONE OF THESE TO GO LIVE ──
+            // Send to Google Sheets
+            if (GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_SCRIPT_URL') {
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        timestamp: new Date().toISOString(),
+                        source: document.referrer || 'direct'
+                    })
+                }).catch(function() {
+                    // Silent fail — email is still stored locally
+                });
+            }
 
-            // OPTION 1: Formspree (free, 50/month)
-            // 1. Go to formspree.io, create free account
-            // 2. Create a new form, copy the form ID
-            // 3. Uncomment the code below and replace YOUR_FORM_ID
+            showSuccess();
+            updateCounter();
+        });
 
-            /*
-            fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email, source: 'waitlist', timestamp: new Date().toISOString() })
-            });
-            */
-
-            // OPTION 2: Google Sheets via Google Apps Script (free, unlimited)
-            // 1. Create a Google Sheet
-            // 2. Extensions > Apps Script > paste the web app code
-            // 3. Deploy as web app, copy URL
-            // 4. Uncomment below and replace YOUR_SCRIPT_URL
-
-            /*
-            fetch('YOUR_SCRIPT_URL', {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email, timestamp: new Date().toISOString() })
-            });
-            */
-
-            // Show success
+        function showSuccess() {
             form.style.display = 'none';
             document.querySelector('.form-note').style.display = 'none';
             successMsg.style.display = 'block';
-            updateCounter();
-        });
+        }
 
         function updateCounter() {
             if (signups.length > 0) {
