@@ -37,9 +37,9 @@ Two massive markets. Both growing fast across Asia-Pacific. Both broken in the s
 
 | Metric | Value |
 |---|---|
-| **Asia-Pacific market** | $78B (2025) → $149B by 2033 — the largest regional market globally |
+| **Asia-Pacific market (nutraceuticals)** | $78B (2025) → $149B by 2033 — the largest regional market globally |
 | **CAGR** | 8.4% |
-| **Taiwan** | $4.8B (2024) → $8.9B by 2033, 68% of adults take supplements (vs. 52% global average) |
+| **Taiwan** | $4.8B (2024) → $8.9B by 2033, ~65% of adults take supplements — the highest adoption rate in Asia |
 | **Southeast Asia** | $10B (2025) → $17.3B by 2035 — Indonesia, Thailand, Vietnam leading growth |
 | **Clean label (APAC)** | $50.1B, growing at 14.6% CAGR — fastest clean label growth globally |
 
@@ -47,14 +47,14 @@ Two massive markets. Both growing fast across Asia-Pacific. Both broken in the s
 
 | Metric | Value |
 |---|---|
-| **Southeast Asia** | $16.6B (2024) → $37.6B by 2033 |
+| **Southeast Asia (athleisure)** | $16.6B (2024) → $37.6B by 2033 |
 | **CAGR** | 8.7% |
 | **Taiwan athleisure** | Growing at 10.5% CAGR — outpacing overall sportswear by nearly 3× |
 | **PFAS contamination** | 25% of activewear tested positive for forever chemicals. No major brand in APAC has addressed this. |
 
 ### Why Taiwan First
 
-Taiwan is the perfect launch pad. 23.5M people with high purchasing power. 68% supplement adoption — the most supplement-aware market in Asia. A mature e-commerce infrastructure with Shopee, LINE commerce, and 13,000+ convenience stores for last-mile pickup. And a founder who is a household name here.
+Taiwan is the perfect launch pad. 23.3M people with high purchasing power. ~65% supplement adoption — the most supplement-aware market in Asia. A mature e-commerce infrastructure with Shopee, LINE commerce, and 13,000+ convenience stores for last-mile pickup. And a founder who is a household name here.
 
 The clean label and PFAS awareness waves are just beginning in Asia. INSDR is already positioned on the right side of both.
 
@@ -178,7 +178,7 @@ Vanness Wu has been training for 20+ years. He's seen the supplement industry fr
 
 **Why this matters:**
 - **Credibility is built in.** He didn't license his name to a brand. He built the brand because he couldn't find what he wanted. That story is the marketing.
-- **Asia-native founder.** F4/Meteor Garden made him a household name across Taiwan, Southeast Asia, and Greater China. No Western supplement brand can manufacture this kind of regional cultural credibility. 63M+ Weibo followers. The distribution channel already exists.
+- **Asia-native founder.** F4/Meteor Garden made him a household name across Taiwan, Southeast Asia, and Greater China. No Western supplement brand can manufacture this kind of regional cultural credibility. Massive Weibo following. The distribution channel already exists.
 - **Daily documentation over polished ads.** Vanness training in the cotton. Taking the stack. Putting his parents on the same supplements he takes. Real routines, not campaigns. The content strategy is just the founder living the brand.
 - **"INSDR" literally means he's the insider.** The entire brand feels like Vanness putting you on to what he actually uses. Not selling to you — sharing with you.
 
@@ -230,7 +230,7 @@ Apparel creates visibility → visibility drives supplement trials → trials co
 
 ### The distribution advantage.
 
-Taiwan has the highest convenience store density in the world — one for every 2,000 people. Shopee dominates mobile commerce at 49% market share. LINE has 21M users (near-universal adoption). Social commerce is growing at 22.7% CAGR. INSDR doesn't need to build distribution infrastructure — it needs to plug into what already exists.
+Taiwan has one of the highest convenience store densities in the world — one for every ~1,700 people. Shopee leads mobile commerce. LINE has 22M users (near-universal adoption). Social commerce is growing at 22.7% CAGR globally (APAC even faster). INSDR doesn't need to build distribution infrastructure — it needs to plug into what already exists.
 
 ---
 
@@ -266,7 +266,7 @@ Thailand and Singapore first — highest purchasing power, English-accessible, s
 The prize — but treat it separately. Enter with revenue, brand equity, and a proven playbook behind you.
 
 - Separate regulatory pathway, local platform strategy (WeChat, Tmall, Douyin), likely a local JV partner.
-- Vanness's 63M+ Weibo following is the distribution channel waiting to be activated.
+- Vanness's massive Weibo following is the distribution channel waiting to be activated.
 - Scaled community programs — app-based, tiered membership, full program library.
 - Don't rush this. Get Taiwan and SEA right first.
 
@@ -288,7 +288,7 @@ Tone and positioning can be copied. These can't.
 
 ## The Opportunity
 
-The human performance market in Asia-Pacific is $78B and growing at 8.4%. Taiwan alone is $4.8B with the highest supplement adoption rate in the region. But the market is split — clinical supplement brands on one side, hype-driven lifestyle brands on the other. Nobody owns the middle.
+The human performance and nutraceuticals market in Asia-Pacific is $78B and growing at 8.4%. Taiwan alone is $4.8B with the highest supplement adoption rate in the region. But the market is split — clinical supplement brands on one side, hype-driven lifestyle brands on the other. Nobody owns the middle.
 
 **INSDR lives in that gap.**
 

@@ -73,7 +73,7 @@ The launch strategy is deficiency-based, not trend-based. These are what most pe
 
 Sleep, stress, recovery, heart health, cognitive function, bone density. The most common mineral deficiency. Most people take magnesium oxide — which has as low as 4% bioavailability (Firoz & Graber, 2001). INSDR uses a dual-form approach:
 
-- **Glycinate** — body: sleep, muscle relaxation, stress reduction. Well-absorbed, significantly lower GI side effects than other forms (confirmed in meta-analyses).
+- **Glycinate** — body: sleep, muscle relaxation, stress reduction. Well-absorbed, significantly lower GI side effects than other forms (confirmed in clinical studies).
 - **Threonate (Magtein)** — brain: the most clinically studied magnesium form for cognitive outcomes. Patented (AIDP, developed from MIT research), with multiple published RCTs showing improvements in memory, cognitive performance, and sleep quality. Effectively crosses the blood-brain barrier and has been shown to increase brain magnesium levels ~15%.
 - **B6 (P5P)** — cofactor that enhances magnesium cellular uptake. A 2018 RCT (Pouteau et al.) showed magnesium + B6 was superior to magnesium alone for reducing severe stress. The relationship is synergistic — they facilitate each other's function.
 
@@ -83,7 +83,7 @@ Sleep, stress, recovery, heart health, cognitive function, bone density. The mos
 
 Cellular energy, cardiovascular health, antioxidant protection, neuroprotection. CoQ10 is what your mitochondria use to produce ATP — it's not a stimulant, it's the raw material for cellular energy. Natural levels peak around age 25 and decline measurably by 30. The heart has the highest CoQ10 concentration of any organ (114 μg/g tissue), reflecting its extraordinary metabolic demand.
 
-- **CoQ10 as Ubiquinol (Kaneka)** — the reduced, active form. Kaneka is the gold standard with 85+ clinical studies. The body cycles between ubiquinone and ubiquinol (a redox cycle), but the enzymes driving this conversion decline with age — by 40, conversion capacity may drop by roughly half. Formulation quality is critical: a well-formulated ubiquinol delivers meaningfully better absorption, particularly in older adults and cardiac patients. Statin users are especially relevant — statins deplete plasma CoQ10 by 25–50% as a biochemical side effect (they block the same mevalonate pathway that produces both cholesterol and CoQ10).
+- **CoQ10 as Ubiquinol (Kaneka)** — the reduced, active form. Kaneka is the gold standard with 85+ clinical studies. The body cycles between ubiquinone and ubiquinol (a redox cycle), but the enzymes driving this conversion decline with age — by 40, conversion capacity begins to decline meaningfully. Formulation quality is critical: a well-formulated ubiquinol delivers meaningfully better absorption, particularly in older adults and cardiac patients. Statin users are especially relevant — statins deplete plasma CoQ10 by 25–50% as a biochemical side effect (they block the same mevalonate pathway that produces both cholesterol and CoQ10).
 - **PQQ** — triggers mitochondrial biogenesis via the SIRT1/PGC-1alpha signaling pathway (the master regulator of new mitochondria creation). Also stimulates nerve growth factor (NGF) synthesis and has documented neuroprotective effects. The CoQ10 + PQQ pairing: more mitochondria (PQQ) × better-powered mitochondria (CoQ10) = compounding cellular energy output.
 
 *The vitality angle:* This is the product customers feel. Sustained energy, better exercise performance, faster recovery. Longevity and vitality in the same formula.
@@ -97,8 +97,8 @@ Cellular energy, cardiovascular health, antioxidant protection, neuroprotection.
 Up to 42% of US adults have vitamin D levels below 20 ng/mL (NHANES data). Immune function, bone density, mood, cardiovascular health. K2 completes the picture by activating the proteins (osteocalcin and Matrix GLA Protein) that promote bone mineralization and inhibit arterial calcification.
 
 - **D3** — the foundation. Fat-soluble, so absorption is enhanced ~30% when taken with dietary fat. INSDR solves this by building the fat carrier directly into the formula.
-- **K2 as MK-7** — the long-acting form with a half-life of approximately 68–72 hours, vs MK-4's 4–8 hours. Once-daily dosing at 100–200 mcg is effective (MK-4 requires much higher doses multiple times daily). Higher K2 intake correlates with a 57% reduction in cardiovascular mortality risk (Rotterdam Study).
-- **Boron** — supports bone mineral density (confirmed in postmenopausal women studies), supports vitamin D utilization (inhibits 24-hydroxylase, the enzyme that breaks down active vitamin D metabolites), and has emerging research on healthy hormone levels. Small dose, significant impact, and almost no one else includes it.
+- **K2 as MK-7** — the long-acting form with a half-life of approximately 68–72 hours, vs MK-4's ~1–2 hours. Once-daily dosing at 100–200 mcg is effective (MK-4 requires much higher doses multiple times daily). Higher K2 intake correlates with a 57% reduction in coronary heart disease mortality risk (Rotterdam Study, Geleijnse et al. 2004).
+- **Boron** — supports bone mineral metabolism (observed in postmenopausal women studies), supports vitamin D utilization (evidence suggests it may inhibit 24-hydroxylase, the enzyme that breaks down active vitamin D metabolites), and has emerging research on healthy hormone levels. Small dose, significant impact, and almost no one else includes it.
 - **Built-in lipid delivery** — MCT oil base or liposomal encapsulation. Clinical evidence shows liposomal D3 achieves superior plasma levels even after a 12-hour fast. This removes the meal-timing requirement entirely — the absorption technology is built into the product.
 
 **Why these three:**
@@ -262,7 +262,7 @@ INSDR apparel carries no visible logos. Instead, the brand identifier is Signal 
 
 ### Deep Dive: The Absorption Company (absorbmore.com)
 
-**Founded:** 2023 (launched Jan 2024) by Ian Somerhalder, Nikki Reed, Zeke Bronfman, Nate Medow
+**Founded:** 2023 (launched Feb 2024) by Ian Somerhalder, Nikki Reed, Zeke Bronfman, Nate Medow
 **Traction:** $800K Q1 revenue, 228K Instagram followers at launch, Erewhon placement
 **Pricing:** $24–$49 per product, sticks priced at premium over bags
 
@@ -325,7 +325,7 @@ INSDR apparel carries no visible logos. Instead, the brand identifier is Signal 
 
 3. **Science-first marketing** — Site leads with doctors and clinical studies, not influencer testimonials. 12-week clinical study: 95% of participants reported more energy. Out-sciences AG1 instead of out-marketing them.
 
-4. **Equity-for-reach partnerships** — Sabalenka became a shareholder and ambassador. Her US Open Instagram push hit 233M views at $0 marketing spend. They traded equity for distribution.
+4. **Equity-for-reach partnerships** — Sabalenka became a shareholder and ambassador. Her US Open Instagram push hit 233M+ views in earned media. They traded equity for distribution.
 
 5. **DTC discipline** — Stayed direct-to-consumer to control experience, build trust, protect margins. Retail expansion only after proving the model.
 
@@ -501,7 +501,7 @@ Once both verticals are running in Taiwan, INSDR becomes a daily presence throug
 **Greater China entry:**
 - Separate regulatory pathway, local platform strategy (WeChat, Tmall, Douyin)
 - Likely a local JV partner
-- Vanness's 63M+ Weibo following is the distribution channel waiting to be activated
+- Vanness's massive Weibo following is the distribution channel waiting to be activated
 - Don't rush this. Get Taiwan and SEA right first.
 
 **Why the community flywheel works:**
