@@ -69,7 +69,7 @@ Three products. Three deficiencies most people don't know they have. Every produ
 ### Magnesium Complex — The Hero SKU
 *Body + brain + the key that unlocks both.*
 
-Most people take magnesium oxide — as low as **4% bioavailability**. INSDR pairs **glycinate** (body: sleep, stress, recovery) with **threonate/Magtein** (the only form shown to cross the blood-brain barrier and raise brain magnesium levels) and adds **B6** to enhance cellular uptake. Two forms doing different jobs, plus the cofactor that makes both work harder.
+Most people take magnesium oxide — as low as **4% bioavailability**. INSDR pairs **Albion TRAACS® Magnesium Bisglycinate Chelate** (body: sleep, stress, recovery — a verified, fully-reacted chelate that absorbs 3–6x better than oxide, without GI distress) with **Magtein®** (brain: the only patented magnesium form shown to cross the blood-brain barrier and raise brain magnesium levels) and **B6 as P5P** to enhance cellular uptake. Two delivery mechanisms solving two different problems, plus the cofactor that makes both work harder.
 
 **Why this leads:** Sleep is the most universally *felt* benefit — customers notice it in 3–5 days. That fast feedback loop converts trials to subscriptions faster than any other product. "Your magnesium has 4% bioavailability" is a one-line wrecking ball against every competitor on the shelf. And it's the cheapest to formulate with the simplest story — the perfect gateway to the full stack.
 
@@ -96,12 +96,12 @@ This isn't a marketing gimmick. It's a business model built on the product actua
 ### Mito Complex — CoQ10 + PQQ
 *Powers your existing mitochondria. Builds new ones.*
 
-CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **ubiquinol (Kaneka)**, the active form that delivers **~2x higher plasma CoQ10 levels** vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Paired with **PQQ**, which triggers the creation of entirely new mitochondria. More engines × better fuel = compounding cellular energy. This is the product customers feel.
+CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **Kaneka QH® (ubiquinol)**, the active form that delivers **~2x higher plasma CoQ10 levels** vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Delivered via **VESIsorb® colloidal technology**, a self-emulsifying nano-delivery system that achieves **622% higher plasma absorption** vs. a standard oil-based softgel (clinical study, PMID 19284181). Paired with **BioPQQ®** (Mitsubishi Gas Chemical) — the only PQQ ingredient with US NDI (New Dietary Ingredient) status and the only form with published human clinical trials demonstrating cognitive function and memory improvements. BioPQQ triggers the creation of entirely new mitochondria. More engines (BioPQQ) × better-powered, better-absorbed fuel (Kaneka QH® + VESIsorb®) = compounding cellular energy. This is the product customers feel.
 
 ### D3+K2 Complex
 *Fat-soluble vitamin that comes with its own fat.*
 
-Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone mineral metabolism and vitamin D utilization. Built-in **lipid delivery** delivers **4x higher absorption** vs. standard formulations, even fasted. No meal timing. No guesswork.
+Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs **D3** with **MenaQ7® K2 (MK-7)** (Gnosis by Lesaffre) — the most clinically studied K2 ingredient available, with 22 published studies including a 3-year bone health RCT. Critically: MK-7 exists as active (all-trans) and inert (cis) isomers — generic MK-7 can be as little as 15% biologically active. MenaQ7® is verified at 99.8% all-trans purity. Plus **FruiteX-B®** (FutureCeuticals) — the nature-identical calcium fructoborate form of boron, with clinical data on bone mineral metabolism and inflammation. Built-in **liposomal lipid delivery** for D3 achieves **4x higher absorption** vs. standard formulations, even fasted. No meal timing. No guesswork — and no inert isomers.
 
 ### Why This Stack
 
@@ -278,7 +278,7 @@ Tone and positioning can be copied. These can't.
 
 | Moat | Why It's Structural |
 |---|---|
-| **Branded ingredient exclusivity** | Lock regional rights for Magtein (magnesium threonate) and Kaneka Ubiquinol in Taiwan/SEA. If INSDR holds the rights, competitors can't replicate the formulations. |
+| **Branded ingredient exclusivity** | Lock regional rights for Magtein® (magnesium threonate), Kaneka QH® (ubiquinol), BioPQQ® (Mitsubishi Gas Chemical), and MenaQ7® (Gnosis by Lesaffre) in Taiwan/SEA. If INSDR holds the rights, competitors can't replicate the formulations. |
 | **Apparel as acquisition channel** | No supplement brand has physical presence in gyms. Every INSDR garment is a zero-cost billboard that starts conversations. Can't be bought — has to be built. |
 | **Community programs as switching cost** | Gated fitness programs from Phase 1b. Once someone is mid-program, they don't churn. Free for subscribers — makes subscriptions stickier than product alone. |
 | **Founder-market fit** | Vanness Wu is not a paid endorser. He's the founder, the product demo, and a cultural icon in the exact markets INSDR is launching. Irreplicable. |
