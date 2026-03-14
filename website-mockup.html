@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSDR — Shop</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --signal: #AD4236;
+      --signal-dark: #8a3329;
+      --bg: #0a0a0a;
+      --surface-1: #141414;
+      --surface-2: #1c1917;
+      --border: #292524;
+      --border-light: #3a3530;
+      --text-primary: #f5f2ed;
+      --text-secondary: #a8a29e;
+      --text-muted: #57534e;
+      --cotton: url('https://plus.unsplash.com/premium_photo-1675855619492-285d269baf32?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── STATE MANAGEMENT ─── */
+    .guest-state .guest-only   { display: block; }
+    .guest-state .sub-only     { display: none; }
+    .subscriber-state .guest-only { display: none; }
+    .subscriber-state .sub-only   { display: block; }
+
+    .guest-state .guest-flex   { display: flex; }
+    .subscriber-state .guest-flex { display: none; }
+    .subscriber-state .sub-flex   { display: flex; }
+    .guest-state .sub-flex     { display: none; }
+
+    /* ─── ANNOUNCEMENT BAR ─── */
+    .bar {
+      background: var(--signal);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(10,10,10,0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-link {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover { color: var(--text-primary); }
+
+    .insider-pill {
+      background: rgba(173,66,54,0.12);
+      border: 1px solid var(--signal);
+      color: var(--signal);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .bag-btn {
+      background: var(--signal);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .bag-btn:hover { background: var(--signal-dark); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(10,10,10,0.55) 0%,
+          rgba(10,10,10,0.45) 40%,
+          rgba(10,10,10,0.80) 100%
+        ),
+        var(--cotton);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      text-align: center;
+      padding: 80px 40px;
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--signal);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 9vw, 104px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      margin-bottom: 28px;
+    }
+
+    .hero-sub {
+      font-size: clamp(15px, 1.8vw, 19px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+      line-height: 1.8;
+      margin-bottom: 48px;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--signal);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--signal-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(245,242,237,0.25);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { border-color: rgba(245,242,237,0.6); }
+
+    .signal-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--signal);
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 96px 48px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--signal);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 540px;
+      margin-bottom: 52px;
+    }
+
+    /* ─── DROP SECTION ─── */
+    .drop-section {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drop-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .drop-timer {
+      text-align: right;
+      padding-top: 6px;
+    }
+
+    .drop-timer-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .drop-timer-value {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .drop-timer-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ─── STATUS NOTICES ─── */
+    .notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+    }
+
+    .notice-locked {
+      background: linear-gradient(135deg, rgba(173,66,54,0.06) 0%, rgba(10,10,10,0) 100%);
+      border: 1px solid rgba(173,66,54,0.25);
+    }
+
+    .notice-unlocked {
+      background: linear-gradient(135deg, rgba(34,120,60,0.06) 0%, rgba(10,10,10,0) 100%);
+      border: 1px solid rgba(34,120,60,0.2);
+    }
+
+    .notice-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .notice-dot-red { background: var(--signal); }
+    .notice-dot-green { background: #22783c; }
+
+    .notice p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .notice p strong { color: var(--text-primary); font-weight: 600; }
+    .notice p .green { color: #4ade80; font-weight: 600; }
+
+    /* ─── PRODUCT GRID ─── */
+    .product-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 700px;
+    }
+
+    /* ─── PRODUCT CARD ─── */
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      transition: border-color 0.25s;
+      position: relative;
+    }
+
+    .card:hover { border-color: var(--border-light); }
+
+    .card-img {
+      aspect-ratio: 3/4;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Colorway overlays */
+    .cw-black .card-img {
+      background:
+        linear-gradient(160deg, rgba(10,10,10,0.45) 0%, rgba(5,5,5,0.75) 100%),
+        var(--cotton);
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .cw-charcoal .card-img {
+      background:
+        linear-gradient(160deg, rgba(28,22,20,0.5) 0%, rgba(12,10,8,0.78) 100%),
+        var(--cotton);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .cw-ecru .card-img {
+      background:
+        linear-gradient(160deg, rgba(160,148,130,0.38) 0%, rgba(90,80,68,0.65) 100%),
+        var(--cotton);
+      background-size: cover;
+      background-position: center bottom;
+    }
+
+    .card-img-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245,242,237,0.35);
+    }
+
+    .badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .badge-locked {
+      background: rgba(10,10,10,0.85);
+      border: 1px solid var(--signal);
+      color: var(--signal);
+    }
+
+    .badge-drop {
+      background: var(--signal);
+      color: #fff;
+    }
+
+    .badge-open {
+      background: rgba(10,10,10,0.7);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .card-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .price-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .colorways {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .sz {
+      width: 36px;
+      height: 36px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.15s;
+    }
+
+    .sz:hover { border-color: var(--border-light); color: var(--text-primary); }
+    .sz.on { border-color: var(--text-primary); color: var(--text-primary); background: rgba(245,242,237,0.06); }
+    .sz.off { opacity: 0.2; cursor: default; pointer-events: none; }
+
+    .cta-add {
+      width: 100%;
+      padding: 13px;
+      border-radius: 6px;
+      border: none;
+      background: var(--signal);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .cta-add:hover { background: var(--signal-dark); }
+
+    .cta-unlock {
+      width: 100%;
+      padding: 13px;
+      border-radius: 6px;
+      border: 1px solid rgba(173,66,54,0.5);
+      background: rgba(173,66,54,0.06);
+      color: var(--signal);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .cta-unlock:hover { background: var(--signal); color: #fff; border-color: var(--signal); }
+
+    /* ─── THE GATE ─── */
+    .gate {
+      background:
+        linear-gradient(rgba(10,10,10,0.87), rgba(10,10,10,0.87)),
+        var(--cotton);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 120px 48px;
+      text-align: center;
+    }
+
+    .gate-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .gate h2 {
+      font-size: clamp(38px, 5.5vw, 68px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    .gate-sub {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 56px;
+    }
+
+    .perks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 52px;
+      text-align: left;
+    }
+
+    .perk {
+      background: rgba(20,20,20,0.85);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 22px;
+    }
+
+    .perk-mark {
+      width: 28px;
+      height: 3px;
+      background: var(--signal);
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    .perk h4 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .perk p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ─── ALWAYS AVAILABLE ─── */
+    .always {
+      background: var(--bg);
+    }
+
+    /* ─── SUPPLEMENTS ─── */
+    .supps {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .supp-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .supp-visual {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #1a1210 0%, #0d0908 100%);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pill-group {
+      display: flex;
+      gap: 14px;
+      align-items: flex-end;
+    }
+
+    .pill {
+      border-radius: 24px;
+      background: linear-gradient(180deg, #2e2e2e 0%, #1a1a1a 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pill::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 45%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, transparent 100%);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .pill-lg { width: 52px; height: 120px; }
+    .pill-sm { width: 38px; height: 88px; opacity: 0.55; }
+
+    .supp-watermark {
+      position: absolute;
+      bottom: -12px; right: -8px;
+      font-size: 88px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: rgba(255,255,255,0.025);
+      line-height: 1;
+    }
+
+    .supp-signal-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--signal);
+    }
+
+    .supp-info .hero-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--signal);
+      margin-bottom: 12px;
+    }
+
+    .supp-info h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .supp-info p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+
+    .ingredient-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+
+    .ingredient-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+
+    .ing-name {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .ing-note {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-align: right;
+      max-width: 200px;
+      line-height: 1.5;
+    }
+
+    .ing-note .accent { color: var(--signal); font-weight: 600; }
+
+    .fit-strip {
+      background: linear-gradient(135deg, #1a0f0e 0%, #141414 100%);
+      border: 1px solid var(--signal);
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .fit-label { font-size: 12px; font-weight: 700; color: var(--signal); letter-spacing: 0.05em; }
+    .fit-detail { font-size: 12px; color: var(--text-secondary); text-align: right; font-weight: 300; line-height: 1.5; }
+
+    /* ─── PRICING ─── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .pricing-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--signal);
+      background: linear-gradient(160deg, rgba(173,66,54,0.07) 0%, var(--surface-2) 60%);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -1px; right: 24px;
+      background: var(--signal);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .pricing-tier {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .pricing-name {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .pricing-price {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pricing-price sup {
+      font-size: 18px;
+      font-weight: 600;
+      vertical-align: super;
+    }
+
+    .pricing-price sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      vertical-align: baseline;
+    }
+
+    .pricing-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .pricing-features li {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 7px 0 7px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .pricing-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--signal);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--surface-1);
+      border-top: 1px solid var(--border);
+      padding: 64px 48px 40px;
+    }
+
+    .footer-grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 210px;
+      margin-bottom: 24px;
+    }
+
+    .signal-mark {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .signal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--signal);
+    }
+
+    .footer-col-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .footer-links { list-style: none; }
+
+    .footer-links li { margin-bottom: 10px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text-primary); }
+
+    .footer-bottom {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy { font-size: 11px; color: var(--text-muted); }
+    .footer-claim {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ─── DEMO TOGGLE ─── */
+    .demo {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: var(--surface-2);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 16px 18px;
+      min-width: 210px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .demo-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .demo-btns { display: flex; gap: 8px; }
+
+    .demo-btn {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .demo-btn.on {
+      background: var(--signal);
+      border-color: var(--signal);
+      color: #fff;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 860px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .section { padding: 72px 24px; }
+      .product-grid-3 { grid-template-columns: 1fr 1fr; }
+      .supp-hero { grid-template-columns: 1fr; gap: 40px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .perks { grid-template-columns: 1fr; }
+      footer { padding: 56px 24px 32px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .demo { bottom: 16px; right: 16px; min-width: 190px; }
+    }
+
+    @media (max-width: 560px) {
+      .product-grid-3 { grid-template-columns: 1fr; }
+      .product-grid-2 { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body class="guest-state" id="root">
+
+  <!-- Announcement Bar -->
+  <div class="bar" id="bar">Drop 001 is live — subscriber access only. Subscribe to unlock.</div>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="wordmark">INSDR</a>
+    <ul class="nav-links">
+      <li><a href="#drop">The Drop</a></li>
+      <li><a href="#always">Always Available</a></li>
+      <li><a href="#supplements">Supplements</a></li>
+      <li><a href="#gate">Insider</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="insider-pill sub-only">Insider</span>
+      <a href="#" class="nav-link guest-only">Sign In</a>
+      <a href="#" class="nav-link sub-only">Account</a>
+      <a href="#" class="bag-btn">Bag (0)</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Taiwan &middot; SEA &middot; Greater China</div>
+      <h1>Stop Sweating<br>in Plastic.</h1>
+      <p class="hero-sub">100% cotton activewear. Bioavailability-first supplements. No synthetics. No fillers. No compromise.</p>
+      <div class="hero-ctas">
+        <a href="#drop" class="btn-primary">Shop The Drop</a>
+        <a href="#supplements" class="btn-outline">Feel It First &mdash; Free Trial</a>
+      </div>
+    </div>
+    <div class="signal-line"></div>
+  </section>
+
+  <!-- ═══ DROP 001 ═══ -->
+  <div id="drop" class="drop-section">
+    <div class="section">
+      <div class="drop-header">
+        <div>
+          <div class="section-label">Drop 001 &mdash; The Foundation Capsule</div>
+          <h2 class="section-title">Three pieces.<br>All cotton. All deliberate.</h2>
+          <p class="section-sub">300 GSM jersey. French terry. Heavyweight twill. Dropped shoulders, signal bar tack, tonal embroidery. No logos you didn't earn.</p>
+        </div>
+        <div class="drop-timer">
+          <div class="drop-timer-label">Drop closes in</div>
+          <div class="drop-timer-value" id="timer">71:42:18</div>
+          <div class="drop-timer-note guest-only">Subscribers only</div>
+          <div class="drop-timer-note sub-only" style="color: #4ade80;">Your access is active</div>
+        </div>
+      </div>
+
+      <!-- Guest notice -->
+      <div class="notice notice-locked guest-only">
+        <div class="notice-dot notice-dot-red"></div>
+        <p><strong>These pieces are subscriber-exclusive.</strong> Subscribe to the Magnesium Complex or Foundation Stack to unlock Drop 001 and all future drops — permanently, for as long as you're subscribed.</p>
+      </div>
+
+      <!-- Subscriber notice -->
+      <div class="notice notice-unlocked sub-only">
+        <div class="notice-dot notice-dot-green"></div>
+        <p><strong class="green">Drop 001 is unlocked.</strong> You have priority access for the next 72 hours before any remaining pieces go to the public waitlist.</p>
+      </div>
+
+      <div class="product-grid-3">
+
+        <!-- Heavyweight Tee -->
+        <div class="card cw-black">
+          <div class="card-img">
+            <div class="card-img-label">Heavyweight Tee</div>
+            <div class="badge badge-locked guest-only">Subscriber Only</div>
+            <div class="badge badge-drop sub-only">Drop 001</div>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Heavyweight Tee</div>
+            <div class="card-desc">300 GSM cotton jersey. Dropped shoulder. Tonal INSDR embroidery at chest.</div>
+            <div class="card-meta">
+              <div>
+                <div class="price">TWD 1,680</div>
+                <div class="price-note">~USD 52</div>
+              </div>
+              <div class="colorways">Black<br>Washed Black</div>
+            </div>
+            <div class="sizes" id="sz1">
+              <button class="sz guest-only off">S</button>
+              <button class="sz guest-only off">M</button>
+              <button class="sz guest-only off">L</button>
+              <button class="sz guest-only off">XL</button>
+              <button class="sz sub-only">S</button>
+              <button class="sz sub-only on">M</button>
+              <button class="sz sub-only">L</button>
+              <button class="sz sub-only">XL</button>
+            </div>
+            <button class="cta-unlock guest-only" onclick="scrollToGate()">
+              <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><rect x="0.75" y="5.75" width="9.5" height="7.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><path d="M3 5.5V4A2.5 2.5 0 018 4v1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Subscribe to Unlock
+            </button>
+            <button class="cta-add sub-only">Add to Bag</button>
+          </div>
+        </div>
+
+        <!-- Loop-Back Crew -->
+        <div class="card cw-charcoal">
+          <div class="card-img">
+            <div class="card-img-label">Loop-Back Crew</div>
+            <div class="badge badge-locked guest-only">Subscriber Only</div>
+            <div class="badge badge-drop sub-only">Drop 001</div>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Loop-Back Crew</div>
+            <div class="card-desc">French terry cotton. Brushed interior. Signal bar tack at left hem.</div>
+            <div class="card-meta">
+              <div>
+                <div class="price">TWD 2,280</div>
+                <div class="price-note">~USD 70</div>
+              </div>
+              <div class="colorways">Faded Black<br>Slate</div>
+            </div>
+            <div class="sizes">
+              <button class="sz guest-only off">S</button>
+              <button class="sz guest-only off">M</button>
+              <button class="sz guest-only off">L</button>
+              <button class="sz guest-only off">XL</button>
+              <button class="sz sub-only">S</button>
+              <button class="sz sub-only on">M</button>
+              <button class="sz sub-only">L</button>
+              <button class="sz sub-only">XL</button>
+            </div>
+            <button class="cta-unlock guest-only" onclick="scrollToGate()">
+              <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><rect x="0.75" y="5.75" width="9.5" height="7.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><path d="M3 5.5V4A2.5 2.5 0 018 4v1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Subscribe to Unlock
+            </button>
+            <button class="cta-add sub-only">Add to Bag</button>
+          </div>
+        </div>
+
+        <!-- Tapered Short -->
+        <div class="card cw-ecru">
+          <div class="card-img">
+            <div class="card-img-label">Tapered Short</div>
+            <div class="badge badge-locked guest-only">Subscriber Only</div>
+            <div class="badge badge-drop sub-only">Drop 001</div>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Tapered Training Short</div>
+            <div class="card-desc">Heavyweight cotton twill. 7" inseam. Hidden Signal woven label inside waistband.</div>
+            <div class="card-meta">
+              <div>
+                <div class="price">TWD 1,980</div>
+                <div class="price-note">~USD 61</div>
+              </div>
+              <div class="colorways">Ecru<br>Stone</div>
+            </div>
+            <div class="sizes">
+              <button class="sz guest-only off">S</button>
+              <button class="sz guest-only off">M</button>
+              <button class="sz guest-only off">L</button>
+              <button class="sz guest-only off">XL</button>
+              <button class="sz sub-only">S</button>
+              <button class="sz sub-only on">M</button>
+              <button class="sz sub-only">L</button>
+              <button class="sz sub-only">XL</button>
+            </div>
+            <button class="cta-unlock guest-only" onclick="scrollToGate()">
+              <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><rect x="0.75" y="5.75" width="9.5" height="7.5" rx="1.25" stroke="currentColor" stroke-width="1.2"/><path d="M3 5.5V4A2.5 2.5 0 018 4v1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Subscribe to Unlock
+            </button>
+            <button class="cta-add sub-only">Add to Bag</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ THE GATE ═══ -->
+  <div class="gate" id="gate">
+    <div class="gate-inner">
+      <div class="eyebrow guest-only">The Insider Access</div>
+      <div class="eyebrow sub-only" style="color: #4ade80; letter-spacing: 0.28em; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 16px;">You're Inside</div>
+      <h2 class="guest-only">Subscribe.<br>Unlock everything.</h2>
+      <h2 class="sub-only">You have full<br>access.</h2>
+      <p class="gate-sub guest-only">INSDR supplement subscribers get first access to every drop, the full catalog, exclusive colorways — and free shipping on everything. The subscription isn't a loyalty program. It's the key.</p>
+      <p class="gate-sub sub-only">Every drop. Every restock. Every new product — unlocked the moment it goes live. Your subscription is the key.</p>
+
+      <div class="perks">
+        <div class="perk">
+          <div class="perk-mark"></div>
+          <h4>Full Drop Access</h4>
+          <p>Every limited capsule — unlocked. Buy before the public ever sees it. Drops sell out. Subscribers don't miss them.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-mark"></div>
+          <h4>48-Hour Priority Window</h4>
+          <p>Subscribers shop first. 48 hours before any piece hits the public waitlist. Your size, your pick, your timeline.</p>
+        </div>
+        <div class="perk">
+          <div class="perk-mark"></div>
+          <h4>Free Shipping. Always.</h4>
+          <p>Every supplement reorder. Every apparel purchase. No minimum. No exceptions. Ships free, every time.</p>
+        </div>
+      </div>
+
+      <a href="#supplements" class="btn-primary guest-only" style="padding: 18px 52px; font-size: 13px;">Subscribe from TWD 980 / month</a>
+      <a href="#drop" class="btn-outline sub-only" style="padding: 18px 52px; font-size: 13px; display: inline-block;">Back to Drop 001</a>
+    </div>
+  </div>
+
+  <!-- ═══ ALWAYS AVAILABLE ═══ -->
+  <div id="always" class="always">
+    <div class="section">
+      <div class="section-label">Permanent Collection</div>
+      <h2 class="section-title">Always Available.</h2>
+      <p class="section-sub">No drops. No waitlists. Two pieces, always in stock. The entry point to INSDR — no subscription required.</p>
+
+      <div class="product-grid-2">
+
+        <!-- Entry Tee -->
+        <div class="card cw-black">
+          <div class="card-img">
+            <div class="card-img-label">The Entry Tee</div>
+            <div class="badge badge-open">Always Available</div>
+          </div>
+          <div class="card-body">
+            <div class="card-name">The Entry Tee</div>
+            <div class="card-desc">200 GSM cotton jersey. Regular fit. Signal bar tack at left hem. The starting point.</div>
+            <div class="card-meta">
+              <div>
+                <div class="price">TWD 1,280</div>
+                <div class="price-note">~USD 39</div>
+              </div>
+              <div class="colorways">Black / White / Stone</div>
+            </div>
+            <div class="sizes">
+              <button class="sz">S</button>
+              <button class="sz on">M</button>
+              <button class="sz">L</button>
+              <button class="sz">XL</button>
+              <button class="sz">2XL</button>
+            </div>
+            <button class="cta-add">Add to Bag</button>
+          </div>
+        </div>
+
+        <!-- Signal Crew -->
+        <div class="card cw-charcoal">
+          <div class="card-img">
+            <div class="card-img-label">The Signal Crew</div>
+            <div class="badge badge-open">Always Available</div>
+          </div>
+          <div class="card-body">
+            <div class="card-name">The Signal Crew</div>
+            <div class="card-desc">280 GSM cotton fleece. Brushed interior. Signal bar tack. Mid-weight, all-season.</div>
+            <div class="card-meta">
+              <div>
+                <div class="price">TWD 1,980</div>
+                <div class="price-note">~USD 61</div>
+              </div>
+              <div class="colorways">Charcoal / Black</div>
+            </div>
+            <div class="sizes">
+              <button class="sz">S</button>
+              <button class="sz on">M</button>
+              <button class="sz">L</button>
+              <button class="sz">XL</button>
+              <button class="sz">2XL</button>
+            </div>
+            <button class="cta-add">Add to Bag</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SUPPLEMENTS ═══ -->
+  <div id="supplements" class="supps">
+    <div class="section">
+
+      <div class="section-label">The Foundation Stack</div>
+      <h2 class="section-title">What's actually in it.</h2>
+      <p class="section-sub">No proprietary blends. No underdosed actives. No forms your body can't use. Every ingredient listed with the dose and delivery method that actually works.</p>
+
+      <!-- Magnesium Hero -->
+      <div class="supp-hero">
+        <div class="supp-visual">
+          <div class="pill-group">
+            <div class="pill pill-sm"></div>
+            <div class="pill pill-lg"></div>
+          </div>
+          <div class="supp-watermark">Mg</div>
+          <div class="supp-signal-bar"></div>
+        </div>
+
+        <div class="supp-info">
+          <div class="hero-label">Hero Product &mdash; Start Here</div>
+          <h2>Magnesium Complex</h2>
+          <p>Most magnesium supplements use the cheapest form — oxide — which absorbs at roughly 4%. Ours uses glycinate for bioavailability and Magtein® (L-threonate) to cross the blood-brain barrier. Most people feel it in their sleep within 3–5 days.</p>
+
+          <ul class="ingredient-list">
+            <li>
+              <span class="ing-name">Magnesium Glycinate</span>
+              <span class="ing-note">Chelated form — <span class="accent">~50% higher absorption</span> vs. oxide</span>
+            </li>
+            <li>
+              <span class="ing-name">Magtein® (L-Threonate)</span>
+              <span class="ing-note">Crosses blood-brain barrier — <span class="accent">patented, clinically studied</span></span>
+            </li>
+            <li>
+              <span class="ing-name">P5P (Active B6)</span>
+              <span class="ing-note">Co-factor for magnesium absorption and utilization</span>
+            </li>
+          </ul>
+
+          <div class="fit-strip">
+            <div>
+              <div class="fit-label">Feel It First Guarantee</div>
+              <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Better sleep in 30 days &mdash; or full refund.</div>
+            </div>
+            <div class="fit-detail">No questionnaires.<br>No fine print.</div>
+          </div>
+
+          <button class="cta-add" style="padding: 15px; font-size: 12px; border-radius: 7px; margin-bottom: 10px;">Subscribe &mdash; TWD 980 / month</button>
+          <div style="text-align: center; font-size: 11px; color: var(--text-muted);">Cancel anytime &nbsp;&middot;&nbsp; Free shipping &nbsp;&middot;&nbsp; Unlocks full drop access</div>
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Entry</div>
+          <div class="pricing-name">Magnesium Complex</div>
+          <div class="pricing-price"><sup>TWD</sup> 980 <sub>/ mo</sub></div>
+          <div class="pricing-note">~USD 30 &nbsp;&middot;&nbsp; Cancel anytime</div>
+          <ul class="pricing-features">
+            <li>Magnesium Glycinate + Magtein® + P5P</li>
+            <li>Full access to every apparel drop</li>
+            <li>48-hour subscriber priority window</li>
+            <li>Free shipping on all orders</li>
+            <li>Feel It First — 30-day money back</li>
+          </ul>
+          <button class="cta-add">Subscribe</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="featured-tag">Most Popular</div>
+          <div class="pricing-tier">Full Stack</div>
+          <div class="pricing-name">Foundation Stack</div>
+          <div class="pricing-price"><sup>TWD</sup> 2,480 <sub>/ mo</sub></div>
+          <div class="pricing-note">~USD 77 &nbsp;&middot;&nbsp; Save 15% vs. individual</div>
+          <ul class="pricing-features">
+            <li>Magnesium Complex</li>
+            <li>CoQ10 — Ubiquinol 200mg (~2x bioavailability)</li>
+            <li>Vitamin D3+K2 — Liposomal (~4x absorption)</li>
+            <li>Omega-3 — rTG form, 2g EPA/DHA daily</li>
+            <li>Everything in Entry tier</li>
+            <li>Gift subscription — send to anyone</li>
+            <li>Community programs access</li>
+          </ul>
+          <button class="cta-add">Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">INSDR</div>
+        <div class="footer-tagline">Bioavailability-first supplements and 100% cotton activewear. No synthetics. No fillers.</div>
+        <div class="signal-mark">
+          <div class="signal-dot"></div>
+          Signal &mdash; #AD4236
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">The Drop</a></li>
+          <li><a href="#">Always Available</a></li>
+          <li><a href="#">Supplements</a></li>
+          <li><a href="#">Foundation Stack</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Insider</div>
+        <ul class="footer-links">
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Feel It First</a></li>
+          <li><a href="#">Gift a Stack</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Info</div>
+        <ul class="footer-links">
+          <li><a href="#">Our Philosophy</a></li>
+          <li><a href="#">What's Actually In It</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 INSDR &nbsp;&middot;&nbsp; Taiwan &middot; SEA &middot; Greater China</div>
+      <div class="footer-claim">100% Cotton. No Synthetics. No PFAs.</div>
+    </div>
+  </footer>
+
+  <!-- Demo Toggle -->
+  <div class="demo">
+    <div class="demo-label">Demo &mdash; Viewing As</div>
+    <div class="demo-btns">
+      <button class="demo-btn on" id="d-guest" onclick="setGuest()">Guest</button>
+      <button class="demo-btn" id="d-sub" onclick="setSub()">Subscriber</button>
+    </div>
+  </div>
+
+  <script>
+    function setGuest() {
+      document.getElementById('root').className = 'guest-state';
+      document.getElementById('d-guest').classList.add('on');
+      document.getElementById('d-sub').classList.remove('on');
+      document.getElementById('bar').textContent = 'Drop 001 is live — subscriber access only. Subscribe to unlock.';
+    }
+
+    function setSub() {
+      document.getElementById('root').className = 'subscriber-state';
+      document.getElementById('d-sub').classList.add('on');
+      document.getElementById('d-guest').classList.remove('on');
+      document.getElementById('bar').textContent = 'Drop 001 — 72 hours remaining. You have full access, Insider.';
+    }
+
+    function scrollToGate() {
+      document.getElementById('gate').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Size button interaction
+    document.querySelectorAll('.sizes').forEach(group => {
+      group.querySelectorAll('.sz:not(.off)').forEach(btn => {
+        btn.addEventListener('click', () => {
+          group.querySelectorAll('.sz').forEach(b => b.classList.remove('on'));
+          btn.classList.add('on');
+        });
+      });
+    });
+
+    // Countdown timer
+    let secs = 71 * 3600 + 42 * 60 + 18;
+    setInterval(() => {
+      if (secs <= 0) return;
+      secs--;
+      const h = String(Math.floor(secs / 3600)).padStart(2, '0');
+      const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+      const s = String(secs % 60).padStart(2, '0');
+      document.getElementById('timer').textContent = `${h}:${m}:${s}`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
