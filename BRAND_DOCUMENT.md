@@ -1,7 +1,7 @@
 # INSDR — Brand Document
 
-> **Status:** Living document — v0.1
-> **Last updated:** March 11, 2026
+> **Status:** Living document — v0.4
+> **Last updated:** March 14, 2026
 
 ---
 
@@ -73,9 +73,11 @@ The launch strategy is deficiency-based, not trend-based. These are what most pe
 
 Sleep, stress, recovery, heart health, cognitive function, bone density. The most common mineral deficiency. Most people take magnesium oxide — which has as low as 4% bioavailability (Firoz & Graber, 2001). INSDR uses a dual-form approach:
 
-- **Glycinate** — body: sleep, muscle relaxation, stress reduction. Well-absorbed, significantly lower GI side effects than other forms (confirmed in clinical studies).
-- **Threonate (Magtein)** — brain: the most clinically studied magnesium form for cognitive outcomes. Patented (AIDP, developed from MIT research), with multiple published RCTs showing improvements in memory, cognitive performance, and sleep quality. Effectively crosses the blood-brain barrier and has been shown to increase brain magnesium levels ~15%.
+- **Glycinate** — body: sleep, muscle relaxation, stress reduction. Well-absorbed, significantly lower GI side effects than other forms (confirmed in clinical studies). Organic chelates like glycinate consistently outperform magnesium oxide — the most common commercial form — which absorbs at as low as 4% (Firoz & Graber, 2001).
+- **Threonate (Magtein)** — brain: the only magnesium form shown to cross the blood-brain barrier and elevate brain magnesium levels. Patented (AIDP, developed from MIT research, Slutsky et al., *Neuron* 2010), with multiple published RCTs showing improvements in memory, cognitive performance, and sleep quality.
 - **B6 (P5P)** — cofactor that enhances magnesium cellular uptake. A 2018 RCT (Pouteau et al.) showed magnesium + B6 was superior to magnesium alone for reducing severe stress. The relationship is synergistic — they facilitate each other's function.
+
+**Absorption advantage:** Most people are taking a form their body can barely use. Magnesium oxide — what's in the majority of commercial supplements — absorbs at as low as 4%. INSDR uses chelated and patented forms specifically selected for bioavailability.
 
 #### 2. Mito Complex (CoQ10 + PQQ)
 
@@ -83,8 +85,10 @@ Sleep, stress, recovery, heart health, cognitive function, bone density. The mos
 
 Cellular energy, cardiovascular health, antioxidant protection, neuroprotection. CoQ10 is what your mitochondria use to produce ATP — it's not a stimulant, it's the raw material for cellular energy. Natural levels peak around age 25 and decline measurably by 30. The heart has the highest CoQ10 concentration of any organ (114 μg/g tissue), reflecting its extraordinary metabolic demand.
 
-- **CoQ10 as Ubiquinol (Kaneka)** — the reduced, active form. Kaneka is the gold standard with 85+ clinical studies. The body cycles between ubiquinone and ubiquinol (a redox cycle), but the enzymes driving this conversion decline with age — by 40, conversion capacity begins to decline meaningfully. Formulation quality is critical: a well-formulated ubiquinol delivers meaningfully better absorption, particularly in older adults and cardiac patients. Statin users are especially relevant — statins deplete plasma CoQ10 by 25–50% as a biochemical side effect (they block the same mevalonate pathway that produces both cholesterol and CoQ10).
+- **CoQ10 as Ubiquinol (Kaneka)** — the reduced, active form. Kaneka is the gold standard with 85+ clinical studies. Ubiquinol raises plasma CoQ10 levels approximately **2x higher than ubiquinone** at equivalent doses (Kaneka clinical data; Langsjoen et al., 2014). The body cycles between ubiquinone and ubiquinol (a redox cycle), but the enzymes driving this conversion decline with age — by 40, conversion capacity begins to decline meaningfully. Statin users are especially relevant — statins deplete plasma CoQ10 by 25–50% as a biochemical side effect (they block the same mevalonate pathway that produces both cholesterol and CoQ10).
 - **PQQ** — triggers mitochondrial biogenesis via the SIRT1/PGC-1alpha signaling pathway (the master regulator of new mitochondria creation). Also stimulates nerve growth factor (NGF) synthesis and has documented neuroprotective effects. The CoQ10 + PQQ pairing: more mitochondria (PQQ) × better-powered mitochondria (CoQ10) = compounding cellular energy output.
+
+**Absorption advantage:** Ubiquinol delivers ~2x higher plasma CoQ10 levels vs. the ubiquinone form found in most commercial supplements — a meaningful difference given that CoQ10 bioavailability is notoriously low and formulation-dependent.
 
 *The vitality angle:* This is the product customers feel. Sustained energy, better exercise performance, faster recovery. Longevity and vitality in the same formula.
 
@@ -97,9 +101,11 @@ Cellular energy, cardiovascular health, antioxidant protection, neuroprotection.
 Up to 42% of US adults have vitamin D levels below 20 ng/mL (NHANES data). Immune function, bone density, mood, cardiovascular health. K2 completes the picture by activating the proteins (osteocalcin and Matrix GLA Protein) that promote bone mineralization and inhibit arterial calcification.
 
 - **D3** — the foundation. Fat-soluble, so absorption is enhanced ~30% when taken with dietary fat. INSDR solves this by building the fat carrier directly into the formula.
-- **K2 as MK-7** — the long-acting form with a half-life of approximately 68–72 hours, vs MK-4's ~1–2 hours. Once-daily dosing at 100–200 mcg is effective (MK-4 requires much higher doses multiple times daily). Higher K2 intake correlates with a 57% reduction in coronary heart disease mortality risk (Rotterdam Study, Geleijnse et al. 2004).
+- **K2 as MK-7** — the long-acting form with a half-life of approximately 68–72 hours, vs MK-4's ~1–2 hours. At nutritional doses, MK-4 is essentially undetectable in serum; MK-7 remains active for 3 days from a single dose (Sato, Schurgers & Uenishi, *Nutrition Journal* 2012). Once-daily dosing at 100–200 mcg is effective. Higher K2 intake correlates with a 57% reduction in coronary heart disease mortality risk (Rotterdam Study, Geleijnse et al. 2004).
 - **Boron** — supports bone mineral metabolism (observed in postmenopausal women studies), supports vitamin D utilization (evidence suggests it may inhibit 24-hydroxylase, the enzyme that breaks down active vitamin D metabolites), and has emerging research on healthy hormone levels. Small dose, significant impact, and almost no one else includes it.
-- **Built-in lipid delivery** — MCT oil base or liposomal encapsulation. Clinical evidence shows liposomal D3 achieves superior plasma levels even after a 12-hour fast. This removes the meal-timing requirement entirely — the absorption technology is built into the product.
+- **Built-in lipid delivery** — MCT oil base or liposomal encapsulation. Liposomal D3 achieves **4x higher AUC** vs. standard oil-based formulations, even after a 12-hour fast (Pignitter et al., *Nanomedicine*, 2022). This removes the meal-timing requirement entirely — the absorption technology is built into the product.
+
+**Absorption advantage:** Standard D3 requires dietary fat for absorption. INSDR builds the lipid carrier in. Liposomal delivery achieves 4x higher blood levels vs. conventional formulations regardless of what you ate.
 
 **Why these three:**
 - Every product has a clear, scientifically validated absorption story
@@ -141,7 +147,7 @@ The brand stays young and culturally sharp. The product just happens to be unive
 - 25–30% off first order
 - 10% recurring discount
 - Flexible delivery: 30, 45, 60, 120-day cycles
-- Family/gift subscriptions (Phase 2)
+- Family/gift subscriptions from day one
 
 *See Section 7 for full Absorption Company competitive analysis.*
 
@@ -299,7 +305,7 @@ INSDR apparel carries no visible logos. Instead, the brand identifier is Signal 
 | Supplements only | Supplements + 100% cotton apparel |
 | Aspirational wellness tone | Informed, skeptical, "if you know you know" |
 | No education content strategy | Phase 2: daily content (ingredient deep-dives, myth-busting) |
-| No community/programs | Phase 3: gated fitness programs for members |
+| No community/programs | Phase 1b: gated fitness programs launch with supplements |
 | Fun and approachable | Confident and knowing |
 
 **Key Principles to Adopt:**
@@ -339,7 +345,7 @@ INSDR apparel carries no visible logos. Instead, the brand identifier is Signal 
 | 2 products, ruthless focus | Launch 2-3 max. Constraint = credibility. |
 | Mayo Clinic / NASA advisory board | Use branded/patented ingredients (come with existing clinical data) + partner with 1-2 nutritionists or sports scientists as advisors |
 | Sabalenka equity partnership (233M views) | 5-10 micro-influencers or gym figures (10K-100K followers) with equity/founding member status. Authentic, free, organic. |
-| $100M paid media infrastructure | Phase 2 content play: daily Instagram/TikTok (ingredient deep-dives, myth-busting, "Now You Know"). Content compounds and costs nothing. |
+| $100M ARR at launch — brand awareness at scale | Phase 2 content play: daily Instagram/TikTok (ingredient deep-dives, myth-busting, "Now You Know"). Content compounds and costs nothing. |
 | "Inner Circle" ambassador program | "Insider" community — the brand name IS the community. Referral codes, early drop access, gated programs. Word of mouth is cheapest + most trusted channel. |
 | DTC + subscription | Same. Own the customer. Subscriptions = recurring revenue. High margins. Direct feedback loop. |
 | Premium visual identity | Already in motion — Signal palette, editorial aesthetic, INSDR wordmark. Streetwear credibility > celebrity polish. |

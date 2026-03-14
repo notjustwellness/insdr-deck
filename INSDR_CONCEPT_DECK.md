@@ -43,7 +43,7 @@ Two massive markets. Both growing fast across Asia-Pacific. Both broken in the s
 | **Southeast Asia** | $10B (2025) → $17.3B by 2035 — Indonesia, Thailand, Vietnam leading growth |
 | **Clean label (APAC)** | $50.1B, growing at 14.6% CAGR — fastest clean label growth globally |
 
-### Activewear — Asia-Pacific
+### Athleisure — Asia-Pacific
 
 | Metric | Value |
 |---|---|
@@ -69,7 +69,7 @@ Three products. Three deficiencies most people don't know they have. Every produ
 ### Magnesium Complex — The Hero SKU
 *Body + brain + the key that unlocks both.*
 
-Most people take magnesium oxide — as low as 4% bioavailability. INSDR pairs **glycinate** (body: sleep, stress, recovery) with **threonate/Magtein** (brain: the most clinically studied magnesium for cognitive health) and adds **B6** to enhance cellular uptake. Two forms doing different jobs, plus the cofactor that makes both work harder.
+Most people take magnesium oxide — as low as **4% bioavailability**. INSDR pairs **glycinate** (body: sleep, stress, recovery) with **threonate/Magtein** (the only form shown to cross the blood-brain barrier and raise brain magnesium levels) and adds **B6** to enhance cellular uptake. Two forms doing different jobs, plus the cofactor that makes both work harder.
 
 **Why this leads:** Sleep is the most universally *felt* benefit — customers notice it in 3–5 days. That fast feedback loop converts trials to subscriptions faster than any other product. "Your magnesium has 4% bioavailability" is a one-line wrecking ball against every competitor on the shelf. And it's the cheapest to formulate with the simplest story — the perfect gateway to the full stack.
 
@@ -96,12 +96,12 @@ This isn't a marketing gimmick. It's a business model built on the product actua
 ### Mito Complex — CoQ10 + PQQ
 *Powers your existing mitochondria. Builds new ones.*
 
-CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **ubiquinol (Kaneka)**, the active form backed by 85+ clinical studies, paired with **PQQ**, which triggers the creation of entirely new mitochondria. More engines × better fuel = compounding cellular energy. This is the product customers feel.
+CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **ubiquinol (Kaneka)**, the active form that delivers **~2x higher plasma CoQ10 levels** vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Paired with **PQQ**, which triggers the creation of entirely new mitochondria. More engines × better fuel = compounding cellular energy. This is the product customers feel.
 
 ### D3+K2 Complex
 *Fat-soluble vitamin that comes with its own fat.*
 
-Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone density and vitamin D utilization. Built-in **lipid delivery** means it absorbs without food. No meal timing. No guesswork.
+Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs **D3** with **K2 (MK-7)** — the long-acting form that activates the proteins directing calcium into bones instead of arteries — plus **boron** for bone mineral metabolism and vitamin D utilization. Built-in **lipid delivery** delivers **4x higher absorption** vs. standard formulations, even fasted. No meal timing. No guesswork.
 
 ### Why This Stack
 
