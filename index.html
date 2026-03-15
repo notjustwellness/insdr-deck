@@ -565,6 +565,127 @@
             }
         }
 
+        /* Branded Ingredients & Delivery Tech */
+        .branded-section {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            margin-top: 56px;
+        }
+
+        .branded-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 32px;
+        }
+
+        .branded-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .branded-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .branded-item .bi-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 4px;
+        }
+
+        .branded-item .bi-supplier {
+            font-size: 12px;
+            font-weight: 500;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .branded-item .bi-desc {
+            font-size: 13px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        .delivery-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .delivery-item .di-tech {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 4px;
+        }
+
+        .delivery-item .di-product {
+            font-size: 12px;
+            font-weight: 500;
+            color: #78716c;
+            margin-bottom: 12px;
+        }
+
+        .delivery-item .di-stat {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 800;
+            color: #AD4236;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .delivery-item .di-baseline {
+            font-size: 12px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 0;
+        }
+
+        .branded-footer {
+            font-size: 16px;
+            font-weight: 300;
+            color: #a8a29e;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 0;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .branded-grid,
+            .delivery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .branded-section {
+                padding: 32px 24px;
+            }
+        }
+
         /* Opportunity */
         .opportunity-section {
             text-align: center;
@@ -2118,13 +2239,13 @@
                 <div class="product-ingredients">
                     <div class="ingredient-block">
                         <div class="ingredient-role">Primary</div>
-                        <div class="ingredient-name">Glycinate</div>
-                        <p class="ingredient-desc">Body: sleep, stress, muscle recovery. Well-absorbed with significantly lower GI side effects than other forms.</p>
+                        <div class="ingredient-name">Albion TRAACS® Glycinate</div>
+                        <p class="ingredient-desc">Body: sleep, stress, muscle recovery. Verified fully-reacted chelate — absorbs significantly better than oxide, stable through the gut. No GI distress.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">Amplifier</div>
-                        <div class="ingredient-name">Threonate (Magtein)</div>
-                        <p class="ingredient-desc">Brain: the most clinically studied magnesium for cognitive health. Patented, developed from MIT research.</p>
+                        <div class="ingredient-name">Magtein® Threonate</div>
+                        <p class="ingredient-desc">Brain: the most clinically effective magnesium form for raising brain magnesium levels. Patented (AIDP), developed from MIT research. Multiple RCTs on memory + sleep.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">Cofactor</div>
@@ -2165,21 +2286,21 @@
                 <div class="product-ingredients">
                     <div class="ingredient-block">
                         <div class="ingredient-role">Primary</div>
-                        <div class="ingredient-name">CoQ10 (Ubiquinol)</div>
-                        <p class="ingredient-desc">Cellular energy production (ATP). Kaneka ubiquinol — the active form delivering <strong>~2x higher plasma CoQ10</strong> vs. ubiquinone. 85+ clinical studies. Levels decline after age 25.</p>
+                        <div class="ingredient-name">Kaneka QH® Ubiquinol</div>
+                        <p class="ingredient-desc">The active form — <strong>~2x higher plasma CoQ10</strong> vs. ubiquinone. 85+ clinical studies. Delivered via <strong>VESIsorb®</strong> colloidal technology for <strong>622% higher absorption</strong> vs. standard softgels.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">Amplifier</div>
-                        <div class="ingredient-name">PQQ</div>
-                        <p class="ingredient-desc">Triggers mitochondrial biogenesis — the creation of entirely new mitochondria. Also stimulates nerve growth factor (NGF).</p>
+                        <div class="ingredient-name">BioPQQ®</div>
+                        <p class="ingredient-desc">The only PQQ with an accepted US FDA NDI notification. All published human PQQ RCTs to date use Mitsubishi's material. Triggers mitochondrial biogenesis — the creation of entirely new mitochondria.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">The Result</div>
                         <div class="ingredient-name">More + Better</div>
-                        <p class="ingredient-desc">More engines (PQQ) &times; better fuel (CoQ10) = compounding cellular energy. This is the product customers feel.</p>
+                        <p class="ingredient-desc">More engines (BioPQQ®) &times; better-absorbed fuel (Kaneka QH® + VESIsorb®) = compounding cellular energy. This is the product customers feel.</p>
                     </div>
                 </div>
-                <p class="product-story"><strong>The story:</strong> Your cells make energy in the mitochondria. CoQ10 powers them. PQQ builds new ones. Statin users — including a huge percentage of the older population — are CoQ10-depleted and most don't know it.</p>
+                <p class="product-story"><strong>The story:</strong> Your cells make energy in the mitochondria. CoQ10 powers them. PQQ builds new ones. Statin users — including a huge percentage of the older population — are CoQ10-depleted and most don't know it. VESIsorb® nano-droplet delivery means no fatty meal required — 622% higher absorption vs. a standard softgel.</p>
             </div>
 
             <!-- D3+K2 Complex -->
@@ -2190,18 +2311,18 @@
                 <div class="product-ingredients">
                     <div class="ingredient-block">
                         <div class="ingredient-role">Primary</div>
-                        <div class="ingredient-name">D3 + K2 (MK-7)</div>
-                        <p class="ingredient-desc">Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. MK-7 activates proteins directing calcium into bones, not arteries. 72-hour half-life.</p>
+                        <div class="ingredient-name">D3 + MenaQ7® K2 (MK-7)</div>
+                        <p class="ingredient-desc">Up to 58% of adults across Asia are vitamin D deficient — 68% among Taiwan 18–34-year-olds. MenaQ7 is 99.8% all-trans purity — generic MK-7 can be as low as 15% biologically active. 22 published clinical studies.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">Amplifier</div>
-                        <div class="ingredient-name">Boron</div>
-                        <p class="ingredient-desc">Supports bone mineral metabolism and vitamin D utilization. Emerging research on healthy hormone levels. Almost nobody includes it.</p>
+                        <div class="ingredient-name">FruiteX-B® Boron</div>
+                        <p class="ingredient-desc">Nature-identical calcium fructoborate. Supports bone mineral metabolism and vitamin D utilization. Pilot RCT: 29% improvement in WOMAC scores in 14 days (standalone). Almost nobody includes any boron — let alone a clinically studied form.</p>
                     </div>
                     <div class="ingredient-block">
                         <div class="ingredient-role">Delivery</div>
-                        <div class="ingredient-name">Built-in Lipid Carrier</div>
-                        <p class="ingredient-desc">Liposomal delivery achieves <strong>4x higher absorption</strong> vs. standard formulations, even fasted. No meal timing, no guesswork.</p>
+                        <div class="ingredient-name">Liposomal Encapsulation</div>
+                        <p class="ingredient-desc">Fat carrier built into the formula. Liposomal D3 achieves <strong>4x higher absorption</strong> vs. standard formulations, even fasted. No meal timing, no guesswork.</p>
                     </div>
                 </div>
                 <p class="product-story"><strong>The story:</strong> D3 is fat-soluble — most people absorb it poorly unless they take it with a meal. We built the lipid carrier in. Liposomal delivery gives 4x higher blood levels vs. standard formulations, regardless of when you took it.</p>
@@ -2221,6 +2342,67 @@
                     <h3>Every Product Educates</h3>
                     <p>The science behind each formula is shareable content. The stack doesn't just sell. It teaches.</p>
                 </div>
+            </div>
+
+            <!-- Branded Ingredients & Delivery Tech Summary -->
+            <div class="branded-section">
+                <h3>Branded Ingredients — Every Form Is Patented</h3>
+                <div class="branded-grid">
+                    <div class="branded-item">
+                        <div class="bi-name">Albion TRAACS®</div>
+                        <div class="bi-supplier">Balchem Corporation</div>
+                        <p class="bi-desc">Magnesium bisglycinate chelate. Verified fully-reacted — the distinction that separates true chelates from cheap blends carrying the same label name.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">Magtein®</div>
+                        <div class="bi-supplier">AIDP (MIT-developed)</div>
+                        <p class="bi-desc">Magnesium L-threonate. Most effective form for elevating brain magnesium levels — strongest preclinical and clinical evidence of any magnesium form. Multiple published RCTs.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">Kaneka QH®</div>
+                        <div class="bi-supplier">Kaneka Corporation</div>
+                        <p class="bi-desc">Ubiquinol CoQ10. The active, reduced form. Gold standard with 85+ clinical studies. ~2x higher plasma levels vs. ubiquinone.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">BioPQQ®</div>
+                        <div class="bi-supplier">Mitsubishi Gas Chemical</div>
+                        <p class="bi-desc">Only PQQ with an accepted US FDA NDI notification. All published human PQQ clinical trials use Mitsubishi's material. Triggers new mitochondria.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">MenaQ7®</div>
+                        <div class="bi-supplier">Gnosis by Lesaffre</div>
+                        <p class="bi-desc">K2 as MK-7. 99.8% all-trans purity — generic MK-7 can be as low as 15% biologically active. 22 published clinical studies.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">FruiteX-B®</div>
+                        <div class="bi-supplier">FutureCeuticals</div>
+                        <p class="bi-desc">Nature-identical calcium fructoborate. Clinically studied boron with pilot RCT data on bone mineral metabolism and inflammation.</p>
+                    </div>
+                </div>
+
+                <h3>Delivery Tech — Matched to Each Nutrient</h3>
+                <div class="delivery-grid">
+                    <div class="delivery-item">
+                        <div class="di-tech">TRAACS® Chelation</div>
+                        <div class="di-product">Magnesium Complex</div>
+                        <div class="di-stat">Superior</div>
+                        <p class="di-baseline">absorption vs. magnesium oxide</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="di-tech">VESIsorb® Colloidal</div>
+                        <div class="di-product">Mito Complex (CoQ10)</div>
+                        <div class="di-stat">622%</div>
+                        <p class="di-baseline">higher AUC vs. standard softgel</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="di-tech">Liposomal Encapsulation</div>
+                        <div class="di-product">D3+K2 Complex</div>
+                        <div class="di-stat">4x</div>
+                        <p class="di-baseline">higher AUC — even fasted</p>
+                    </div>
+                </div>
+
+                <p class="branded-footer">Three nutrients. Three different absorption problems. Three purpose-matched delivery technologies. Every product has specific, citation-backed absorption data — not vague "more absorbable" claims.</p>
             </div>
         </div>
     </section>

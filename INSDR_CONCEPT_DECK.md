@@ -69,7 +69,7 @@ Three products. Three deficiencies most people don't know they have. Every produ
 ### Magnesium Complex — The Hero SKU
 *Body + brain + the key that unlocks both.*
 
-Most people take magnesium oxide — as low as **4% bioavailability**. INSDR pairs **Albion TRAACS® Magnesium Bisglycinate Chelate** (body: sleep, stress, recovery — a verified, fully-reacted chelate that absorbs 3–6x better than oxide, without GI distress) with **Magtein®** (brain: the only patented magnesium form shown to cross the blood-brain barrier and raise brain magnesium levels) and **B6 as P5P** to enhance cellular uptake. Two delivery mechanisms solving two different problems, plus the cofactor that makes both work harder.
+Most people take magnesium oxide — as low as **4% bioavailability**. INSDR pairs **Albion TRAACS® Magnesium Bisglycinate Chelate** (body: sleep, stress, recovery — a verified, fully-reacted chelate that absorbs significantly better than oxide, without GI distress) with **Magtein®** (brain: the most clinically effective magnesium form for raising brain magnesium levels) and **B6 as P5P** to enhance cellular uptake. Two delivery mechanisms solving two different problems, plus the cofactor that makes both work harder.
 
 **Why this leads:** Sleep is the most universally *felt* benefit — customers notice it in 3–5 days. That fast feedback loop converts trials to subscriptions faster than any other product. "Your magnesium has 4% bioavailability" is a one-line wrecking ball against every competitor on the shelf. And it's the cheapest to formulate with the simplest story — the perfect gateway to the full stack.
 
@@ -96,7 +96,7 @@ This isn't a marketing gimmick. It's a business model built on the product actua
 ### Mito Complex — CoQ10 + PQQ
 *Powers your existing mitochondria. Builds new ones.*
 
-CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **Kaneka QH® (ubiquinol)**, the active form that delivers **~2x higher plasma CoQ10 levels** vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Delivered via **VESIsorb® colloidal technology**, a self-emulsifying nano-delivery system that achieves **622% higher plasma absorption** vs. a standard oil-based softgel (clinical study, PMID 19284181). Paired with **BioPQQ®** (Mitsubishi Gas Chemical) — the only PQQ ingredient with US NDI (New Dietary Ingredient) status and the only form with published human clinical trials demonstrating cognitive function and memory improvements. BioPQQ triggers the creation of entirely new mitochondria. More engines (BioPQQ) × better-powered, better-absorbed fuel (Kaneka QH® + VESIsorb®) = compounding cellular energy. This is the product customers feel.
+CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses **Kaneka QH® (ubiquinol)**, the active form that delivers **~2x higher plasma CoQ10 levels** vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Delivered via **VESIsorb® colloidal technology**, a self-emulsifying nano-delivery system that achieves **622% higher plasma absorption** vs. a standard oil-based softgel (clinical study, PMID 19284181). Paired with **BioPQQ®** (Mitsubishi Gas Chemical) — the only PQQ ingredient with an accepted US FDA NDI (New Dietary Ingredient) notification, and the source material behind all published human PQQ clinical trials to date. BioPQQ triggers the creation of entirely new mitochondria. More engines (BioPQQ) × better-powered, better-absorbed fuel (Kaneka QH® + VESIsorb®) = compounding cellular energy. This is the product customers feel.
 
 ### D3+K2 Complex
 *Fat-soluble vitamin that comes with its own fat.*
@@ -110,6 +110,33 @@ This isn't a trend play. It's a foundation — what your body actually needs and
 - **Longevity + vitality.** Every product supports long-term health AND daily performance. Live longer and feel it.
 - **Multigenerational.** A 28-year-old takes these for recovery and energy. Their parents need the same stack for bone density, heart health, and cognitive function. Taiwan becomes a super-aged society this year — 20%+ over 65. One product line, two generations, zero "senior" marketing. Gift subscriptions are available from day one — "the stack I put my mom on" is a purchase path, not just a tagline.
 - **Every product educates.** The science behind each formula is shareable content — ingredient deep-dives, myth-busting, "your body can't use what it can't absorb." The stack doesn't just sell. It teaches.
+
+---
+
+## What's Inside — Branded Ingredients & Delivery Tech
+
+Every ingredient in the Foundation Stack uses a named, patented form — not the generic equivalent that looks the same on a label but delivers meaningfully less. And each product uses a delivery mechanism matched to the nutrient type. This isn't one gimmick applied across the board. It's the right technology for each problem.
+
+### Branded Ingredients
+
+| Ingredient | Supplier | Product | Why It Matters |
+|---|---|---|---|
+| **Albion TRAACS®** Magnesium Bisglycinate Chelate | Balchem | Magnesium Complex | Verified fully-reacted chelate — absorbs significantly better than oxide, no GI distress |
+| **Magtein®** Magnesium L-Threonate | AIDP (MIT-developed) | Magnesium Complex | Most effective form for raising brain magnesium levels; multiple RCTs on memory + sleep |
+| **Kaneka QH®** Ubiquinol CoQ10 | Kaneka | Mito Complex | Active form — ~2x higher plasma CoQ10 vs. ubiquinone; 85+ clinical studies |
+| **BioPQQ®** | Mitsubishi Gas Chemical | Mito Complex | Only PQQ with an accepted FDA NDI notification; all published human PQQ RCTs use Mitsubishi's material; triggers new mitochondria |
+| **MenaQ7®** K2 as MK-7 | Gnosis by Lesaffre | D3+K2 Complex | 99.8% all-trans purity; 22 published studies. Generic MK-7 can be as low as 15% biologically active — most have never been tested |
+| **FruiteX-B®** Calcium Fructoborate | FutureCeuticals | D3+K2 Complex | Nature-identical boron form; pilot RCT showing 29% improvement in WOMAC scores in 14 days (standalone) |
+
+### Delivery Mechanisms — Matched to Each Nutrient
+
+| Technology | Applied To | What It Does | Absorption Advantage |
+|---|---|---|---|
+| **TRAACS® Chelation** | Magnesium Complex | Mineral-amino acid bond stays stable through the gut — absorbs throughout the small intestine, not just the stomach | Significantly higher vs. magnesium oxide |
+| **VESIsorb® Colloidal Delivery** | Mito Complex (CoQ10) | Self-emulsifying nano-droplets form on contact with the GI environment — no bile salts or fatty meal required | **622% higher AUC** vs. standard softgel |
+| **Liposomal Encapsulation** | D3+K2 Complex | Fat carrier built into the formula — fat-soluble D3 absorbs without a meal | **4x higher AUC** vs. standard oil-based, even fasted |
+
+Three nutrients. Three different absorption problems. Three purpose-matched delivery technologies. The result: every product in the stack has specific, citation-backed absorption data — not vague "more absorbable" claims.
 
 ---
 
