@@ -295,6 +295,113 @@
             margin-bottom: 0;
         }
 
+        /* Bioavailability Section */
+        .bioavail-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #0f0d0c 50%, #0a0a0a 100%);
+        }
+
+        .bioavail-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .bioavail-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 36px 40px;
+        }
+
+        .bioavail-nutrient {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            color: #f5f2ed;
+        }
+
+        .bioavail-compare {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .bioavail-bar-group {
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .bioavail-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #a8a29e;
+            white-space: nowrap;
+        }
+
+        .bioavail-bar-track {
+            height: 28px;
+            background: #1c1917;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bioavail-bar {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .bioavail-bar.generic {
+            background: #44403c;
+        }
+
+        .bioavail-bar.insdr {
+            background: linear-gradient(90deg, #AD4236 0%, #c75a4e 100%);
+        }
+
+        .bioavail-pct {
+            font-size: 14px;
+            font-weight: 700;
+            min-width: 120px;
+            text-align: right;
+        }
+
+        .bioavail-pct.generic-pct {
+            color: #78716c;
+        }
+
+        .bioavail-pct.insdr-pct {
+            color: #AD4236;
+        }
+
+        .bioavail-note {
+            font-size: 14px;
+            font-weight: 300;
+            color: #78716c;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .bioavail-card {
+                padding: 28px 24px;
+            }
+
+            .bioavail-bar-group {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .bioavail-pct {
+                text-align: left;
+            }
+        }
+
         /* Streetwear list */
         .play-list {
             list-style: none;
@@ -2129,7 +2236,7 @@
             <div class="two-col">
                 <div class="col">
                     <h3>Supplements</h3>
-                    <p>Formulated for what your body actually absorbs, not what looks good on a label. Bioavailability-first. Every milligram earns its place.</p>
+                    <p>Most supplements are formulated to impress on a label — not to survive your gut. INSDR formulates for bioavailability: the amount your body actually absorbs and uses. Patented delivery systems. Clinically studied forms. Every milligram earns its place — or it doesn't make the formula.</p>
                 </div>
                 <div class="col">
                     <h3>Apparel</h3>
@@ -2147,13 +2254,90 @@
             <h2>Two industries. Two dirty secrets.</h2>
             <div class="problem-card">
                 <h3>The Supplement Problem</h3>
-                <p>Most supplements are poorly absorbed. You're paying for 500mg on the label but your body might use 50. The rest is expensive urine. INSDR formulates for bioavailability — the amount your body actually takes in. Less waste. Real results.</p>
+                <p>Standard magnesium oxide: <strong style="color: #AD4236;">~4% absorption</strong>. Standard CoQ10 softgels: your body discards most of it without a fatty meal. Standard vitamin D: fat-soluble, taken on an empty stomach, wasted.</p>
+                <p style="margin-top: 16px; margin-bottom: 0;">You're paying for 500mg on the label, but your body might use 50. The rest is expensive urine. The supplement industry sells dosage. INSDR sells absorption — because what your body can't take in, it can't use. Bioavailability isn't a feature. It's the entire point.</p>
             </div>
             <div class="problem-card">
                 <h3>The Activewear Problem</h3>
                 <p>Most gym clothes are made from polyester and nylon — thermoplastics. The same material as plastic water bottles. These fabrics have tested positive for PFAs, forever chemicals linked to cancer and thyroid dysfunction. People are sweating in plastic pressed against their lymph nodes and calling it "performance wear."</p>
             </div>
             <p style="margin-top: 32px; font-weight: 500; color: #AD4236; font-size: 22px;">INSDR says no to both.</p>
+        </div>
+    </section>
+
+    <!-- Bioavailability Visual — What Your Body Actually Absorbs -->
+    <section class="bioavail-section">
+        <div class="inner reveal">
+            <div class="section-label">The Bioavailability Gap</div>
+            <h2>Same nutrient. Radically different absorption.</h2>
+            <p style="max-width: 700px;">Most supplement brands compete on dosage — who can print the biggest number on the label. But dosage without absorption is waste. Here's what the science actually shows.</p>
+
+            <div class="bioavail-grid">
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">Magnesium</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Generic oxide</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 4%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">~4%</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(TRAACS® chelate)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 80%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">Superior absorption</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">Fully-reacted chelate survives gastric acid intact. Oxide breaks apart — most never reaches the bloodstream.</p>
+                </div>
+
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">CoQ10</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Standard softgel</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 14%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">Baseline</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(VESIsorb®)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 100%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">622% higher</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">VESIsorb® colloidal delivery creates nano-droplets that absorb without a fatty meal. No meal timing required.</p>
+                </div>
+
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">Vitamin D3</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Standard tablet</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 25%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">Baseline</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(liposomal)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 100%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">4x higher</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">D3 is fat-soluble — most people absorb it poorly fasted. INSDR builds the lipid carrier into the formula. No guesswork.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #78716c; font-size: 15px; margin-top: 48px; margin-bottom: 0;">This is why we don't compete on label dosage. We compete on what your body actually receives.</p>
         </div>
     </section>
 
@@ -2226,9 +2410,9 @@
     <section>
         <div class="inner reveal">
             <div class="stack-intro">
-                <div class="section-label">The Stack</div>
-                <h2>Three deficiencies. Three complexes.</h2>
-                <p>Not trends. Not categories. What your body is actually missing. Every product has a <span style="color: #f5f2ed; font-weight: 500;">primary ingredient</span>, a <span style="color: #f5f2ed; font-weight: 500;">synergistic amplifier</span>, and a <span style="color: #f5f2ed; font-weight: 500;">story that educates</span>.</p>
+                <div class="section-label">The Foundation Stack</div>
+                <h2>Three deficiencies. Three delivery systems. Zero wasted milligrams.</h2>
+                <p>Every product starts with what your body is actually missing — then solves the absorption problem that makes most supplements useless. Each formula pairs a <span style="color: #f5f2ed; font-weight: 500;">clinically studied primary ingredient</span> with a <span style="color: #f5f2ed; font-weight: 500;">synergistic amplifier</span> and a <span style="color: #f5f2ed; font-weight: 500;">purpose-matched delivery technology</span> that gets it into your bloodstream — not your toilet.</p>
             </div>
 
             <!-- Magnesium Complex — Hero SKU -->
