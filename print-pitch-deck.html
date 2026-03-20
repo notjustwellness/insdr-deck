@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSDR — Partner Deck (Print)</title>
+    <title>INSDR — Partner Deck</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -226,132 +226,10 @@
 
         .footnote { font-size: 12px; color: #57534e; margin-top: 24px; }
 
-        /* ══════════════════════════════════════════
-           PRINT OVERRIDE — white background
-           ══════════════════════════════════════════ */
-        body {
-            background: #ffffff !important;
-            color: #1a1410 !important;
-        }
-
-        /* Slides */
-        .slide {
-            border-bottom-color: #e0dbd5 !important;
-        }
-
-        /* Nav */
-        .nav {
-            background: rgba(255,255,255,0.92) !important;
-            border-bottom-color: #e0dbd5 !important;
-        }
-        .nav-brand { color: #1a1410 !important; }
-        .nav-label { color: #a8a29e !important; }
-        .nav-links a { color: #a8a29e !important; }
-
-        /* Typography */
-        h1, h2, h3 { color: #1a1410 !important; }
-        .signal { color: #AD4236 !important; }
-        p { color: #44403c !important; }
-        strong { color: #1a1410 !important; }
-        .subtitle { color: #78716c !important; }
-        .label { color: #AD4236 !important; }
-
-        /* Cards */
-        .card {
-            background: #f5f2ed !important;
-            border-color: #e0dbd5 !important;
-        }
-        .card p { color: #78716c !important; }
-        .card h3 { color: #1a1410 !important; }
-        .card .stat { color: #AD4236 !important; }
-        .card .stat-label { color: #a8a29e !important; }
-
-        /* Tables */
-        th {
-            color: #a8a29e !important;
-            border-bottom-color: #d6d3d1 !important;
-        }
-        td {
-            color: #44403c !important;
-            border-bottom-color: #e0dbd5 !important;
-        }
-        td strong { color: #1a1410 !important; }
-
-        /* Pills */
-        .pill-signal {
-            background: rgba(173,66,54,0.08) !important;
-            color: #AD4236 !important;
-            border-color: rgba(173,66,54,0.25) !important;
-        }
-        .pill-green {
-            background: rgba(34,197,94,0.06) !important;
-            color: #16a34a !important;
-            border-color: rgba(34,197,94,0.2) !important;
-        }
-        .pill-amber {
-            background: rgba(245,158,11,0.06) !important;
-            color: #d97706 !important;
-            border-color: rgba(245,158,11,0.2) !important;
-        }
-
-        /* Urgency bar */
-        .urgency-bar {
-            background: #ffffff !important;
-            border: 2px solid #AD4236 !important;
-            color: #AD4236 !important;
-        }
-        .urgency-bar .pulse { background: #AD4236 !important; }
-
-        /* VS rows */
-        .vs-row { border-bottom-color: #e0dbd5 !important; }
-        .vs-left { color: #a8a29e !important; }
-        .vs-center { color: #AD4236 !important; }
-        .vs-right { color: #1a1410 !important; }
-
-        /* Divider */
-        .divider { background: #d6d3d1 !important; }
-
-        /* Timeline */
-        .timeline-item { border-bottom-color: #e0dbd5 !important; }
-        .timeline-phase { color: #AD4236 !important; }
-        .timeline-when { color: #a8a29e !important; }
-        .timeline-content h3 { color: #1a1410 !important; }
-        .timeline-content p { color: #78716c !important; }
-
-        /* Moat numbers */
-        .moat-num {
-            color: #e0dbd5 !important;
-            -webkit-text-stroke-color: #d6d3d1 !important;
-        }
-        .moat-item { border-bottom-color: #e0dbd5 !important; }
-        .moat-item h3 { color: #1a1410 !important; }
-        .moat-item p { color: #44403c !important; }
-
-        /* Link cards */
-        .link-card {
-            background: #f5f2ed !important;
-            border-color: #e0dbd5 !important;
-        }
-        .link-card .link-title { color: #1a1410 !important; }
-        .link-card .link-desc { color: #a8a29e !important; }
-        .link-card .link-arrow { color: #AD4236 !important; }
-
-        /* TOC */
-        .toc-list li { border-bottom-color: #e0dbd5 !important; }
-        .toc-list a { color: #44403c !important; }
-
-        /* Footnote */
-        .footnote { color: #a8a29e !important; }
-
-        /* Print-specific */
         @media print {
-            body { background: #fff !important; }
-            .nav { display: none !important; }
-            .slide {
-                min-height: auto !important;
-                page-break-inside: avoid;
-                padding: 40px 60px !important;
-            }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            .slide { min-height: auto !important; page-break-inside: avoid; }
+            .nav { position: static !important; }
             .urgency-bar .pulse { animation: none !important; }
         }
 
