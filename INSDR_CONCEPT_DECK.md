@@ -305,7 +305,7 @@ Tone and positioning can be copied. These can't.
 
 | Moat | Why It's Structural |
 |---|---|
-| **Branded ingredient exclusivity** | Lock regional rights for Magtein® (magnesium threonate), Kaneka QH® (ubiquinol), BioPQQ® (Mitsubishi Gas Chemical), and MenaQ7® (Gnosis by Lesaffre) in Taiwan/SEA. If INSDR holds the rights, competitors can't replicate the formulations. |
+| **Branded ingredient first-mover advantage** | INSDR is the first Taiwan brand to build its identity around branded, patented ingredients (Magtein®, Kaneka QH®, BioPQQ®, MenaQ7®, TRAACS®) with citation-backed absorption data. The moat is brand association + formulation complexity + CDMO-level IP — not contractual exclusivity, but mindshare that's harder to displace than to build. |
 | **Apparel as acquisition channel** | No supplement brand has physical presence in gyms. Every INSDR garment is a zero-cost billboard that starts conversations. Can't be bought — has to be built. |
 | **Community programs as switching cost** | Gated fitness programs from Phase 1b. Once someone is mid-program, they don't churn. Free for subscribers — makes subscriptions stickier than product alone. |
 | **Founder-market fit** | Vanness Wu is not a paid endorser. He's the founder, the product demo, and a cultural icon in the exact markets INSDR is launching. Irreplicable. |

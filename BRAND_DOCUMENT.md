@@ -414,13 +414,14 @@ Drop model means no discounting. Limited runs hold value. Resale culture is a fe
 
 The brand doc positions against competitors primarily on tone (streetwear credibility, insider culture). Tone is easy to copy. These are the structural moats:
 
-### 1. Branded Ingredient Exclusivity
-Lock in exclusive regional distribution rights for key branded ingredients in Taiwan/SEA:
-- **Magtein®** (magnesium threonate) — patented, limited licensees in APAC
-- **Kaneka QH®** (ubiquinol CoQ10) — gold standard, exclusive terms possible in smaller markets
-- **BioPQQ®** (Mitsubishi Gas Chemical) — the only legal PQQ supplement ingredient with NDI status; explore Taiwan/SEA distribution exclusivity
-- **MenaQ7®** (Gnosis by Lesaffre) — 22 clinical studies, strongest K2 patent portfolio; exclusive regional terms worth pursuing
-- This is a real moat. If INSDR holds the regional rights, competitors can't replicate the formulations — and the branded ingredient story becomes a marketing asset, not just a quality standard.
+### 1. Branded Ingredient First-Mover Advantage
+INSDR uses branded, patented ingredients across every product in the Foundation Stack — Albion TRAACS®, Magtein®, Kaneka QH®, BioPQQ®, MenaQ7®, FruiteX-B® — and builds its brand story around them. The moat is not contractual exclusivity (unrealistic for a startup) but a layered defensibility strategy:
+
+- **First-to-market positioning:** No Taiwan brand currently leads with branded ingredients as their story. Being the first to prominently feature these ingredients — with specific absorption multipliers and citation-backed data — creates a perceived moat through brand association. Consumers don't check licensing agreements; they remember which brand taught them about bioavailability.
+- **Formulation complexity:** Any single ingredient can be sourced by a competitor. But the specific *combinations* — TRAACS magnesium + Magtein + P5P in one complex, Kaneka QH + BioPQQ in VESIsorb delivery, MenaQ7 + FruiteX-B + liposomal D3 — require formulation expertise, multiple supplier relationships, and the conviction to pay for premium ingredients. The full stack architecture is much harder to replicate than any single ingredient.
+- **Co-marketing with ingredient companies:** Rather than locking up supply, pursue being a featured case study for ingredient companies' Asia marketing. "Vanness Wu's INSDR uses Magtein" in AIDP's marketing materials creates mutual value. Ingredient companies need success stories in new markets — INSDR offers that.
+- **CDMO relationship as practical moat:** Working with a Taiwan CDMO (e.g., TCI Bio) to develop proprietary formulations creates practical switching costs — custom processes, supplier relationships, and formulation IP that a competitor can't simply copy overnight.
+- **Speed advantage:** In a market like Taiwan where no brand owns the bioavailability position, being first with a well-marketed product creates a de facto moat even without contractual exclusivity. Own the mindshare before anyone else thinks to compete.
 
 ### 2. Apparel as Physical Brand Presence
 No supplement brand has a physical presence in gyms. Every INSDR garment is a zero-cost billboard that creates conversations. This is an acquisition channel competitors can't buy — it has to be built.
@@ -537,7 +538,11 @@ Once both verticals are running in Taiwan, INSDR becomes a daily presence throug
 - [ ] Develop visual identity system (logo, type, color palette)
 - [ ] Website architecture and platform (Shopify, custom, etc.)
 - [ ] Regulatory / compliance review for supplement claims
-- [ ] Explore regional exclusivity rights for Taiwan/SEA: Magtein® (AIDP), Kaneka QH® (Kaneka), BioPQQ® (Mitsubishi Gas Chemical), MenaQ7® (Gnosis by Lesaffre)
+- [ ] Contact TCI Bio (大江生醫) for CDMO partnership — branded ingredient sourcing, manufacturing, regulatory
+- [ ] Contact AIDP about Magtein® supply for Taiwan (open territory, no known distributor)
+- [ ] Contact MGC nutrition division about BioPQQ® distribution partnership for Taiwan
+- [ ] Source MenaQ7® through SunWay Biotech (existing Gnosis by Lesaffre alliance in Taiwan)
+- [ ] Source Kaneka QH® through Kaneka Taiwan Co., Ltd. or via TCI Bio
 - [ ] Confirm VESIsorb® licensing for Mito Complex (Vesifact AG / SourceOne Global Partners)
 - [ ] Source FruiteX-B® (FutureCeuticals) for D3+K2 Complex boron
 - [ ] Confirm Albion TRAACS® Magnesium Bisglycinate Chelate supply chain (Balchem Corporation)
