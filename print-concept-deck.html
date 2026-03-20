@@ -1,848 +1,3741 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INSDR — Concept Deck (Print)</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSDR — Concept Deck (Print)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-    html {
-      scroll-behavior: smooth;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #ffffff;
-      color: #333333;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* NAV — static header for print */
-    nav {
-      position: static;
-      background: #ffffff;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 0 2rem;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #f5f2ed;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    nav .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 40px;
+            position: relative;
+        }
 
-    nav .back-link {
-      font-size: 0.8rem;
-      color: #999999;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
+        .inner {
+            max-width: 900px;
+            width: 100%;
+        }
 
-    nav .brand {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.35em;
-      color: #1a1a1a;
-    }
+        /* Hero */
+        .hero {
+            text-align: center;
+            flex-direction: column;
+        }
 
-    nav .nav-right {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #999999;
-    }
+        .hero .brand-logo {
+            max-width: clamp(280px, 50vw, 550px);
+            height: auto;
+            margin-bottom: 40px;
+        }
 
-    /* MAIN CONTENT */
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-    }
+        .hero .mantra {
+            font-size: clamp(16px, 2.5vw, 22px);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #a8a29e;
+        }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 4rem 0 3rem;
-      border-bottom: 1px solid #e0e0e0;
-      margin-bottom: 4rem;
-    }
+        .pill-prompt {
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #57534e;
+            margin-bottom: 24px;
+        }
 
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: 900;
-      letter-spacing: 0.3em;
-      color: #1a1a1a;
-      margin-bottom: 1rem;
-    }
+        .play-btn {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
 
-    .hero .tagline {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666666;
-      letter-spacing: 0.08em;
-    }
+        .capsule {
+            width: 52px;
+            height: 120px;
+            border-radius: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0.85;
+        }
 
-    /* SECTIONS */
-    section {
-      margin-bottom: 4rem;
-      padding-bottom: 4rem;
-      border-bottom: 1px solid #e0e0e0;
-      break-inside: avoid;
-    }
+        .capsule-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
 
-    section:last-child {
-      border-bottom: none;
-    }
+        .capsule-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
 
-    /* HEADINGS */
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #1a1a1a;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.01em;
-      line-height: 1.3;
-    }
+        .capsule-shine {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 12px;
+            height: 35px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(5deg);
+        }
 
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
+        .capsule-band {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.15);
+        }
 
-    h3:first-child {
-      margin-top: 0;
-    }
+        .play-btn:hover .capsule {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
 
-    /* PARAGRAPHS */
-    p {
-      margin-bottom: 1.2rem;
-      color: #333333;
-    }
+        .play-btn.playing .capsule {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
 
-    strong {
-      color: #1a1a1a;
-      font-weight: 600;
-    }
+        /* Red capsule */
+        .red-pill .capsule-top {
+            background: linear-gradient(135deg, #c9554a 0%, #AD4236 50%, #8a3028 100%);
+        }
 
-    em {
-      font-style: italic;
-      color: #333333;
-    }
+        .red-pill .capsule-bottom {
+            background: linear-gradient(135deg, #e8d5d0 0%, #f0e0da 50%, #d4b8b0 100%);
+        }
 
-    /* SUBTITLE under H3 */
-    .subtitle {
-      font-style: italic;
-      color: #666666;
-      margin-top: -0.75rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.95rem;
-    }
+        .play-btn.red-pill:hover .capsule,
+        .play-btn.red-pill.playing .capsule {
+            box-shadow: 0 8px 30px rgba(173, 66, 54, 0.4);
+        }
 
-    /* LISTS */
-    ul, ol {
-      margin-bottom: 1.2rem;
-      padding-left: 1.5rem;
-    }
+        /* Blue capsule */
+        .blue-pill .capsule-top {
+            background: linear-gradient(135deg, #5a8fc5 0%, #4A7FB5 50%, #3a6590 100%);
+        }
 
-    li {
-      margin-bottom: 0.5rem;
-      color: #333333;
-    }
+        .blue-pill .capsule-bottom {
+            background: linear-gradient(135deg, #d0dce8 0%, #dae5f0 50%, #b0c4d4 100%);
+        }
 
-    li strong {
-      color: #1a1a1a;
-    }
+        .play-btn.blue-pill:hover .capsule,
+        .play-btn.blue-pill.playing .capsule {
+            box-shadow: 0 8px 30px rgba(74, 127, 181, 0.4);
+        }
 
-    /* TABLES */
-    .table-wrap {
-      overflow-x: auto;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-      break-inside: avoid;
-    }
+        .capsule-label {
+            margin-top: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #78716c;
+            transition: color 0.3s ease;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #f8f8f8;
-      font-size: 0.9rem;
-      break-inside: avoid;
-    }
+        .red-pill:hover .capsule-label,
+        .red-pill.playing .capsule-label {
+            color: #AD4236;
+        }
 
-    thead th {
-      background: #f5f5f5;
-      color: #1a1a1a;
-      font-weight: 600;
-      text-align: left;
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid #e0e0e0;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      white-space: nowrap;
-    }
+        .blue-pill:hover .capsule-label,
+        .blue-pill.playing .capsule-label {
+            color: #4A7FB5;
+        }
 
-    tbody td {
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid #e0e0e0;
-      color: #333333;
-      vertical-align: top;
-    }
+        #youtube-player {
+            position: fixed;
+            top: -9999px;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none;
+        }
 
-    tbody tr:last-child td {
-      border-bottom: none;
-    }
+        .hero .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #57534e;
+            animation: pulse 2s ease-in-out infinite;
+        }
 
-    tbody td strong {
-      color: #1a1a1a;
-    }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
 
-    /* BLOCKQUOTES */
-    blockquote {
-      border-left: 3px solid #AD4236;
-      padding: 1.2rem 1.5rem;
-      margin: 1.5rem 0;
-      background: rgba(173, 66, 54, 0.06);
-      border-radius: 0 6px 6px 0;
-      break-inside: avoid;
-    }
+        /* Section headers */
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 40px;
+        }
 
-    blockquote p {
-      margin-bottom: 0;
-      color: #1a1a1a;
-      font-weight: 500;
-    }
+        h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 32px;
+        }
 
-    /* HORIZONTAL RULES */
-    hr {
-      border: none;
-      border-top: 1px solid #e0e0e0;
-      margin: 3rem 0;
-    }
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
 
-    /* ACCENT COLOR */
-    .accent {
-      color: #AD4236;
-    }
+        p {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
 
-    /* FOOTER TAGLINE */
-    .closing {
-      text-align: center;
-      padding: 3rem 0 1rem;
-      font-style: italic;
-      color: #666666;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-    }
+        .highlight {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
 
-    /* CONFIDENTIAL FOOTER */
-    .confidential-footer {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      margin-top: 2rem;
-      border-top: 1px solid #e0e0e0;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #999999;
-    }
+        /* Two columns */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 48px;
+        }
 
-    /* PRINT MEDIA */
-    @media print {
-      body {
-        background: #ffffff;
-        color: #333333;
-        font-size: 11pt;
-      }
+        .col h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
 
-      @page {
-        margin: 1.5cm 2cm;
-      }
+        .col p {
+            font-size: 17px;
+        }
 
-      nav {
-        position: static;
-        background: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-      }
+        /* Divider */
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #78716c;
+            margin-bottom: 40px;
+        }
 
-      nav .back-link {
-        display: none;
-      }
+        /* Problem section */
+        .problem-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-left: 3px solid #AD4236;
+            border-radius: 12px;
+            padding: 48px;
+            margin-bottom: 24px;
+        }
 
-      main {
-        max-width: 100%;
-        padding: 1rem 0 2rem;
-      }
+        .problem-card h3 {
+            color: #f5f2ed;
+        }
 
-      .hero {
-        padding: 2rem 0 2rem;
-        margin-bottom: 2rem;
-      }
+        .problem-card p {
+            margin-bottom: 0;
+        }
 
-      section {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        break-inside: avoid;
-      }
+        /* Bioavailability Section */
+        .bioavail-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #0f0d0c 50%, #0a0a0a 100%);
+        }
 
-      .table-wrap {
-        break-inside: avoid;
-      }
+        .bioavail-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
 
-      table {
-        break-inside: avoid;
-      }
+        .bioavail-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 36px 40px;
+        }
 
-      blockquote {
-        break-inside: avoid;
-      }
+        .bioavail-nutrient {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            color: #f5f2ed;
+        }
 
-      h2, h3 {
-        break-after: avoid;
-      }
+        .bioavail-compare {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
 
-      ul, ol {
-        break-inside: avoid;
-      }
+        .bioavail-bar-group {
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            align-items: center;
+            gap: 16px;
+        }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
+        .bioavail-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #a8a29e;
+            white-space: nowrap;
+        }
 
-      .confidential-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-    }
+        .bioavail-bar-track {
+            height: 28px;
+            background: #1c1917;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 640px) {
-      nav {
-        padding: 0 1rem;
-      }
+        .bioavail-bar {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
 
-      nav .brand {
-        font-size: 0.75rem;
-        letter-spacing: 0.25em;
-      }
+        .bioavail-bar.generic {
+            background: #44403c;
+        }
 
-      nav .back-link {
-        font-size: 0.7rem;
-      }
+        .bioavail-bar.insdr {
+            background: linear-gradient(90deg, #AD4236 0%, #c75a4e 100%);
+        }
 
-      .hero h1 {
-        font-size: 2.5rem;
-        letter-spacing: 0.2em;
-      }
+        .bioavail-pct {
+            font-size: 14px;
+            font-weight: 700;
+            min-width: 120px;
+            text-align: right;
+        }
 
-      .hero .tagline {
-        font-size: 0.95rem;
-      }
+        .bioavail-pct.generic-pct {
+            color: #78716c;
+        }
 
-      main {
-        padding: 2rem 1rem 3rem;
-      }
+        .bioavail-pct.insdr-pct {
+            color: #AD4236;
+        }
 
-      h2 {
-        font-size: 1.4rem;
-      }
+        .bioavail-note {
+            font-size: 14px;
+            font-weight: 300;
+            color: #78716c;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
 
-      h3 {
-        font-size: 1.1rem;
-      }
+        @media (max-width: 768px) {
+            .bioavail-card {
+                padding: 28px 24px;
+            }
 
-      table {
-        font-size: 0.8rem;
-      }
+            .bioavail-bar-group {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
 
-      thead th, tbody td {
-        padding: 0.6rem 0.75rem;
-      }
-    }
-  </style>
+            .bioavail-pct {
+                text-align: left;
+            }
+        }
+
+        /* Streetwear list */
+        .play-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .play-list li {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 300;
+            color: #d6d3d1;
+            padding: 24px 0;
+            border-bottom: 1px solid #1c1917;
+            line-height: 1.6;
+        }
+
+        .play-list li strong {
+            color: #AD4236;
+            font-weight: 600;
+        }
+
+        /* Audience */
+        .audience-headline {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            font-style: italic;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .trait-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .trait {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 8px;
+            padding: 20px 24px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #d6d3d1;
+        }
+
+        /* Manifesto */
+        .manifesto-section {
+            background: #f5f2ed;
+            color: #0a0a0a;
+        }
+
+        .manifesto-section .section-label {
+            color: #AD4236;
+        }
+
+        .manifesto-text {
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 300;
+            line-height: 1.8;
+            color: #292524;
+        }
+
+        .manifesto-text .stanza {
+            margin-bottom: 32px;
+        }
+
+        .manifesto-text .payoff {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            color: #AD4236;
+            margin-top: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        /* Comparison table */
+        .comparison {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+
+        .comparison th {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #78716c;
+            text-align: left;
+            padding: 16px 0;
+            border-bottom: 2px solid #292524;
+        }
+
+        .comparison th:last-child {
+            color: #AD4236;
+        }
+
+        .comparison td {
+            font-size: 17px;
+            font-weight: 300;
+            padding: 20px 24px 20px 0;
+            border-bottom: 1px solid #1c1917;
+            vertical-align: top;
+            color: #a8a29e;
+        }
+
+        .comparison td:last-child {
+            color: #f5f2ed;
+            font-weight: 400;
+        }
+
+        /* Foundation Stack */
+        .stack-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+        }
+
+        .stack-intro p {
+            font-size: 18px;
+        }
+
+        .stack-framework {
+            font-size: 15px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 0;
+        }
+
+        .stack-framework span {
+            color: #AD4236;
+            font-weight: 500;
+        }
+
+        .product-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #AD4236;
+        }
+
+        .product-number {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 12px;
+        }
+
+        .product-name {
+            font-size: clamp(24px, 3.5vw, 36px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .product-tagline {
+            font-size: 17px;
+            font-weight: 400;
+            font-style: italic;
+            color: #a8a29e;
+            margin-bottom: 32px;
+        }
+
+        .product-ingredients {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .ingredient-block {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .ingredient-role {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .ingredient-name {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 6px;
+        }
+
+        .ingredient-desc {
+            font-size: 14px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .product-story {
+            font-size: 16px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 0;
+            padding-top: 24px;
+            border-top: 1px solid #292524;
+        }
+
+        .product-story strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .stack-why {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+            margin-top: 56px;
+        }
+
+        .why-block {
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .why-block h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .why-block p {
+            font-size: 15px;
+            color: #a8a29e;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                padding: 32px 24px;
+            }
+
+            .product-ingredients {
+                grid-template-columns: 1fr;
+            }
+
+            .stack-why {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        /* Branded Ingredients & Delivery Tech */
+        .branded-section {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            margin-top: 56px;
+        }
+
+        .branded-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 32px;
+        }
+
+        .branded-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .branded-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .branded-item .bi-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 4px;
+        }
+
+        .branded-item .bi-supplier {
+            font-size: 12px;
+            font-weight: 500;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .branded-item .bi-desc {
+            font-size: 13px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        .delivery-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .delivery-item .di-tech {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 4px;
+        }
+
+        .delivery-item .di-product {
+            font-size: 12px;
+            font-weight: 500;
+            color: #78716c;
+            margin-bottom: 12px;
+        }
+
+        .delivery-item .di-stat {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 800;
+            color: #AD4236;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .delivery-item .di-baseline {
+            font-size: 12px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 0;
+        }
+
+        .branded-footer {
+            font-size: 16px;
+            font-weight: 300;
+            color: #a8a29e;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 0;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .branded-grid,
+            .delivery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .branded-section {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Opportunity */
+        .opportunity-section {
+            text-align: center;
+        }
+
+        .opportunity-section p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .closer {
+            font-size: clamp(28px, 5vw, 52px);
+            font-weight: 800;
+            color: #AD4236;
+            margin-top: 48px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        /* Roadmap */
+        .roadmap-section {
+            background: #141414;
+        }
+
+        .phase {
+            margin-bottom: 64px;
+        }
+
+        .phase:last-child {
+            margin-bottom: 0;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .phase-number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #AD4236;
+            white-space: nowrap;
+        }
+
+        .phase-title {
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .phase p {
+            font-size: 18px;
+            max-width: 760px;
+        }
+
+        .phase-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .phase-detail {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 8px;
+            padding: 20px 24px;
+        }
+
+        .phase-detail .detail-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .phase-detail .detail-text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .phase-arrow {
+            text-align: center;
+            font-size: 28px;
+            color: #292524;
+            margin: 48px 0;
+        }
+
+        .lock-icon {
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        /* Why Both */
+        .why-both-section {
+            background: #0a0a0a;
+        }
+
+        .why-both-section .section-question {
+            font-size: clamp(18px, 2.5vw, 22px);
+            font-weight: 300;
+            font-style: italic;
+            color: #78716c;
+            margin-bottom: 12px;
+        }
+
+        .flywheel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .flywheel-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 40px 36px;
+        }
+
+        .flywheel-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .flywheel-card p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .flywheel-card.full-width {
+            grid-column: 1 / -1;
+            border-left: 3px solid #AD4236;
+        }
+
+        .sequence-block {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            margin-top: 48px;
+        }
+
+        .sequence-block h3 {
+            font-size: clamp(22px, 3vw, 28px);
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .sequence-block p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+        }
+
+        .sequence-block p strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .flywheel {
+                grid-template-columns: 1fr;
+            }
+
+            .flywheel-card {
+                padding: 32px 24px;
+            }
+
+            .sequence-block {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Market Section */
+        .market-section {
+            background: #141414;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .market-column {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 40px 36px;
+        }
+
+        .market-column-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 32px;
+        }
+
+        .market-stat {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #292524;
+        }
+
+        .market-stat:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .market-stat .stat-number {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: #AD4236;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .market-stat .stat-label {
+            font-size: 15px;
+            font-weight: 400;
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .market-stat .stat-label strong {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .market-closing {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-left: 3px solid #AD4236;
+            border-radius: 12px;
+            padding: 40px 36px;
+        }
+
+        .market-closing p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .market-column {
+                padding: 32px 24px;
+            }
+
+            .market-closing {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Business Model Section */
+        .biz-model-section {
+            background: #0a0a0a;
+        }
+
+        .biz-model-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            margin-bottom: 32px;
+        }
+
+        .biz-model-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 40px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .biz-model-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #AD4236;
+        }
+
+        .biz-model-card-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 12px;
+        }
+
+        .biz-model-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .biz-metric {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #1c1917;
+        }
+
+        .biz-metric:last-child {
+            border-bottom: none;
+        }
+
+        .biz-metric .metric-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #78716c;
+            white-space: nowrap;
+            min-width: 100px;
+        }
+
+        .biz-metric .metric-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: #f5f2ed;
+        }
+
+        .biz-metric .metric-value .accent {
+            color: #AD4236;
+            font-weight: 700;
+        }
+
+        .biz-flywheel {
+            background: #141414;
+            border: 1px solid #292524;
+            border-left: 3px solid #AD4236;
+            border-radius: 12px;
+            padding: 40px 36px;
+            margin-bottom: 32px;
+        }
+
+        .biz-flywheel h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .biz-flywheel p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #d6d3d1;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .biz-key-stat {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .biz-key-stat .stat-number {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: #AD4236;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .biz-key-stat p {
+            font-size: 17px;
+            font-weight: 300;
+            color: #a8a29e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .biz-model-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .biz-model-card {
+                padding: 32px 24px;
+            }
+
+            .biz-flywheel {
+                padding: 32px 24px;
+            }
+
+            .biz-key-stat {
+                padding: 32px 24px;
+            }
+
+            .biz-metric {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .biz-metric .metric-label {
+                min-width: auto;
+            }
+        }
+
+        /* Represent Case Study */
+        .represent-section {
+            background: #0f0e0c;
+        }
+
+        .represent-origin {
+            display: flex;
+            gap: 16px;
+            align-items: baseline;
+            margin-bottom: 48px;
+        }
+
+        .represent-origin-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            white-space: nowrap;
+        }
+
+        .represent-origin-line {
+            font-size: 15px;
+            color: #78716c;
+        }
+
+        .represent-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 48px 0;
+        }
+
+        .represent-pillar {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 28px 24px;
+        }
+
+        .represent-pillar h4 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 10px;
+        }
+
+        .represent-pillar p {
+            font-size: 15px;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .represent-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 48px 0;
+        }
+
+        .represent-table th {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #57534e;
+            padding: 0 0 16px;
+            text-align: left;
+            border-bottom: 1px solid #292524;
+        }
+
+        .represent-table th:last-child {
+            color: #AD4236;
+        }
+
+        .represent-table td {
+            padding: 18px 0;
+            border-bottom: 1px solid #1c1917;
+            font-size: 15px;
+            color: #a8a29e;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .represent-table td:first-child {
+            color: #78716c;
+            font-weight: 500;
+            width: 22%;
+            padding-right: 24px;
+        }
+
+        .represent-table td:last-child {
+            color: #f5f2ed;
+        }
+
+        .represent-stat-row {
+            display: flex;
+            gap: 20px;
+            margin: 48px 0;
+        }
+
+        .represent-stat {
+            flex: 1;
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+
+        .represent-stat .big-num {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            color: #AD4236;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .represent-stat p {
+            font-size: 13px;
+            color: #78716c;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .represent-edge {
+            background: #1a0f0e;
+            border: 1px solid #3a2020;
+            border-radius: 12px;
+            padding: 36px 40px;
+            margin-top: 48px;
+        }
+
+        .represent-edge h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f5f2ed;
+            margin-bottom: 20px;
+        }
+
+        .represent-edge ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .represent-edge ul li {
+            font-size: 15px;
+            color: #a8a29e;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .represent-edge ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #AD4236;
+            font-weight: 700;
+        }
+
+        .represent-edge ul li strong {
+            color: #f5f2ed;
+        }
+
+        @media (max-width: 768px) {
+            .represent-pillars {
+                grid-template-columns: 1fr;
+            }
+            .represent-stat-row {
+                flex-direction: column;
+            }
+        }
+
+        /* Moodboard */
+        .moodboard-section {
+            background:
+                linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.75)),
+                url('https://plus.unsplash.com/premium_photo-1675855619492-285d269baf32?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .ref-brands {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+            margin-bottom: 64px;
+        }
+
+        .ref-brand {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 36px 32px;
+        }
+
+        .ref-brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .ref-brand-sub {
+            font-size: 13px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 20px;
+        }
+
+        .ref-brand p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .cross-section {
+            margin-top: 64px;
+        }
+
+        .cross-section h3 {
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        .dna-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .dna-item {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .dna-item .dna-num {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 10px;
+        }
+
+        .dna-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .dna-item p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .whitespace-callout {
+            text-align: center;
+            margin-top: 56px;
+            padding: 48px 32px;
+            background: #0a0a0a;
+            border: 1px solid #292524;
+            border-radius: 16px;
+        }
+
+        .whitespace-callout p {
+            font-size: 17px;
+            color: #78716c;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+
+        .whitespace-callout .callout-line {
+            font-size: clamp(20px, 3vw, 26px);
+            font-weight: 700;
+            color: #f5f2ed;
+            margin-bottom: 0;
+        }
+
+        .pos-map {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #292524;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pos-quadrant {
+            background: #1c1917;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .pos-quadrant .quad-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #57534e;
+            margin-bottom: 12px;
+        }
+
+        .pos-quadrant .quad-brands {
+            font-size: 15px;
+            font-weight: 400;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .pos-quadrant.insdr-quad {
+            background: #1a1512;
+            border: 1px solid rgba(173, 66, 54, 0.3);
+        }
+
+        .pos-quadrant.insdr-quad .quad-brands {
+            color: #f5f2ed;
+            font-weight: 500;
+        }
+
+        .pos-quadrant.insdr-quad .quad-label {
+            color: #AD4236;
+        }
+
+        @media (max-width: 768px) {
+            .ref-brands {
+                grid-template-columns: 1fr;
+            }
+
+            .dna-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pos-map {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* The Signal */
+        .signal-section {
+            margin-top: 64px;
+            padding-top: 64px;
+            border-top: 1px solid #292524;
+        }
+
+        .signal-header {
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+
+        .signal-header h3 {
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0;
+        }
+
+        .signal-swatch {
+            width: 24px;
+            height: 24px;
+            background: #AD4236;
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: pulse-signal 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-signal {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(173, 66, 54, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(173, 66, 54, 0); }
+        }
+
+        .signal-subtitle {
+            font-size: 17px;
+            font-weight: 300;
+            color: #a8a29e;
+            margin-bottom: 40px;
+        }
+
+        .signal-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .signal-detail {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 12px;
+            padding: 36px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signal-detail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: #AD4236;
+        }
+
+        .signal-detail .detail-type {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 10px;
+        }
+
+        .signal-detail h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .signal-detail .detail-placement {
+            font-size: 13px;
+            font-weight: 500;
+            color: #78716c;
+            margin-bottom: 12px;
+        }
+
+        .signal-detail p {
+            font-size: 15px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .signal-rule {
+            background: #0a0a0a;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 24px 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .signal-rule p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #78716c;
+            margin-bottom: 0;
+        }
+
+        .signal-rule strong {
+            color: #f5f2ed;
+            font-weight: 600;
+        }
+
+        .signal-precedents {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .precedent {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .precedent-brand {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f5f2ed;
+            margin-bottom: 6px;
+        }
+
+        .precedent-detail {
+            font-size: 13px;
+            font-weight: 300;
+            color: #78716c;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .signal-timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .signal-phase {
+            background: #1c1917;
+            border: 1px solid #292524;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .signal-phase .phase-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #AD4236;
+            margin-bottom: 8px;
+        }
+
+        .signal-phase h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .signal-phase p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #78716c;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .signal-details {
+                grid-template-columns: 1fr;
+            }
+
+            .signal-precedents {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .signal-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .signal-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* Program Teaser */
+        .program-teaser {
+            background: #0a0a0a;
+            border-top: 1px solid #1c1917;
+        }
+
+        .teaser-card {
+            background: #141414;
+            border: 1px solid #292524;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .teaser-header {
+            padding: 48px 48px 32px;
+        }
+
+        .teaser-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #AD4236;
+            border: 1px solid rgba(173, 66, 54, 0.4);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .teaser-header h3 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .teaser-header .teaser-sub {
+            font-size: 17px;
+            font-weight: 300;
+            color: #a8a29e;
+            margin-bottom: 0;
+        }
+
+        .teaser-holds {
+            padding: 0 48px 8px;
+        }
+
+        .teaser-hold {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #1c1917;
+        }
+
+        .teaser-hold:last-child {
+            border-bottom: none;
+        }
+
+        .hold-num {
+            font-size: 12px;
+            font-weight: 700;
+            color: #AD4236;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .hold-name {
+            font-size: 17px;
+            font-weight: 500;
+            color: #f5f2ed;
+        }
+
+        .hold-target {
+            font-size: 14px;
+            font-weight: 300;
+            color: #78716c;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        .teaser-fade {
+            position: relative;
+            padding: 0 48px;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .teaser-fade::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to bottom, transparent, #141414);
+            pointer-events: none;
+        }
+
+        .teaser-fade p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #a8a29e;
+            line-height: 1.7;
+        }
+
+        .teaser-cta {
+            padding: 32px 48px 48px;
+            text-align: center;
+        }
+
+        .teaser-cta a {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #f5f2ed;
+            background: #AD4236;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .teaser-cta a:hover {
+            background: #c9554a;
+        }
+
+        .teaser-context {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .teaser-context p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #78716c;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .teaser-context p strong {
+            color: #a8a29e;
+            font-weight: 500;
+        }
+
+        .teaser-stats {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .teaser-stat {
+            text-align: center;
+        }
+
+        .teaser-stat .num {
+            font-size: 28px;
+            font-weight: 800;
+            color: #AD4236;
+        }
+
+        .teaser-stat .lbl {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #57534e;
+        }
+
+        @media (max-width: 768px) {
+            .teaser-header,
+            .teaser-holds,
+            .teaser-fade,
+            .teaser-cta {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .hold-target {
+                display: none;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            min-height: auto;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .footer .brand-name {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .footer .mantra {
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #78716c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 24px;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .trait-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-card {
+                padding: 32px 24px;
+            }
+
+            .comparison th,
+            .comparison td {
+                font-size: 14px;
+                padding: 14px 12px 14px 0;
+            }
+
+            .phase-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phase-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+
+        /* ============================================
+           FEATURE 1: SCROLL-TRIGGERED ANIMATIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           FEATURE 3: MARQUEE TICKER
+           ============================================ */
+        .marquee-track {
+            overflow: hidden;
+            background: #AD4236;
+            padding: 12px 0;
+            white-space: nowrap;
+        }
+        .marquee-inner {
+            display: inline-flex;
+            gap: 0;
+            animation: marquee 28s linear infinite;
+        }
+        .marquee-inner span {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #f5f2ed;
+            padding: 0 32px;
+        }
+        .marquee-inner .marquee-dot {
+            color: rgba(245, 242, 237, 0.4);
+            padding: 0;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ============================================
+           FEATURE 4: SCROLL PROGRESS BAR
+           ============================================ */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: #AD4236;
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* ============================================
+           FEATURE 5: PULL QUOTES
+           ============================================ */
+        .pull-quote {
+            background: #0f0e0c;
+            text-align: center;
+        }
+        .pull-quote blockquote {
+            font-size: clamp(28px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #f5f2ed;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .pull-quote blockquote::before {
+            display: block;
+            content: '';
+            width: 40px;
+            height: 3px;
+            background: #AD4236;
+            margin: 0 auto 32px;
+        }
+
+        /* ============================================
+           FEATURE 6: COMPARISON TABLE ROW HOVER
+           ============================================ */
+        .comparison tr:hover td {
+            background: rgba(173, 66, 54, 0.06);
+            transition: background 0.2s ease;
+        }
+
+        /* ============================================
+           FEATURE 7: FLOATING MINI PLAYER
+           ============================================ */
+        #mini-player {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        #mini-player.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .mini-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            background: #1a1816;
+            border: 1px solid #2a2825;
+        }
+        .mini-btn:hover { transform: scale(1.1); }
+        .mini-btn.active { border-color: #AD4236; }
+
+        /* ══════════════════════════════════════════
+           PRINT OVERRIDE — white background
+           ══════════════════════════════════════════ */
+        body {
+            background: #ffffff !important;
+            color: #1a1410 !important;
+        }
+
+        /* Sections & containers */
+        section {
+            background: #ffffff !important;
+        }
+
+        .bioavail-section {
+            background: #ffffff !important;
+        }
+
+        /* Cards & panels — light gray instead of near-black */
+        .problem-card,
+        .bioavail-card,
+        .trait,
+        .moat-card,
+        .stat-card,
+        .stack-card {
+            background: #f5f2ed !important;
+            border-color: #e0dbd5 !important;
+        }
+
+        .problem-card {
+            border-left: 3px solid #AD4236 !important;
+        }
+
+        /* Text colors — dark on white */
+        h2, h3, .highlight,
+        .problem-card h3,
+        .bioavail-nutrient,
+        .stat-number,
+        .moat-title {
+            color: #1a1410 !important;
+        }
+
+        p, .col p, li {
+            color: #44403c !important;
+        }
+
+        .hero .mantra {
+            color: #78716c !important;
+        }
+
+        .pill-prompt,
+        .scroll-hint {
+            color: #a8a29e !important;
+        }
+
+        /* Section labels stay Signal red */
+        .section-label {
+            color: #AD4236 !important;
+        }
+
+        /* Divider */
+        .divider {
+            background: #d6d3d1 !important;
+        }
+
+        /* List borders */
+        .play-list li {
+            border-bottom-color: #e0dbd5 !important;
+            color: #44403c !important;
+        }
+
+        .play-list li strong {
+            color: #AD4236 !important;
+        }
+
+        /* Comparison table */
+        .comparison th {
+            color: #78716c !important;
+            border-bottom-color: #d6d3d1 !important;
+        }
+
+        .comparison th:last-child {
+            color: #AD4236 !important;
+        }
+
+        .comparison td {
+            color: #44403c !important;
+            border-bottom-color: #e0dbd5 !important;
+        }
+
+        .comparison .insdr-col {
+            color: #1a1410 !important;
+        }
+
+        /* Bioavailability bars */
+        .bioavail-bar-track {
+            background: #e0dbd5 !important;
+        }
+
+        .bioavail-label {
+            color: #78716c !important;
+        }
+
+        .bioavail-pct.generic-pct {
+            color: #a8a29e !important;
+        }
+
+        .bioavail-note {
+            color: #a8a29e !important;
+        }
+
+        .bioavail-bar.generic {
+            background: #c8c3bc !important;
+        }
+
+        /* Trait grid */
+        .trait {
+            color: #44403c !important;
+        }
+
+        /* Audience */
+        .audience-headline {
+            color: #1a1410 !important;
+        }
+
+        /* Manifesto — already light, just ensure consistency */
+        .manifesto-section {
+            background: #f5f2ed !important;
+        }
+
+        /* Moat numbers */
+        .moat-number {
+            color: #e0dbd5 !important;
+            -webkit-text-stroke-color: #d6d3d1 !important;
+        }
+
+        /* Stat cards */
+        .stat-label {
+            color: #78716c !important;
+        }
+
+        .stat-desc {
+            color: #78716c !important;
+        }
+
+        /* Capsule labels */
+        .capsule-label {
+            color: #78716c !important;
+        }
+
+        /* Any remaining #d6d3d1 body text should be darker */
+        .inner p {
+            color: #44403c !important;
+        }
+
+        /* Timeline / roadmap items */
+        .roadmap-phase {
+            color: #AD4236 !important;
+        }
+
+        .roadmap-when,
+        .timeline-when {
+            color: #a8a29e !important;
+        }
+
+        /* Generic dark backgrounds to light */
+        [style*="background: #141414"],
+        [style*="background:#141414"],
+        [style*="background: #0a0a0a"],
+        [style*="background:#0a0a0a"] {
+            background: #f5f2ed !important;
+        }
+
+        /* SVG logo — invert for white bg */
+        .hero .brand-logo {
+            filter: invert(1) !important;
+        }
+
+        /* Print-specific rules */
+        @media print {
+            body { background: #fff !important; }
+            section { min-height: auto !important; page-break-inside: avoid; }
+            .hero { min-height: auto !important; }
+            .scroll-hint { display: none !important; }
+            .play-btn { display: none !important; }
+            .pill-prompt { display: none !important; }
+        }
+
+    </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-left">
-      <a href="pitch-deck.html" class="back-link">&larr; Back to Pitch Deck</a>
-      <span class="brand">I N S D R</span>
-    </div>
-    <span class="nav-right">Concept Deck</span>
-  </nav>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
-  <main>
-
-    <!-- HERO -->
-    <div class="hero">
-      <h1>INSDR</h1>
-      <p class="tagline">Invincible. Naturally Sourced. Dosed Right.</p>
-    </div>
-
-    <!-- WHAT IS INSDR -->
-    <section>
-      <h2>What Is INSDR?</h2>
-      <p>INSDR is a human performance brand built on one idea: <strong>what you put in your body and what you put on it are the same conversation.</strong></p>
-      <p>Two product lines. One philosophy.</p>
-      <p><strong>Supplements</strong> — formulated for what your body actually absorbs, not what looks good on a label.<br>
-      <strong>Apparel</strong> — 100% cotton activewear. No polyester. No plastic. No compromise.</p>
-      <p>Launching in Taiwan. Expanding across Southeast Asia. Built for the Asia-Pacific market.</p>
+    <!-- 1. Hero -->
+    <section class="hero">
+        <div class="inner" style="text-align: center;">
+            <img src="assets/insdr-logo-signal.png" alt="INSDR" class="brand-logo">
+            <div class="mantra">Invincible. Naturally Sourced. Dosed Right.</div>
+            <div style="margin-top: 48px;">
+                <div class="pill-prompt">Choose your supplement</div>
+                <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-end; flex-wrap: wrap;">
+                    <button class="play-btn red-pill" id="playBtn1" onclick="toggleMusic('btn1')">
+                        <div class="capsule">
+                            <div class="capsule-top"></div>
+                            <div class="capsule-bottom"></div>
+                            <div class="capsule-band"></div>
+                            <div class="capsule-shine"></div>
+                        </div>
+                        <span class="capsule-label" id="playLabel1">Gonna Fly Now</span>
+                    </button>
+                    <button class="play-btn blue-pill" id="playBtn2" onclick="toggleMusic('btn2')">
+                        <div class="capsule">
+                            <div class="capsule-top"></div>
+                            <div class="capsule-bottom"></div>
+                            <div class="capsule-band"></div>
+                            <div class="capsule-shine"></div>
+                        </div>
+                        <span class="capsule-label" id="playLabel2">Eye of the Tiger</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">Scroll</div>
     </section>
 
-    <!-- WHY THIS WINS -->
-    <section>
-      <h2>Why This Wins</h2>
-
-      <h3>The supplement industry has a dirty secret.</h3>
-      <p>Most supplements are poorly absorbed. You're paying for 500mg on the label but your body might use 50. The rest is expensive urine. INSDR formulates for bioavailability — the amount your body actually takes in. Less waste. Real results.</p>
-
-      <h3>The activewear industry has one too.</h3>
-      <p>Most gym clothes are made from polyester and nylon — thermoplastics. The same material as plastic water bottles. These fabrics have tested positive for PFAs, forever chemicals linked to cancer and thyroid dysfunction. People are sweating in plastic pressed against their lymph nodes and calling it "performance wear."</p>
-      <p>INSDR says no to both.</p>
-    </section>
-
-    <!-- THE MARKET -->
-    <section>
-      <h2>The Market</h2>
-      <p>Two massive markets. Both growing fast across Asia-Pacific. Both broken in the same way — the mainstream players prioritize marketing over substance.</p>
-
-      <h3>Supplements — Asia-Pacific</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Metric</th><th>Value</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Asia-Pacific market (nutraceuticals)</strong></td><td>$78B (2025) &rarr; $149B by 2033 — the largest regional market globally</td></tr>
-            <tr><td><strong>CAGR</strong></td><td>8.4%</td></tr>
-            <tr><td><strong>Taiwan</strong></td><td>$4.8B (2024) &rarr; $8.9B by 2033, ~65% of adults take supplements — the highest adoption rate in Asia</td></tr>
-            <tr><td><strong>Southeast Asia</strong></td><td>$10B (2025) &rarr; $17.3B by 2035 — Indonesia, Thailand, Vietnam leading growth</td></tr>
-            <tr><td><strong>Clean label (APAC)</strong></td><td>$50.1B, growing at 14.6% CAGR — fastest clean label growth globally</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Athleisure — Asia-Pacific</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Metric</th><th>Value</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Southeast Asia (athleisure)</strong></td><td>$16.6B (2024) &rarr; $37.6B by 2033</td></tr>
-            <tr><td><strong>CAGR</strong></td><td>8.7%</td></tr>
-            <tr><td><strong>Taiwan athleisure</strong></td><td>Growing at 10.5% CAGR — outpacing overall sportswear by nearly 3&times;</td></tr>
-            <tr><td><strong>PFAS contamination</strong></td><td>25% of activewear tested positive for forever chemicals. No major brand in APAC has addressed this.</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Why Taiwan First</h3>
-      <p>Taiwan is the perfect launch pad. 23.3M people with high purchasing power. ~65% supplement adoption — the most supplement-aware market in Asia. A mature e-commerce infrastructure with Shopee, LINE commerce, and 13,000+ convenience stores for last-mile pickup. And a founder who is a household name here.</p>
-      <p>The clean label and PFAS awareness waves are just beginning in Asia. INSDR is already positioned on the right side of both.</p>
-    </section>
-
-    <!-- THE FOUNDATION STACK -->
-    <section>
-      <h2>The Foundation Stack</h2>
-      <p>Three products. Three deficiencies most people don't know they have. Every product has a <strong>primary ingredient</strong>, a <strong>synergistic amplifier</strong>, and a <strong>story that educates</strong>.</p>
-      <p><strong>One hero leads the way.</strong></p>
-
-      <h3>Magnesium Complex — The Hero SKU</h3>
-      <p class="subtitle">Body + brain + the key that unlocks both.</p>
-      <p>Most people take magnesium oxide — as low as <strong>4% bioavailability</strong>. INSDR pairs <strong>Albion TRAACS&reg; Magnesium Bisglycinate Chelate</strong> (body: sleep, stress, recovery — a verified, fully-reacted chelate that absorbs significantly better than oxide, without GI distress) with <strong>Magtein&reg;</strong> (brain: the most clinically effective magnesium form for raising brain magnesium levels) and <strong>B6 as P5P</strong> to enhance cellular uptake. Two delivery mechanisms solving two different problems, plus the cofactor that makes both work harder.</p>
-      <p><strong>Why this leads:</strong> Sleep is the most universally <em>felt</em> benefit — customers notice it in 3–5 days. That fast feedback loop converts trials to subscriptions faster than any other product. "Your magnesium has 4% bioavailability" is a one-line wrecking ball against every competitor on the shelf. And it's the cheapest to formulate with the simplest story — the perfect gateway to the full stack.</p>
-    </section>
-
-    <!-- THE "FEEL IT FIRST" GUARANTEE -->
-    <section>
-      <h3>The "Feel It First" Guarantee</h3>
-      <blockquote>
-        <p><strong>30 days. Better sleep — or your money back.</strong></p>
-      </blockquote>
-      <p>Most supplement brands hide behind "results may vary." INSDR leads with a guarantee tied to the one benefit customers feel fastest: <strong>sleep quality.</strong></p>
-      <p>Magnesium Complex customers typically notice a difference in <strong>3–5 days</strong>. By day 30, the product has either earned a subscriber — or we refund in full. No questionnaires. No fine print.</p>
-      <p><strong>Why this matters:</strong></p>
-      <ul>
-        <li><strong>Removes the #1 purchase barrier</strong> — "what if it doesn't work for me?" is answered before checkout</li>
-        <li><strong>Signals confidence</strong> — only a brand that knows its formulation works would tie a refund to a specific outcome</li>
-        <li><strong>Creates word of mouth</strong> — "I slept better in 3 days" is the most shareable testimonial in wellness</li>
-        <li><strong>Converts trials to subscriptions</strong> — customers who feel results don't cancel. The guarantee pays for itself in retention.</li>
-      </ul>
-      <p>This isn't a marketing gimmick. It's a business model built on the product actually working.</p>
-    </section>
-
-    <!-- MITO COMPLEX -->
-    <section>
-      <h3>Mito Complex — CoQ10 + PQQ</h3>
-      <p class="subtitle">Powers your existing mitochondria. Builds new ones.</p>
-      <p>CoQ10 is what your cells use to make energy — and your levels drop every year after 25. INSDR uses <strong>Kaneka QH&reg; (ubiquinol)</strong>, the active form that delivers <strong>~2x higher plasma CoQ10 levels</strong> vs. the ubiquinone found in most supplements — backed by 85+ clinical studies. Delivered via <strong>VESIsorb&reg; colloidal technology</strong>, a self-emulsifying nano-delivery system that achieves <strong>622% higher plasma absorption</strong> vs. a standard oil-based softgel (clinical study, PMID 19284181). Paired with <strong>BioPQQ&reg;</strong> (Mitsubishi Gas Chemical) — the only PQQ ingredient with an accepted US FDA NDI (New Dietary Ingredient) notification, and the source material behind all published human PQQ clinical trials to date. BioPQQ triggers the creation of entirely new mitochondria. More engines (BioPQQ) &times; better-powered, better-absorbed fuel (Kaneka QH&reg; + VESIsorb&reg;) = compounding cellular energy. This is the product customers feel.</p>
-
-      <h3>D3+K2 Complex</h3>
-      <p class="subtitle">Fat-soluble vitamin that comes with its own fat.</p>
-      <p>Up to 58% of adults across Asia are vitamin D deficient — in Taiwan, the rate hits 68% among 18–34-year-olds. INSDR pairs <strong>D3</strong> with <strong>MenaQ7&reg; K2 (MK-7)</strong> (Gnosis by Lesaffre) — the most clinically studied K2 ingredient available, with 22 published studies including a 3-year bone health RCT. Critically: MK-7 exists as active (all-trans) and inert (cis) isomers — generic MK-7 can be as little as 15% biologically active. MenaQ7&reg; is verified at 99.8% all-trans purity. Plus <strong>FruiteX-B&reg;</strong> (FutureCeuticals) — the nature-identical calcium fructoborate form of boron, with clinical data on bone mineral metabolism and inflammation. Built-in <strong>liposomal lipid delivery</strong> for D3 achieves <strong>4x higher absorption</strong> vs. standard formulations, even fasted. No meal timing. No guesswork — and no inert isomers.</p>
-
-      <h3>Why This Stack</h3>
-      <p>This isn't a trend play. It's a foundation — what your body actually needs and isn't getting.</p>
-      <ul>
-        <li><strong>Longevity + vitality.</strong> Every product supports long-term health AND daily performance. Live longer and feel it.</li>
-        <li><strong>Multigenerational.</strong> A 28-year-old takes these for recovery and energy. Their parents need the same stack for bone density, heart health, and cognitive function. Taiwan becomes a super-aged society this year — 20%+ over 65. One product line, two generations, zero "senior" marketing. Gift subscriptions are available from day one — "the stack I put my mom on" is a purchase path, not just a tagline.</li>
-        <li><strong>Every product educates.</strong> The science behind each formula is shareable content — ingredient deep-dives, myth-busting, "your body can't use what it can't absorb." The stack doesn't just sell. It teaches.</li>
-      </ul>
-    </section>
-
-    <!-- BRANDED INGREDIENTS & DELIVERY TECH -->
-    <section>
-      <h2>What's Inside — Branded Ingredients &amp; Delivery Tech</h2>
-      <p>Every ingredient in the Foundation Stack uses a named, patented form — not the generic equivalent that looks the same on a label but delivers meaningfully less. And each product uses a delivery mechanism matched to the nutrient type. This isn't one gimmick applied across the board. It's the right technology for each problem.</p>
-
-      <h3>Branded Ingredients</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Ingredient</th><th>Supplier</th><th>Product</th><th>Why It Matters</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Albion TRAACS&reg;</strong> Magnesium Bisglycinate Chelate</td>
-              <td>Balchem</td>
-              <td>Magnesium Complex</td>
-              <td>Verified fully-reacted chelate — absorbs significantly better than oxide, no GI distress</td>
-            </tr>
-            <tr>
-              <td><strong>Magtein&reg;</strong> Magnesium L-Threonate</td>
-              <td>AIDP (MIT-developed)</td>
-              <td>Magnesium Complex</td>
-              <td>Most effective form for raising brain magnesium levels; multiple RCTs on memory + sleep</td>
-            </tr>
-            <tr>
-              <td><strong>Kaneka QH&reg;</strong> Ubiquinol CoQ10</td>
-              <td>Kaneka</td>
-              <td>Mito Complex</td>
-              <td>Active form — ~2x higher plasma CoQ10 vs. ubiquinone; 85+ clinical studies</td>
-            </tr>
-            <tr>
-              <td><strong>BioPQQ&reg;</strong></td>
-              <td>Mitsubishi Gas Chemical</td>
-              <td>Mito Complex</td>
-              <td>Only PQQ with an accepted FDA NDI notification; all published human PQQ RCTs use Mitsubishi's material; triggers new mitochondria</td>
-            </tr>
-            <tr>
-              <td><strong>MenaQ7&reg;</strong> K2 as MK-7</td>
-              <td>Gnosis by Lesaffre</td>
-              <td>D3+K2 Complex</td>
-              <td>99.8% all-trans purity; 22 published studies. Generic MK-7 can be as low as 15% biologically active — most have never been tested</td>
-            </tr>
-            <tr>
-              <td><strong>FruiteX-B&reg;</strong> Calcium Fructoborate</td>
-              <td>FutureCeuticals</td>
-              <td>D3+K2 Complex</td>
-              <td>Nature-identical boron form; pilot RCT showing 29% improvement in WOMAC scores in 14 days (standalone)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Delivery Mechanisms — Matched to Each Nutrient</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Technology</th><th>Applied To</th><th>What It Does</th><th>Absorption Advantage</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>TRAACS&reg; Chelation</strong></td>
-              <td>Magnesium Complex</td>
-              <td>Mineral-amino acid bond stays stable through the gut — absorbs throughout the small intestine, not just the stomach</td>
-              <td>Significantly higher vs. magnesium oxide</td>
-            </tr>
-            <tr>
-              <td><strong>VESIsorb&reg; Colloidal Delivery</strong></td>
-              <td>Mito Complex (CoQ10)</td>
-              <td>Self-emulsifying nano-droplets form on contact with the GI environment — no bile salts or fatty meal required</td>
-              <td><strong>622% higher AUC</strong> vs. standard softgel</td>
-            </tr>
-            <tr>
-              <td><strong>Liposomal Encapsulation</strong></td>
-              <td>D3+K2 Complex</td>
-              <td>Fat carrier built into the formula — fat-soluble D3 absorbs without a meal</td>
-              <td><strong>4x higher AUC</strong> vs. standard oil-based, even fasted</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Three nutrients. Three different absorption problems. Three purpose-matched delivery technologies. The result: every product in the stack has specific, citation-backed absorption data — not vague "more absorbable" claims.</p>
-    </section>
-
-    <!-- WHO IS THIS FOR -->
-    <section>
-      <h2>Who Is This For?</h2>
-      <p>People who read ingredient labels AND clothing tags.</p>
-      <p>They're 22–40. They train. They care about performance and longevity but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.</p>
-      <p>This customer is concentrated in Taipei, Bangkok, Singapore, Kuala Lumpur, Jakarta, Manila — urban, connected, fitness-conscious, and already buying supplements. They don't need to be convinced. They just need someone to finally make the thing they've been looking for.</p>
-    </section>
-
-    <!-- HOW WE'RE DIFFERENT -->
-    <section>
-      <h2>How We're Different</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Everyone Else</th><th>INSDR</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Overdosed labels, under-absorbed formulas</td><td>Bioavailability-first — your body uses what we give it</td></tr>
-            <tr><td>Synthetic "performance" fabrics full of plastic</td><td>100% cotton. Period.</td></tr>
-            <tr><td>Supplements OR apparel</td><td>Both — because it's the same philosophy</td></tr>
-            <tr><td>Generic "wellness" positioning — no one believes it anymore</td><td>Streetwear energy, drop culture, insider access</td></tr>
-            <tr><td>"Results may vary" fine print</td><td><strong>"Feel It First" — better sleep in 30 days or your money back</strong></td></tr>
-            <tr><td>Sells to everyone</td><td>Built for people who already know</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- WHY BOTH -->
-    <section>
-      <h2>Why Both — Not One or the Other</h2>
-      <p>The obvious question: supplements AND apparel? Isn't that spreading too thin?</p>
-      <p>No. Dropping either vertical makes INSDR forgettable. The combination is the moat.</p>
-
-      <h3>Apparel solves the supplement brand's biggest problem: visibility.</h3>
-      <p>Supplement brands are invisible. The product lives in a cabinet. Nobody sees it. Nobody asks "what are you taking?" But someone wearing INSDR in the gym? That's a billboard that walks, trains, and starts conversations. Every shirt sold is a customer acquisition channel for supplements — at zero ongoing cost.</p>
-
-      <h3>Supplements solve the apparel brand's biggest problem: retention.</h3>
-      <p>Clothing purchases are infrequent — maybe 2–4 times a year. Supplement subscriptions are monthly recurring revenue. The apparel brings people in. The supplements keep them paying. One vertical drives acquisition, the other drives lifetime value.</p>
-
-      <h3>The anti-synthetic narrative only works with both.</h3>
-      <p>"Stop sweating in plastic" is powerful. But if you're only selling cotton tees, you're a cotton brand. Add "and stop swallowing fillers your body can't absorb" — now you own a worldview. The customer who cares about PFAs in their clothes is the same customer who reads supplement labels. This isn't two audiences. It's one audience, served completely.</p>
-
-      <h3>The combination is un-copyable.</h3>
-      <p>There are hundreds of supplement brands. There are hundreds of cotton activewear brands. There is exactly zero that ties them together under a single philosophy. The moment you drop one vertical, you become just another supplement company or just another clothing label. Together, they create a position no one else occupies.</p>
-
-      <h3>The execution: sequence, don't split.</h3>
-      <p><strong>Apparel launches first.</strong> "Stop Sweating in Plastic" is visceral, shareable, and requires zero education. Supplements require explanation — cotton activewear requires one sentence. Every person wearing INSDR in a gym is a walking billboard. Supplements in a cabinet are invisible.</p>
-      <p>Launch a tight apparel capsule — three pieces. Not a full clothing line. A statement. Enough cotton in the gym to make people ask "what's INSDR?" 3–6 months later, the Foundation Stack launches into an audience that already knows and trusts the brand. The first supplement customers are the people already wearing the cotton.</p>
-      <p><strong>Magnesium Complex leads the stack.</strong> It's the hero SKU — sleep is the most universally felt benefit (noticeable in 3–5 days), "your magnesium has 4% bioavailability" is a one-line wrecking ball, and it's the cheapest to formulate with the simplest story. Magnesium opens the door. The full stack follows.</p>
-      <p>The two verticals feed each other — and that flywheel is something a single-vertical brand can never build.</p>
-    </section>
-
-    <!-- THE FOUNDER -->
-    <section>
-      <h2>The Founder — Why Vanness Wu Built This</h2>
-      <p>This isn't a celebrity endorsement. It's a <strong>founder-as-proof</strong> play.</p>
-      <p>Vanness Wu has been training for 20+ years. He's seen the supplement industry from the inside — the bad formulations, the plastic "performance" fabrics, the brands that spend more on marketing than on what's in the bottle. At 47, he IS the product demo. Not a spokesperson reading a script — the guy who formulated it, wears it, and takes it every day.</p>
-      <p><strong>Why this matters:</strong></p>
-      <ul>
-        <li><strong>Credibility is built in.</strong> He didn't license his name to a brand. He built the brand because he couldn't find what he wanted. That story is the marketing.</li>
-        <li><strong>Asia-native founder.</strong> F4/Meteor Garden made him a household name across Taiwan, Southeast Asia, and Greater China. No Western supplement brand can manufacture this kind of regional cultural credibility. Massive Weibo following. The distribution channel already exists.</li>
-        <li><strong>Daily documentation over polished ads.</strong> Vanness training in the cotton. Taking the stack. Putting his parents on the same supplements he takes. Real routines, not campaigns. The content strategy is just the founder living the brand.</li>
-        <li><strong>"INSDR" literally means he's the insider.</strong> The entire brand feels like Vanness putting you on to what he actually uses. Not selling to you — sharing with you.</li>
-      </ul>
-      <p>The IM8 parallel is instructive: Beckham at 50 IS the product demo, and that authenticity drove $100M ARR in 11 months. INSDR has the same founder-as-proof structure — but with streetwear credibility, an apparel vertical for physical brand presence, and a founder who is native to the exact markets being launched.</p>
-    </section>
-
-    <!-- THE BUSINESS MODEL -->
-    <section>
-      <h2>The Business Model</h2>
-
-      <h3>Supplements: the recurring revenue engine.</h3>
-      <p>DTC subscription via Shopee, LINE commerce, and direct e-commerce — with 7-Eleven and convenience store pickup built in from day one. Taiwan's 13,000+ convenience stores become our last-mile network.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Metric</th><th>Target</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Foundation Stack (3 products)</strong></td><td>Pricing calibrated to Taiwan premium supplement market — competitive with imported brands, justified by formulation quality</td></tr>
-            <tr><td><strong>Gross margin</strong></td><td>70–80% (standard for premium DTC supplements)</td></tr>
-            <tr><td><strong>Subscription retention</strong></td><td>67%+ at 12 months (industry benchmark for quality brands)</td></tr>
-            <tr><td><strong>LTV vs. one-time</strong></td><td>Subscribers generate 200–300% higher lifetime value</td></tr>
-            <tr><td><strong>Compliance effect</strong></td><td>89% adherence with subscriptions vs. ~50% without — customers feel results, stay longer</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>The subscription model isn't just a revenue play — it's a product-market fit play. Supplements only work if people take them consistently. Subscriptions drive compliance. Compliance drives results. Results drive retention. The flywheel is built into the business model.</p>
-
-      <h3>Apparel: the brand-building engine.</h3>
-      <p>Streetwear drop model. Limited runs. No standing inventory.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Metric</th><th>Target</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Launch capsule</strong></td><td>3–5 pieces (The Tee, The Crew, The Short, The Hood)</td></tr>
-            <tr><td><strong>Price range</strong></td><td>Calibrated to Taiwan/SEA premium streetwear market</td></tr>
-            <tr><td><strong>Drop cadence</strong></td><td>Quarterly capsules, limited quantities</td></tr>
-            <tr><td><strong>Inventory risk</strong></td><td>Near-zero — produce to demand, scarcity by design</td></tr>
-            <tr><td><strong>Customer acquisition cost</strong></td><td>Every garment in the gym is a zero-cost billboard</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Pricing — calibrated by market.</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th></th><th>Taiwan (launch)</th><th>SEA expansion</th><th>US/Global DTC</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Supplements (per serving)</strong></td><td>NT$65–90 (~$2.00–$2.80)</td><td>15–25% below Taiwan</td><td>$2.40–$3.40</td></tr>
-            <tr><td><strong>Apparel</strong></td><td>NT$800–2,400 (~$25–$75)</td><td>Adjusted per market</td><td>TBD</td></tr>
-            <tr><td><strong>Positioning</strong></td><td>Premium-accessible — above local generics, competitive with imports</td><td>Singapore at parity, others lower</td><td>Benchmarked vs. Absorption Co.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Subscription: 25–30% off first order, 10% recurring, flexible delivery cycles. Gift/family subscriptions from day one.</p>
-
-      <h3>The flywheel in numbers.</h3>
-      <p>Apparel creates visibility &rarr; visibility drives supplement trials &rarr; trials convert to subscriptions &rarr; subscriptions fund the next apparel drop &rarr; repeat.</p>
-
-      <h3>The distribution advantage.</h3>
-      <p>Taiwan has one of the highest convenience store densities in the world — one for every ~1,700 people. Shopee leads mobile commerce. LINE has 22M users (near-universal adoption). Social commerce is growing at 22.7% CAGR globally (APAC even faster). INSDR doesn't need to build distribution infrastructure — it needs to plug into what already exists.</p>
-    </section>
-
-    <!-- GROWTH ROADMAP -->
-    <section>
-      <h2>Growth Roadmap</h2>
-
-      <h3>Phase 1a — Taiwan: Apparel-Led Launch</h3>
-      <p>Apparel first. "Stop Sweating in Plastic" requires one sentence, not an education campaign. Every garment in a gym is a walking billboard. The drop model creates cultural moments. And apparel is simpler — no regulatory review, no FDA claims, no ingredient licensing.</p>
-      <ul>
-        <li><strong>Launch capsule:</strong> The Tee, The Crew, The Short. Three pieces. A statement.</li>
-        <li><strong>Content:</strong> Vanness training in the cotton, documenting daily across Instagram and LINE.</li>
-        <li><strong>Community:</strong> Build the insider waitlist for supplements. Early access, input on drops, behind-the-formula content.</li>
-        <li><strong>Goal:</strong> Establish INSDR as a name people recognize in the gym before a single supplement ships.</li>
-      </ul>
-
-      <h3>Phase 1b — Taiwan: Foundation Stack Launch (3–6 months after apparel)</h3>
-      <p>Supplements launch into a warm audience. The apparel wearers become the first supplement customers.</p>
-      <ul>
-        <li><strong>Magnesium Complex leads</strong> — the hero SKU with "Feel It First" 30-day guarantee.</li>
-        <li><strong>Full Foundation Stack</strong> follows: Mito Complex and D3+K2.</li>
-        <li><strong>Gift subscriptions from day one</strong> — "The Stack I Put My Mom On" as a real purchase path.</li>
-        <li><strong>Community fitness programs</strong> (21 Day Arms, 30 Day Shred) gated behind purchase or email — lead gen and retention from launch.</li>
-        <li><strong>Distribution:</strong> Shopee, LINE commerce, convenience store pickup. Taiwan's 13,000+ convenience stores as last-mile network.</li>
-      </ul>
-
-      <h3>Phase 2 — Southeast Asia Expansion + Content Engine</h3>
-      <p>Thailand and Singapore first — highest purchasing power, English-accessible, strong fitness culture. Then Indonesia, Malaysia, Philippines.</p>
-      <ul>
-        <li>Adapt distribution for each market (Shopee is already dominant across SEA).</li>
-        <li>Localize content but keep the brand voice consistent.</li>
-        <li>Use Taiwan proof of concept to de-risk each market entry.</li>
-        <li><strong>"What's Actually In It"</strong> content series launches — Vanness breaking down competitor formulations, showing the absorption math. The supplement equivalent of "Stop Sweating in Plastic."</li>
-        <li>Pricing adjusted per market (Singapore at Taiwan parity; Thailand/Indonesia/Philippines 15–25% lower).</li>
-      </ul>
-
-      <h3>Phase 3 — Greater China</h3>
-      <p>The prize — but treat it separately. Enter with revenue, brand equity, and a proven playbook behind you.</p>
-      <ul>
-        <li>Separate regulatory pathway, local platform strategy (WeChat, Tmall, Douyin), likely a local JV partner.</li>
-        <li>Vanness's massive Weibo following is the distribution channel waiting to be activated.</li>
-        <li>Scaled community programs — app-based, tiered membership, full program library.</li>
-        <li>Don't rush this. Get Taiwan and SEA right first.</li>
-      </ul>
-    </section>
-
-    <!-- THE MOATS -->
-    <section>
-      <h2>The Moats — Why This Is Hard to Copy</h2>
-      <p>Tone and positioning can be copied. These can't.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Moat</th><th>Why It's Structural</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Branded ingredient first-mover advantage</strong></td><td>INSDR is the first Taiwan brand to build its identity around branded, patented ingredients (Magtein&reg;, Kaneka QH&reg;, BioPQQ&reg;, MenaQ7&reg;, TRAACS&reg;) with citation-backed absorption data. The moat is brand association + formulation complexity + CDMO-level IP — not contractual exclusivity, but mindshare that's harder to displace than to build.</td></tr>
-            <tr><td><strong>Apparel as acquisition channel</strong></td><td>No supplement brand has physical presence in gyms. Every INSDR garment is a zero-cost billboard that starts conversations. Can't be bought — has to be built.</td></tr>
-            <tr><td><strong>Community programs as switching cost</strong></td><td>Gated fitness programs from Phase 1b. Once someone is mid-program, they don't churn. Free for subscribers — makes subscriptions stickier than product alone.</td></tr>
-            <tr><td><strong>Founder-market fit</strong></td><td>Vanness Wu is not a paid endorser. He's the founder, the product demo, and a cultural icon in the exact markets INSDR is launching. Irreplicable.</td></tr>
-            <tr><td><strong>Dual-vertical flywheel</strong></td><td>Apparel drives acquisition (visibility). Supplements drive retention (subscriptions). A competitor would need to build both simultaneously to match the economics. Nobody is doing this.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- THE OPPORTUNITY -->
-    <section>
-      <h2>The Opportunity</h2>
-      <p>The human performance and nutraceuticals market in Asia-Pacific is $78B and growing at 8.4%. Taiwan alone is $4.8B with the highest supplement adoption rate in the region. But the market is split — clinical supplement brands on one side, hype-driven lifestyle brands on the other. Nobody owns the middle.</p>
-      <p><strong>INSDR lives in that gap.</strong></p>
-      <p>Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.</p>
-      <p>The customer already exists across Taipei, Bangkok, Singapore, Jakarta, and Manila. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.</p>
-      <p><strong>We're that brand.</strong></p>
-    </section>
-
-    <!-- THE BRAND PLAYS LIKE STREETWEAR -->
-    <section>
-      <h2>The Brand Plays Like Streetwear</h2>
-      <p>This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills.</p>
-      <p>INSDR operates like a <strong>streetwear label</strong> — with the credibility, the drops, and the culture to match.</p>
-      <ul>
-        <li><strong>Drops, not just launches.</strong> Limited runs. When it's gone, it's gone.</li>
-        <li><strong>The clothes are the marketing.</strong> Someone wearing INSDR in the gym is the best ad we'll ever run.</li>
-        <li><strong>Insider access.</strong> The name writes itself — early access, community input, behind-the-formula content.</li>
-        <li><strong>Earned credibility.</strong> We don't buy our way into culture. We earn it by being right about what matters.</li>
-      </ul>
-    </section>
-
-    <!-- THE MANIFESTO -->
-    <section>
-      <h2>The Manifesto</h2>
-      <p>You read the label before the marketing.<br>
-      You know what's in it — and what shouldn't be.<br>
-      You stopped trusting "proprietary blends" a long time ago.</p>
-      <p>You don't wear plastic to the gym.<br>
-      You don't put fillers in your body.<br>
-      You don't cut corners on the things that compound over time.</p>
-      <p>You source better. You dose right. You absorb more.<br>
-      Not because someone told you to — because you figured it out yourself.</p>
-      <p>That's the edge. Not louder. Not more.<br>
-      Just dialed in. Every input. Every day.</p>
-      <p>Naturally sourced. Dosed right.<br>
-      And when it all clicks —</p>
-      <p><strong>Invincible.</strong></p>
-    </section>
-
-    <!-- CLOSING -->
-    <div class="closing">
-      <em>INSDR — Invincible. Naturally Sourced. Dosed Right.</em>
+    <!-- MARQUEE TICKER (between Hero and Concept) -->
+    <div class="marquee-track">
+        <div class="marquee-inner">
+            <span>Stop Sweating in Plastic</span>
+            <span class="marquee-dot">·</span>
+            <span>Your Body Can't Use What It Can't Absorb</span>
+            <span class="marquee-dot">·</span>
+            <span>If You Know, You Know</span>
+            <span class="marquee-dot">·</span>
+            <span>Invincible. Naturally Sourced. Dosed Right.</span>
+            <span class="marquee-dot">·</span>
+            <span>Stop Sweating in Plastic</span>
+            <span class="marquee-dot">·</span>
+            <span>Your Body Can't Use What It Can't Absorb</span>
+            <span class="marquee-dot">·</span>
+            <span>If You Know, You Know</span>
+            <span class="marquee-dot">·</span>
+            <span>Invincible. Naturally Sourced. Dosed Right.</span>
+            <span class="marquee-dot">·</span>
+        </div>
     </div>
 
-    <!-- CONFIDENTIAL FOOTER -->
-    <div class="confidential-footer">
-      INSDR — Confidential
+    <!-- 2. The Concept (What Is INSDR) -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">The Concept</div>
+            <h2>What you put in your body and what you put on it are the same conversation.</h2>
+            <p>INSDR is a human performance brand with two product lines and one philosophy.</p>
+            <div class="two-col">
+                <div class="col">
+                    <h3>Supplements</h3>
+                    <p>Most supplements are formulated to impress on a label — not to survive your gut. INSDR formulates for bioavailability: the amount your body actually absorbs and uses. Patented delivery systems. Clinically studied forms. Every milligram earns its place — or it doesn't make the formula.</p>
+                </div>
+                <div class="col">
+                    <h3>Apparel</h3>
+                    <p>100% cotton activewear. No polyester. No nylon. No plastic on your skin. Gym-ready and street-ready at the same time.</p>
+                </div>
+            </div>
+            <p style="margin-top: 24px; color: #78716c;">Launching in Taiwan. Expanding across Southeast Asia. Built for the Asia-Pacific market.</p>
+        </div>
+    </section>
+
+    <!-- 3. Why This Wins -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">Why This Wins</div>
+            <h2>Two industries. Two dirty secrets.</h2>
+            <div class="problem-card">
+                <h3>The Supplement Problem</h3>
+                <p>Standard magnesium oxide: <strong style="color: #AD4236;">~4% absorption</strong>. Standard CoQ10 softgels: your body discards most of it without a fatty meal. Standard vitamin D: fat-soluble, taken on an empty stomach, wasted.</p>
+                <p style="margin-top: 16px; margin-bottom: 0;">You're paying for 500mg on the label, but your body might use 50. The rest is expensive urine. The supplement industry sells dosage. INSDR sells absorption — because what your body can't take in, it can't use. Bioavailability isn't a feature. It's the entire point.</p>
+            </div>
+            <div class="problem-card">
+                <h3>The Activewear Problem</h3>
+                <p>Most gym clothes are made from polyester and nylon — thermoplastics. The same material as plastic water bottles. These fabrics have tested positive for PFAs, forever chemicals linked to cancer and thyroid dysfunction. People are sweating in plastic pressed against their lymph nodes and calling it "performance wear."</p>
+            </div>
+            <p style="margin-top: 32px; font-weight: 500; color: #AD4236; font-size: 22px;">INSDR says no to both.</p>
+        </div>
+    </section>
+
+    <!-- Bioavailability Visual — What Your Body Actually Absorbs -->
+    <section class="bioavail-section">
+        <div class="inner reveal">
+            <div class="section-label">The Bioavailability Gap</div>
+            <h2>Same nutrient. Radically different absorption.</h2>
+            <p style="max-width: 700px;">Most supplement brands compete on dosage — who can print the biggest number on the label. But dosage without absorption is waste. Here's what the science actually shows.</p>
+
+            <div class="bioavail-grid">
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">Magnesium</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Generic oxide</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 4%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">~4%</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(TRAACS® chelate)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 80%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">Superior absorption</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">Fully-reacted chelate survives gastric acid intact. Oxide breaks apart — most never reaches the bloodstream.</p>
+                </div>
+
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">CoQ10</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Standard softgel</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 14%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">Baseline</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(VESIsorb®)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 100%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">622% higher</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">VESIsorb® colloidal delivery creates nano-droplets that absorb without a fatty meal. No meal timing required.</p>
+                </div>
+
+                <div class="bioavail-card">
+                    <div class="bioavail-nutrient">Vitamin D3</div>
+                    <div class="bioavail-compare">
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">Standard tablet</div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar generic" style="width: 25%;"></div>
+                            </div>
+                            <div class="bioavail-pct generic-pct">Baseline</div>
+                        </div>
+                        <div class="bioavail-bar-group">
+                            <div class="bioavail-label">INSDR <span style="color: #78716c; font-weight: 400;">(liposomal)</span></div>
+                            <div class="bioavail-bar-track">
+                                <div class="bioavail-bar insdr" style="width: 100%;"></div>
+                            </div>
+                            <div class="bioavail-pct insdr-pct">4x higher</div>
+                        </div>
+                    </div>
+                    <p class="bioavail-note">D3 is fat-soluble — most people absorb it poorly fasted. INSDR builds the lipid carrier into the formula. No guesswork.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #78716c; font-size: 15px; margin-top: 48px; margin-bottom: 0;">This is why we don't compete on label dosage. We compete on what your body actually receives.</p>
+        </div>
+    </section>
+
+    <!-- PULL QUOTE: After "Why This Wins", before "The Market" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>The rest is expensive urine.</blockquote>
+        </div>
+    </section>
+
+    <!-- 4. The Market (NEW) -->
+    <section class="market-section">
+        <div class="inner reveal">
+            <div class="section-label">The Market</div>
+            <h2>Two massive markets. Both growing fast across Asia-Pacific.</h2>
+
+            <div class="market-grid">
+                <div class="market-column">
+                    <div class="market-column-label">Supplements &amp; Nutraceuticals</div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="78" data-format="dollar-arrow" data-suffix="149B">$78B &rarr; $149B</div>
+                        <div class="stat-label">Asia-Pacific nutraceuticals market (2025) projected by 2033 &mdash; <strong>largest regional market globally</strong></div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="8.4" data-format="percent">8.4%</div>
+                        <div class="stat-label">CAGR</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="4.8" data-format="dollar-b">$4.8B</div>
+                        <div class="stat-label"><strong>Taiwan</strong> (2024) &rarr; $8.9B by 2033. <strong>~65%</strong> of adults take supplements — highest adoption in Asia</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="10" data-format="dollar-b">$10B</div>
+                        <div class="stat-label"><strong>Southeast Asia</strong> (2025) &rarr; $17.3B by 2035</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="50.1" data-format="dollar-b">$50.1B</div>
+                        <div class="stat-label"><strong>Clean label (APAC)</strong> &mdash; growing at <strong>14.6%</strong> CAGR</div>
+                    </div>
+                </div>
+
+                <div class="market-column">
+                    <div class="market-column-label">Athleisure</div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="16.6" data-format="dollar-arrow" data-suffix="37.6B">$16.6B &rarr; $37.6B</div>
+                        <div class="stat-label">Southeast Asia market (2024) projected by 2033</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="8.7" data-format="percent">8.7%</div>
+                        <div class="stat-label">CAGR</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="10.5" data-format="percent">10.5%</div>
+                        <div class="stat-label"><strong>Taiwan athleisure</strong> CAGR &mdash; outpacing overall sportswear by nearly 3&times;</div>
+                    </div>
+                    <div class="market-stat">
+                        <div class="stat-number" data-target="25" data-format="percent">25%</div>
+                        <div class="stat-label"><strong>PFAS:</strong> 25% of activewear tested positive for forever chemicals. No major brand in APAC has addressed this.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="market-closing">
+                <p>Taiwan is the perfect launch pad. 23.3M people, ~65% supplement adoption, mature e-commerce with Shopee, LINE commerce, and 13,000+ convenience stores for last-mile delivery. The clean label and PFAS awareness waves are just beginning in Asia. INSDR is already positioned.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. The Stack (Foundation Stack) -->
+    <section>
+        <div class="inner reveal">
+            <div class="stack-intro">
+                <div class="section-label">The Foundation Stack</div>
+                <h2>Three deficiencies. Three delivery systems. Zero wasted milligrams.</h2>
+                <p>Every product starts with what your body is actually missing — then solves the absorption problem that makes most supplements useless. Each formula pairs a <span style="color: #f5f2ed; font-weight: 500;">clinically studied primary ingredient</span> with a <span style="color: #f5f2ed; font-weight: 500;">synergistic amplifier</span> and a <span style="color: #f5f2ed; font-weight: 500;">purpose-matched delivery technology</span> that gets it into your bloodstream — not your toilet.</p>
+            </div>
+
+            <!-- Magnesium Complex — Hero SKU -->
+            <div class="product-card" style="border: 1px solid #AD4236;">
+                <div class="product-number">Hero Product</div>
+                <div class="product-name">Magnesium Complex</div>
+                <div class="product-tagline">Body + brain + the key that unlocks both.</div>
+                <div class="product-ingredients">
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Primary</div>
+                        <div class="ingredient-name">Albion TRAACS® Glycinate</div>
+                        <p class="ingredient-desc">Body: sleep, stress, muscle recovery. Verified fully-reacted chelate — absorbs significantly better than oxide, stable through the gut. No GI distress.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Amplifier</div>
+                        <div class="ingredient-name">Magtein® Threonate</div>
+                        <p class="ingredient-desc">Brain: the most clinically effective magnesium form for raising brain magnesium levels. Patented (AIDP), developed from MIT research. Multiple RCTs on memory + sleep.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Cofactor</div>
+                        <div class="ingredient-name">Vitamin B6 (P5P)</div>
+                        <p class="ingredient-desc">Enhances magnesium cellular uptake. Mg + B6 shown to be superior to Mg alone in clinical trials.</p>
+                    </div>
+                </div>
+                <p class="product-story"><strong>Why this leads:</strong> Sleep is the most universally felt benefit — customers notice it in 3–5 days. "Your magnesium has 4% bioavailability" is a one-line wrecking ball. The perfect gateway to the full stack.</p>
+            </div>
+
+            <!-- Feel It First Guarantee -->
+            <div class="feel-it-first" style="background: linear-gradient(135deg, #1a0f0e 0%, #141414 100%); border: 1px solid #AD4236; border-radius: 16px; padding: 48px; margin-bottom: 32px; text-align: center;">
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #AD4236; margin-bottom: 16px;">The Guarantee</div>
+                <div style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 20px;">Feel It First.</div>
+                <p style="font-size: clamp(17px, 2vw, 20px); font-weight: 300; color: #d6d3d1; max-width: 600px; margin: 0 auto 24px; line-height: 1.7;">30 days. Better sleep — or your money back. No questionnaires. No fine print.</p>
+                <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 32px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #AD4236; line-height: 1;">3–5 days</div>
+                        <div style="font-size: 13px; color: #78716c; margin-top: 6px;">to feel the difference</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #AD4236; line-height: 1;">30 days</div>
+                        <div style="font-size: 13px; color: #78716c; margin-top: 6px;">full money-back window</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: #AD4236; line-height: 1;">100%</div>
+                        <div style="font-size: 13px; color: #78716c; margin-top: 6px;">confidence in the formula</div>
+                    </div>
+                </div>
+                <p style="font-size: 15px; font-weight: 300; color: #78716c; max-width: 520px; margin: 32px auto 0; line-height: 1.6;">Only a brand that knows its formulation works would tie a refund to a specific outcome. The guarantee pays for itself in retention.</p>
+            </div>
+
+            <!-- Mito Complex -->
+            <div class="product-card">
+                <div class="product-number">Product 02</div>
+                <div class="product-name">Mito Complex</div>
+                <div class="product-tagline">Powers your existing mitochondria. Builds new ones.</div>
+                <div class="product-ingredients">
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Primary</div>
+                        <div class="ingredient-name">Kaneka QH® Ubiquinol</div>
+                        <p class="ingredient-desc">The active form — <strong>~2x higher plasma CoQ10</strong> vs. ubiquinone. 85+ clinical studies. Delivered via <strong>VESIsorb®</strong> colloidal technology for <strong>622% higher absorption</strong> vs. standard softgels.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Amplifier</div>
+                        <div class="ingredient-name">BioPQQ®</div>
+                        <p class="ingredient-desc">The only PQQ with an accepted US FDA NDI notification. All published human PQQ RCTs to date use Mitsubishi's material. Triggers mitochondrial biogenesis — the creation of entirely new mitochondria.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">The Result</div>
+                        <div class="ingredient-name">More + Better</div>
+                        <p class="ingredient-desc">More engines (BioPQQ®) &times; better-absorbed fuel (Kaneka QH® + VESIsorb®) = compounding cellular energy. This is the product customers feel.</p>
+                    </div>
+                </div>
+                <p class="product-story"><strong>The story:</strong> Your cells make energy in the mitochondria. CoQ10 powers them. PQQ builds new ones. Statin users — including a huge percentage of the older population — are CoQ10-depleted and most don't know it. VESIsorb® nano-droplet delivery means no fatty meal required — 622% higher absorption vs. a standard softgel.</p>
+            </div>
+
+            <!-- D3+K2 Complex -->
+            <div class="product-card">
+                <div class="product-number">Product 03</div>
+                <div class="product-name">D3+K2 Complex</div>
+                <div class="product-tagline">Fat-soluble vitamin that comes with its own fat.</div>
+                <div class="product-ingredients">
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Primary</div>
+                        <div class="ingredient-name">D3 + MenaQ7® K2 (MK-7)</div>
+                        <p class="ingredient-desc">Up to 58% of adults across Asia are vitamin D deficient — 68% among Taiwan 18–34-year-olds. MenaQ7 is 99.8% all-trans purity — generic MK-7 can be as low as 15% biologically active. 22 published clinical studies.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Amplifier</div>
+                        <div class="ingredient-name">FruiteX-B® Boron</div>
+                        <p class="ingredient-desc">Nature-identical calcium fructoborate. Supports bone mineral metabolism and vitamin D utilization. Pilot RCT: 29% improvement in WOMAC scores in 14 days (standalone). Almost nobody includes any boron — let alone a clinically studied form.</p>
+                    </div>
+                    <div class="ingredient-block">
+                        <div class="ingredient-role">Delivery</div>
+                        <div class="ingredient-name">Liposomal Encapsulation</div>
+                        <p class="ingredient-desc">Fat carrier built into the formula. Liposomal D3 achieves <strong>4x higher absorption</strong> vs. standard formulations, even fasted. No meal timing, no guesswork.</p>
+                    </div>
+                </div>
+                <p class="product-story"><strong>The story:</strong> D3 is fat-soluble — most people absorb it poorly unless they take it with a meal. We built the lipid carrier in. Liposomal delivery gives 4x higher blood levels vs. standard formulations, regardless of when you took it.</p>
+            </div>
+
+            <!-- Why This Stack -->
+            <div class="stack-why">
+                <div class="why-block">
+                    <h3>Longevity + Vitality</h3>
+                    <p>Every product supports long-term health AND daily performance. Live longer and feel it.</p>
+                </div>
+                <div class="why-block">
+                    <h3>Multigenerational</h3>
+                    <p>A 28-year-old takes these for energy. Their parents need the same stack for heart, bone, and brain health. Gift subscriptions from day one — "the stack I put my mom on" is a purchase path. Taiwan becomes super-aged this year — 20%+ over 65.</p>
+                </div>
+                <div class="why-block">
+                    <h3>Every Product Educates</h3>
+                    <p>The science behind each formula is shareable content. The stack doesn't just sell. It teaches.</p>
+                </div>
+            </div>
+
+            <!-- Branded Ingredients & Delivery Tech Summary -->
+            <div class="branded-section">
+                <h3>Branded Ingredients — Every Form Is Patented</h3>
+                <div class="branded-grid">
+                    <div class="branded-item">
+                        <div class="bi-name">Albion TRAACS®</div>
+                        <div class="bi-supplier">Balchem Corporation</div>
+                        <p class="bi-desc">Magnesium bisglycinate chelate. Verified fully-reacted — the distinction that separates true chelates from cheap blends carrying the same label name.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">Magtein®</div>
+                        <div class="bi-supplier">AIDP (MIT-developed)</div>
+                        <p class="bi-desc">Magnesium L-threonate. Most effective form for elevating brain magnesium levels — strongest preclinical and clinical evidence of any magnesium form. Multiple published RCTs.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">Kaneka QH®</div>
+                        <div class="bi-supplier">Kaneka Corporation</div>
+                        <p class="bi-desc">Ubiquinol CoQ10. The active, reduced form. Gold standard with 85+ clinical studies. ~2x higher plasma levels vs. ubiquinone.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">BioPQQ®</div>
+                        <div class="bi-supplier">Mitsubishi Gas Chemical</div>
+                        <p class="bi-desc">Only PQQ with an accepted US FDA NDI notification. All published human PQQ clinical trials use Mitsubishi's material. Triggers new mitochondria.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">MenaQ7®</div>
+                        <div class="bi-supplier">Gnosis by Lesaffre</div>
+                        <p class="bi-desc">K2 as MK-7. 99.8% all-trans purity — generic MK-7 can be as low as 15% biologically active. 22 published clinical studies.</p>
+                    </div>
+                    <div class="branded-item">
+                        <div class="bi-name">FruiteX-B®</div>
+                        <div class="bi-supplier">FutureCeuticals</div>
+                        <p class="bi-desc">Nature-identical calcium fructoborate. Clinically studied boron with pilot RCT data on bone mineral metabolism and inflammation.</p>
+                    </div>
+                </div>
+
+                <h3>Delivery Tech — Matched to Each Nutrient</h3>
+                <div class="delivery-grid">
+                    <div class="delivery-item">
+                        <div class="di-tech">TRAACS® Chelation</div>
+                        <div class="di-product">Magnesium Complex</div>
+                        <div class="di-stat">Superior</div>
+                        <p class="di-baseline">absorption vs. magnesium oxide</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="di-tech">VESIsorb® Colloidal</div>
+                        <div class="di-product">Mito Complex (CoQ10)</div>
+                        <div class="di-stat">622%</div>
+                        <p class="di-baseline">higher AUC vs. standard softgel</p>
+                    </div>
+                    <div class="delivery-item">
+                        <div class="di-tech">Liposomal Encapsulation</div>
+                        <div class="di-product">D3+K2 Complex</div>
+                        <div class="di-stat">4x</div>
+                        <p class="di-baseline">higher AUC — even fasted</p>
+                    </div>
+                </div>
+
+                <p class="branded-footer">Three nutrients. Three different absorption problems. Three purpose-matched delivery technologies. Every product has specific, citation-backed absorption data — not vague "more absorbable" claims.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PULL QUOTE: After "The Foundation Stack", before "The Customer" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>Your body can't use what it can't absorb.</blockquote>
+        </div>
+    </section>
+
+    <!-- 6. The Customer (Who Is This For) -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">The Customer</div>
+            <div class="audience-headline">People who read ingredient labels AND clothing tags.</div>
+            <p>They're 22–40. They train. They care about performance and longevity but they're not preachy about it. They follow streetwear drops. They'd rather own fewer, better things. They're skeptical of marketing — but when something is real, they go all in and put everyone they know on it.</p>
+            <p>This customer is concentrated in Taipei, Bangkok, Singapore, Kuala Lumpur, Jakarta, Manila — urban, connected, fitness-conscious, and already buying supplements.</p>
+            <div class="trait-grid">
+                <div class="trait">Health-conscious but never preachy</div>
+                <div class="trait">Culturally aware — streetwear, music, design</div>
+                <div class="trait">Skeptical of mainstream supplement marketing</div>
+                <div class="trait">Willing to pay more for quality and transparency</div>
+                <div class="trait">Care about materials and sourcing</div>
+                <div class="trait">Don't need convincing — need the right product</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. The Difference (How We're Different) -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">The Difference</div>
+            <h2>INSDR vs. Everyone Else</h2>
+            <table class="comparison">
+                <thead>
+                    <tr>
+                        <th>Everyone Else</th>
+                        <th>INSDR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Overdosed labels, under-absorbed formulas</td>
+                        <td>Bioavailability-first — your body uses what we give it</td>
+                    </tr>
+                    <tr>
+                        <td>Synthetic "performance" fabrics full of plastic</td>
+                        <td>100% cotton. Period.</td>
+                    </tr>
+                    <tr>
+                        <td>Supplements OR apparel</td>
+                        <td>Both — because it's the same philosophy</td>
+                    </tr>
+                    <tr>
+                        <td>Generic "wellness" positioning — no one believes it anymore</td>
+                        <td>Streetwear energy, drop culture, insider access</td>
+                    </tr>
+                    <tr>
+                        <td>"Results may vary" fine print</td>
+                        <td><strong style="color: #AD4236;">Feel It First</strong> — better sleep in 30 days or your money back</td>
+                    </tr>
+                    <tr>
+                        <td>Sells to everyone</td>
+                        <td>Built for people who already know</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 8. The Case for Both (Why Both) -->
+    <section class="why-both-section">
+        <div class="inner reveal">
+            <div class="section-label">The Case for Both</div>
+            <div class="why-both-section section-question">Supplements AND apparel — isn't that spreading too thin?</div>
+            <h2>The combination is the moat.</h2>
+            <p>Dropping either vertical makes INSDR forgettable. Here's why both are essential — and how they feed each other.</p>
+
+            <div class="flywheel">
+                <div class="flywheel-card">
+                    <h3>Apparel solves the supplement brand's biggest problem: visibility.</h3>
+                    <p>Supplement brands are invisible. The product lives in a cabinet. Nobody sees it. But someone wearing INSDR in the gym? That's a billboard that walks, trains, and starts conversations. Every shirt sold is a customer acquisition channel for supplements — at zero ongoing cost.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>Supplements solve the apparel brand's biggest problem: retention.</h3>
+                    <p>Clothing purchases are infrequent — maybe 2–4 times a year. Supplement subscriptions are monthly recurring revenue. The apparel brings people in. The supplements keep them paying. One vertical drives acquisition, the other drives lifetime value.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>The anti-synthetic narrative only works with both.</h3>
+                    <p>"Stop sweating in plastic" is powerful. But if you're only selling cotton tees, you're a cotton brand. Add "stop swallowing fillers your body can't absorb" — now you own a worldview. This isn't two audiences. It's one audience, served completely.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>The combination is un-copyable.</h3>
+                    <p>There are hundreds of supplement brands. There are hundreds of cotton activewear brands. There is exactly zero that ties them together under a single philosophy. Drop one vertical and you become just another company. Together, they create a position no one else occupies.</p>
+                </div>
+                <div class="flywheel-card full-width">
+                    <h3>The execution: apparel first, supplements into a warm audience.</h3>
+                    <p>"Stop Sweating in Plastic" is visceral, shareable, and requires zero education. Launch a tight apparel capsule — three pieces. A statement. Enough cotton in the gym to make people ask "what's INSDR?" 3–6 months later, the Foundation Stack launches into an audience that already knows the brand. Magnesium Complex leads with a <strong style="color: #AD4236;">Feel It First</strong> 30-day sleep guarantee. The two verticals feed each other — and that flywheel is something a single-vertical brand can never build.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PULL QUOTE: After "Why Both", before "The Business Model" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>The combination is un-copyable.</blockquote>
+        </div>
+    </section>
+
+    <!-- 9. The Business Model (NEW) -->
+    <section class="biz-model-section">
+        <div class="inner reveal">
+            <div class="section-label">The Business Model</div>
+            <h2>Two engines. One flywheel.</h2>
+
+            <div class="biz-model-grid">
+                <div class="biz-model-card">
+                    <div class="biz-model-card-label">Supplements</div>
+                    <h3>The Recurring Revenue Engine</h3>
+                    <p style="font-size: 15px; color: #a8a29e; margin-bottom: 20px;">DTC subscription via Shopee, LINE commerce, and direct e-commerce — with 7-Eleven convenience store pickup from day one.</p>
+                    <div class="biz-metric">
+                        <span class="metric-label">Foundation Stack</span>
+                        <span class="metric-value"><span class="accent">Calibrated to Taiwan premium supplement market</span> — competitive with imported brands, justified by formulation quality</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Gross margin</span>
+                        <span class="metric-value"><span class="accent">70–80%</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Retention</span>
+                        <span class="metric-value"><span class="accent">67%+</span> at 12 months</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">LTV</span>
+                        <span class="metric-value">Subscribers generate <span class="accent">200–300%</span> higher lifetime value</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Compliance</span>
+                        <span class="metric-value"><span class="accent">89%</span> adherence with subscriptions vs. ~50% without</span>
+                    </div>
+                </div>
+
+                <div class="biz-model-card">
+                    <div class="biz-model-card-label">Apparel</div>
+                    <h3>The Brand-Building Engine</h3>
+                    <div class="biz-metric">
+                        <span class="metric-label">Launch capsule</span>
+                        <span class="metric-value"><span class="accent">3–5</span> pieces</span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Price range</span>
+                        <span class="metric-value"><span class="accent">Calibrated to Taiwan/SEA premium streetwear market</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Drop cadence</span>
+                        <span class="metric-value">Quarterly, <span class="accent">limited quantities</span></span>
+                    </div>
+                    <div class="biz-metric">
+                        <span class="metric-label">Inventory risk</span>
+                        <span class="metric-value"><span class="accent">Near-zero</span> — produce to demand, scarcity by design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="biz-flywheel">
+                <h3>The Flywheel</h3>
+                <p>Apparel creates visibility &rarr; visibility drives supplement trials &rarr; trials convert to subscriptions &rarr; subscriptions fund the next drop &rarr; repeat.</p>
+            </div>
+
+            <div class="biz-flywheel" style="margin-top: 24px;">
+                <h3>The Distribution Advantage</h3>
+                <p>Taiwan has one of the highest convenience store densities in the world — one for every ~1,700 people. Shopee leads mobile commerce. LINE has 22M users. Social commerce growing at 22.7% CAGR globally (APAC even faster). INSDR doesn't need to build distribution infrastructure — it plugs into what already exists.</p>
+            </div>
+
+            <div class="biz-key-stat">
+                <div class="stat-number" data-target="600" data-format="dollar-range" data-suffix="–$1,400">$600–$1,400</div>
+                <p>Year-one revenue from a single customer who buys one tee and one supplement subscription.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. The Roadmap -->
+    <section class="roadmap-section">
+        <div class="inner reveal">
+            <div class="section-label">The Roadmap</div>
+            <h2>How INSDR grows.</h2>
+            <p style="margin-bottom: 56px;">Three phases. Each one earns the right to the next.</p>
+
+            <!-- Phase 1a -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 1a</span>
+                    <span class="phase-title">Apparel-Led Launch — Taiwan</span>
+                </div>
+                <p>Apparel first. "Stop Sweating in Plastic" requires one sentence, not an education campaign. Every garment in a gym is a walking billboard. Establish the name before a single supplement ships.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Launch Capsule</div>
+                        <div class="detail-text">The Tee. The Crew. The Short. Three pieces. A statement.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Content</div>
+                        <div class="detail-text">Vanness training in the cotton, documenting daily across Instagram and LINE.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Community</div>
+                        <div class="detail-text">Build the insider waitlist for supplements. Early access, input on drops, behind-the-formula content.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-arrow">&#8595;</div>
+
+            <!-- Phase 1b -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 1b</span>
+                    <span class="phase-title">Foundation Stack — Into a Warm Audience</span>
+                </div>
+                <p>3–6 months after apparel. Supplements launch into an audience that already knows and trusts the brand.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Hero Product</div>
+                        <div class="detail-text">Magnesium Complex leads with <strong style="color: #AD4236;">Feel It First</strong> — 30-day sleep guarantee. Full stack follows.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Gift Subscriptions</div>
+                        <div class="detail-text">"The stack I put my mom on" — family gifting as a purchase path from day one.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Distribution</div>
+                        <div class="detail-text">Shopee, LINE commerce, convenience store pickup. Taiwan's 13,000+ stores as last-mile network.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Community Programs</div>
+                        <div class="detail-text">Gated fitness programs (21 Day Arms, 30 Day Shred) — lead gen and retention from launch.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-arrow">&#8595;</div>
+
+            <!-- Phase 2 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 2</span>
+                    <span class="phase-title">Southeast Asia + Content Engine</span>
+                </div>
+                <p>Thailand and Singapore first — highest purchasing power, strong fitness culture. Then Indonesia, Malaysia, Philippines.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Distribution</div>
+                        <div class="detail-text">Adapt for each market — Shopee is already dominant across SEA. Pricing adjusted per market.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Content</div>
+                        <div class="detail-text">"What's Actually In It" — Vanness breaking down competitor formulations. The supplement equivalent of "Stop Sweating in Plastic."</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">Scale</div>
+                        <div class="detail-text">Each new market expands the flywheel — more visibility, more subscriptions, more community.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-arrow">&#8595;</div>
+
+            <!-- Phase 3 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-number">Phase 3</span>
+                    <span class="phase-title">Greater China</span>
+                </div>
+                <p>The prize — but treated separately. Enter with revenue, brand equity, and a proven playbook behind you.</p>
+                <div class="phase-detail-grid">
+                    <div class="phase-detail">
+                        <div class="detail-label">Platform Strategy</div>
+                        <div class="detail-text">WeChat, Tmall, Douyin — separate infrastructure, likely a local JV partner.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">The Reach</div>
+                        <div class="detail-text">Vanness's massive Weibo following is the distribution channel waiting to be activated.</div>
+                    </div>
+                    <div class="phase-detail">
+                        <div class="detail-label">The Rule</div>
+                        <div class="detail-text">Don't rush this. Get Taiwan and SEA right first.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PULL QUOTE: After "The Roadmap", before "The Opportunity" -->
+    <section class="pull-quote">
+        <div class="inner reveal">
+            <blockquote>Nobody owns the middle.</blockquote>
+        </div>
+    </section>
+
+    <!-- 11. The Opportunity -->
+    <section class="opportunity-section">
+        <div class="inner reveal">
+            <div class="section-label">The Opportunity</div>
+            <h2>Nobody owns the middle.</h2>
+            <p>The human performance and nutraceuticals market in Asia-Pacific is $78B and growing at 8.4%. Taiwan alone is $4.8B with the highest supplement adoption rate in the region. But the market is split — clinical supplement brands on one side, hype-driven lifestyle brands on the other.</p>
+            <p>INSDR lives in that gap. Science-backed formulations with the cultural credibility of a streetwear label. Clean supplements paired with clean apparel. A brand that's as intentional about what goes on your body as what goes in it.</p>
+            <p>The customer already exists across Taipei, Bangkok, Singapore, Jakarta, and Manila. They're buying supplements from one brand, cotton basics from another, and wishing someone would put it all together with taste.</p>
+            <div class="closer">We're that brand.</div>
+        </div>
+    </section>
+
+    <!-- The Founder -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">The Founder</div>
+            <h2>Not an endorsement. A proof point.</h2>
+            <p>Vanness Wu has been training for 20+ years. He's seen the supplement industry from the inside — the bad formulations, the plastic "performance" fabrics, the brands that spend more on marketing than on what's in the bottle. At 47, he IS the product demo.</p>
+
+            <div class="flywheel" style="margin-top: 40px; margin-bottom: 0;">
+                <div class="flywheel-card">
+                    <h3>He built it because he couldn't find it.</h3>
+                    <p>Not a paid spokesperson reading a script. The guy who formulated it, wears it, and takes it every day. That story is the marketing.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>Asia-native credibility.</h3>
+                    <p>F4/Meteor Garden made him a household name across Taiwan, SEA, and Greater China. Massive Weibo following. No Western brand can manufacture this.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>Daily documentation, not polished ads.</h3>
+                    <p>Training in the cotton. Taking the stack. Putting his parents on the same supplements. Real routines — the content strategy is just the founder living the brand.</p>
+                </div>
+                <div class="flywheel-card">
+                    <h3>"INSDR" means he's the insider.</h3>
+                    <p>The brand feels like Vanness putting you on to what he actually uses. Not selling to you — sharing with you. If you know, you know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. The Manifesto -->
+    <section class="manifesto-section">
+        <div class="inner reveal">
+            <div class="section-label">The Manifesto</div>
+            <div class="manifesto-text">
+                <div class="stanza">
+                    You read the label before the marketing.<br>
+                    You know what's in it — and what shouldn't be.<br>
+                    You stopped trusting "proprietary blends" a long time ago.
+                </div>
+                <div class="stanza">
+                    You don't wear plastic to the gym.<br>
+                    You don't put fillers in your body.<br>
+                    You don't cut corners on the things that compound over time.
+                </div>
+                <div class="stanza">
+                    You source better. You dose right. You absorb more.<br>
+                    Not because someone told you to — because you figured it out yourself.
+                </div>
+                <div class="stanza">
+                    That's the edge. Not louder. Not more.<br>
+                    Just dialed in. Every input. Every day.
+                </div>
+                <div class="stanza">
+                    Naturally sourced. Dosed right.<br>
+                    And when it all clicks —
+                </div>
+                <div class="payoff">Invincible.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. The Model (Streetwear) -->
+    <section>
+        <div class="inner reveal">
+            <div class="section-label">The Model</div>
+            <h2>The brand plays like streetwear.</h2>
+            <p>This isn't a supplement company that sells merch. This isn't an apparel brand that happens to have pills. INSDR operates like a streetwear label — with the credibility, the drops, and the culture to match.</p>
+            <ul class="play-list">
+                <li><strong>Drops, not just launches.</strong> Limited runs. When it's gone, it's gone.</li>
+                <li><strong>The clothes are the marketing.</strong> Someone wearing INSDR in the gym is the best ad we'll ever run.</li>
+                <li><strong>Insider access.</strong> The name writes itself — early access, community input, behind-the-formula content.</li>
+                <li><strong>Earned credibility.</strong> We don't buy our way into culture. We earn it by being right about what matters.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 14. Program Teaser (Insider Programs) -->
+    <section class="program-teaser">
+        <div class="inner reveal">
+            <div class="section-label">Insider Programs</div>
+            <h2>This is what gated looks like.</h2>
+            <p style="max-width: 660px; margin-bottom: 48px;">Real programs. Real education. Free for INSDR community members. Here's a sample of what's inside — our commitment to helping build a better, stronger you as we all age.</p>
+
+            <div class="teaser-card">
+                <div class="teaser-header">
+                    <div class="teaser-badge">Sample Program</div>
+                    <h3>ISO Holds</h3>
+                    <p class="teaser-sub">Tendon training eliminates the weakness that makes strong men fragile.</p>
+                </div>
+
+                <div class="teaser-holds">
+                    <div class="teaser-hold">
+                        <span class="hold-num">01</span>
+                        <span class="hold-name">Standing Calf Raise Hold</span>
+                        <span class="hold-target">Achilles tendon</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">02</span>
+                        <span class="hold-name">Spanish Squat Hold</span>
+                        <span class="hold-target">Patellar tendon</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">03</span>
+                        <span class="hold-name">Deep Push-Up Isometric Hold</span>
+                        <span class="hold-target">Elbow &amp; wrist tendons</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">04</span>
+                        <span class="hold-name">Wall External Rotation Hold</span>
+                        <span class="hold-target">Rotator cuff</span>
+                    </div>
+                    <div class="teaser-hold">
+                        <span class="hold-num">05</span>
+                        <span class="hold-name">Active Dead Hang</span>
+                        <span class="hold-target">Grip, shoulders, spine</span>
+                    </div>
+                </div>
+
+                <div class="teaser-fade">
+                    <p>Your muscles get stronger fast. Your tendons adapt three times slower. After 40, this gap becomes dangerous. One awkward movement and you're dealing with a torn Achilles, blown rotator cuff, or knee pain that won't quit for months. These five isometric holds force your tendons to handle sustained tension at their most vulnerable positions...</p>
+                </div>
+
+                <div class="teaser-cta">
+                    <a href="programs/iso-holds.html">Read the full program</a>
+                </div>
+            </div>
+
+            <div class="teaser-context">
+                <p>Programs like this are the reward for being an insider. <strong>Structured, science-backed, and designed to keep you moving with confidence for decades.</strong></p>
+                <div class="teaser-stats">
+                    <div class="teaser-stat">
+                        <div class="num">3x</div>
+                        <div class="lbl">Per week</div>
+                    </div>
+                    <div class="teaser-stat">
+                        <div class="num">10</div>
+                        <div class="lbl">Minutes</div>
+                    </div>
+                    <div class="teaser-stat">
+                        <div class="num">0</div>
+                        <div class="lbl">Equipment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. The Aesthetic (Moodboard + Signal) -->
+    <section class="moodboard-section">
+        <div class="inner reveal">
+            <div class="section-label">The Aesthetic</div>
+            <h2>Four brands. One DNA.</h2>
+            <p>INSDR's apparel language draws from the intersection of these references — not copying any, but capitalizing on where they converge.</p>
+
+            <div class="ref-brands">
+                <div class="ref-brand">
+                    <div class="ref-brand-name">Y-3</div>
+                    <div class="ref-brand-sub">Yohji Yamamoto &times; Adidas</div>
+                    <p>Monochrome as philosophy. Texture over color. Construction is the design language. The adidas stripes, subverted every season. Typography-only branding. Assumed authority — never explains itself.</p>
+                </div>
+                <div class="ref-brand">
+                    <div class="ref-brand-name">H-O-R-S-E</div>
+                    <div class="ref-brand-sub">Cotton workout essentials</div>
+                    <p>16 SKUs. Zero logos on clothing. GOTS-certified organic cotton from Japan, Peru, Portugal. "Cotton Clothes for Working Out" — five words, zero spin. The anti-synthetic original.</p>
+                </div>
+                <div class="ref-brand">
+                    <div class="ref-brand-name">1989 Studio</div>
+                    <div class="ref-brand-sub">Grown-up streetwear</div>
+                    <p>Culturally accessible luxury. Narrative-driven collections. Warm earth-tone palette. Heavyweight cotton as a premium material. Anti-trend: every piece an instant classic. Inclusive sizing to 3XL.</p>
+                </div>
+                <div class="ref-brand" style="border-color: #3a2020;">
+                    <div class="ref-brand-name" style="color: #AD4236;">Represent</div>
+                    <div class="ref-brand-sub">Manchester, 2012 — the blueprint</div>
+                    <p>Founded by brothers George and Michael Heaton. DTC-only — no wholesale, no retail partners, full margin and brand control. Drop model with genuine scarcity. Gym-native founder credibility (George was a personal trainer). Owners Club community creates a tiered insider dynamic that drives loyalty. Crossed £50M revenue with a lean team, profitable without external investment.</p>
+                    <p style="margin-top: 12px; font-size: 13px; color: #AD4236; font-weight: 600; letter-spacing: 0.05em;">The business model INSDR is building — already proven at scale.</p>
+                </div>
+            </div>
+
+            <div class="cross-section">
+                <h3>The cross-section — INSDR's apparel DNA.</h3>
+                <div class="dna-grid">
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 01</div>
+                        <h4>Material Is Identity</h4>
+                        <p>100% cotton isn't a constraint — it's the entire design language. Different weights, weaves, washes, and finishes become the palette. When everything is cotton, the texture tells the story.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 02</div>
+                        <h4>Anti-Logo Confidence</h4>
+                        <p>Not no logo — no loud logo. INSDR uses a three-tier system: always-hidden (Signal label inside neck), tonal (wordmark embroidered in matching thread, visible only up close), and precise (one hero piece per capsule gets a small left-chest mark). One rule holds everything together: embroidery, never print. Embroidery says craft. Print says merch.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 03</div>
+                        <h4>Construction Over Decoration</h4>
+                        <p>Invest in how it's built, not what's printed on it. Stitching, cut, hardware, seam placement. The anti-synthetic stance means the craft speaks louder than the graphic.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 04</div>
+                        <h4>Assumed Intelligence</h4>
+                        <p>Don't explain why cotton matters on the garment — that's what the content does. The clothes just ARE. Speak to the informed consumer, not the mass market.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 05</div>
+                        <h4>Curated Restraint</h4>
+                        <p>Launch tight. A small, intentional collection that's sold out beats a large catalog that sits. The Tee. The Crew. The Short. The Hood. That's it.</p>
+                    </div>
+                    <div class="dna-item">
+                        <div class="dna-num">Principle 06</div>
+                        <h4>Typography as the Only Mark</h4>
+                        <p>No icons, no crests, no mascots. A bold, condensed wordmark that gains power through restraint. INSDR — or I-N-S-D-R — is the mark.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pos-map">
+                <div class="pos-quadrant">
+                    <div class="quad-label">Loud + Performance</div>
+                    <p class="quad-brands">Nike, Adidas, Under Armour</p>
+                </div>
+                <div class="pos-quadrant">
+                    <div class="quad-label">Loud + Culture</div>
+                    <p class="quad-brands">Supreme, Kith, Stüssy</p>
+                </div>
+                <div class="pos-quadrant">
+                    <div class="quad-label">Quiet + Performance</div>
+                    <p class="quad-brands">H-O-R-S-E, Satisfy, District Vision</p>
+                </div>
+                <div class="pos-quadrant insdr-quad">
+                    <div class="quad-label">Quiet + Culture</div>
+                    <p class="quad-brands">INSDR &larr; lives here<br>Y-3, 1989 Studio</p>
+                </div>
+            </div>
+
+            <div class="whitespace-callout">
+                <p>Y-3 is fashion-sport. H-O-R-S-E is nostalgic cotton basics. 1989 Studio is grown-up streetwear. None of them are performance-native.</p>
+                <p class="callout-line">Nobody owns anti-synthetic activewear + supplement culture + streetwear credibility.</p>
+            </div>
+
+            <!-- The Signal -->
+            <div class="signal-section">
+                <div class="signal-header">
+                    <div class="signal-swatch"></div>
+                    <h3>The Signal</h3>
+                </div>
+                <p class="signal-subtitle">The color does what a logo can't — it's recognized without being declared. Every INSDR garment carries Signal (#AD4236) in exactly two places. That's the whole system.</p>
+
+                <div class="signal-details">
+                    <div class="signal-detail">
+                        <div class="detail-type">Exterior</div>
+                        <h4>Signal Bar Tack</h4>
+                        <div class="detail-placement">Bottom left hem &middot; Every garment</div>
+                        <p>6–8mm bar tack stitch in Signal red. Invisible until you know it's there. Then you can't unsee it — and you start spotting it on others.</p>
+                    </div>
+                    <div class="signal-detail">
+                        <div class="detail-type">Interior</div>
+                        <h4>Signal Woven Label</h4>
+                        <div class="detail-placement">Inside neck &middot; Hidden when worn</div>
+                        <p>A flash of red when you pull it on. "100% Cotton. No Synthetics. No PFAs." The detail that's only for the person wearing it.</p>
+                    </div>
+                </div>
+
+                <div class="signal-rule">
+                    <p><strong>The three-tier mark.</strong> Most pieces: Signal only — no wordmark, no branding. Some pieces: tonal INSDR embroidery in matching thread, visible only in the right light. Hero pieces: a small, precise wordmark on the left chest — embroidered, never printed, never larger than 40mm. One rule across all of it: <strong>no piece carries more than one visible logo element.</strong> When the mark appears, it's provenance — not advertising.</p>
+                </div>
+
+                <div class="signal-precedents">
+                    <div class="precedent">
+                        <div class="precedent-brand">Margiela</div>
+                        <p class="precedent-detail">Four white stitches on back collar</p>
+                    </div>
+                    <div class="precedent">
+                        <div class="precedent-brand">Bottega Veneta</div>
+                        <p class="precedent-detail">Dropped logos. The color green IS the brand.</p>
+                    </div>
+                    <div class="precedent">
+                        <div class="precedent-brand">Hermès</div>
+                        <p class="precedent-detail">Logo on select pieces — always embroidered, always small. Provenance, not advertising.</p>
+                    </div>
+                    <div class="precedent">
+                        <div class="precedent-brand">Acne Studios</div>
+                        <p class="precedent-detail">Face patch. Tiny. Unmistakable.</p>
+                    </div>
+                </div>
+
+                <div class="signal-timeline">
+                    <div class="signal-phase">
+                        <div class="phase-label">Day One</div>
+                        <h4>Secret Handshake</h4>
+                        <p>Only INSDR wearers know the bar tack. A code between insiders.</p>
+                    </div>
+                    <div class="signal-phase">
+                        <div class="phase-label">Phase 2</div>
+                        <h4>The Education Moment</h4>
+                        <p>"The Signal" becomes content — a post, a reel, a "Now You Know" about the red stitch.</p>
+                    </div>
+                    <div class="signal-phase">
+                        <div class="phase-label">Phase 3</div>
+                        <h4>Spotted in the Wild</h4>
+                        <p>"Caught a Signal at the gym today." User-generated content. The community identifies itself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Represent Case Study -->
+    <section class="represent-section">
+        <div class="inner reveal">
+            <div class="section-label">The Case Study</div>
+            <h2>Represent did it first.</h2>
+            <div class="represent-origin">
+                <span class="represent-origin-tag">Manchester, 2012</span>
+                <span class="represent-origin-line">Founded by brothers George and Michael Heaton. No external investment. No wholesale. No shortcuts.</span>
+            </div>
+
+            <p style="color: #a8a29e; max-width: 700px; margin-bottom: 0;">Represent is the closest existing proof of concept for the INSDR model — a cult brand built on DTC discipline, drop culture, community access, and genuine insider credibility. They crossed £50M in revenue with a lean team and never compromised the model to get there. Here's what they built, and what INSDR takes from it.</p>
+
+            <div class="represent-pillars">
+                <div class="represent-pillar">
+                    <h4>DTC-Only</h4>
+                    <p>No wholesale. No retail partners. Every customer relationship is owned directly. Full margin retention, full brand control, full data ownership. The model that lets a small team outperform a much larger brand.</p>
+                </div>
+                <div class="represent-pillar">
+                    <h4>Drop Culture</h4>
+                    <p>Limited releases. Genuine scarcity — not manufactured, but structural. Pieces regularly sell out and flip on secondary markets at 2–3× retail. The scarcity makes each drop an event. The brand stays desired, never discounted.</p>
+                </div>
+                <div class="represent-pillar">
+                    <h4>Owners Club</h4>
+                    <p>Tiered community with exclusive access — early drops, behind-the-scenes content, member-only product. The community layer converts one-time buyers into advocates. It's the structural reason customers stay and bring others in.</p>
+                </div>
+                <div class="represent-pillar">
+                    <h4>Gym-Native Credibility</h4>
+                    <p>George Heaton was a personal trainer. The fitness roots are genuine — and the customer feels it. Represent didn't position itself as gym-adjacent. It was born there. The credibility isn't bought; it's lived.</p>
+                </div>
+            </div>
+
+            <div class="represent-stat-row">
+                <div class="represent-stat">
+                    <div class="big-num">£50M+</div>
+                    <p>Revenue crossed with a lean team, no VC, no wholesale</p>
+                </div>
+                <div class="represent-stat">
+                    <div class="big-num">0</div>
+                    <p>Wholesale accounts. Every sale is direct, every margin is kept</p>
+                </div>
+                <div class="represent-stat">
+                    <div class="big-num">2–3×</div>
+                    <p>Secondary market premium on sold-out drops — demand INSDR should build toward</p>
+                </div>
+            </div>
+
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px;">Represent vs. INSDR — the parallel playbook.</h3>
+            <table class="represent-table">
+                <thead>
+                    <tr>
+                        <th>Play</th>
+                        <th>Represent</th>
+                        <th>INSDR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Revenue model</td>
+                        <td>DTC-only, no wholesale</td>
+                        <td>DTC supplements (subscription) + apparel drops</td>
+                    </tr>
+                    <tr>
+                        <td>Release strategy</td>
+                        <td>Streetwear drop model — limited, scarce, seasonal</td>
+                        <td>Quarterly apparel capsules + ongoing supplement subscriptions</td>
+                    </tr>
+                    <tr>
+                        <td>Community layer</td>
+                        <td>Owners Club — tiered access, early drops, exclusivity</td>
+                        <td>Insider Programs — gated performance content, early access, subscriber-only drops</td>
+                    </tr>
+                    <tr>
+                        <td>Founder credibility</td>
+                        <td>Personal trainer → designer. Gym-native from day one.</td>
+                        <td>Vanness Wu — performer, athlete, household name in Asia. 65M+ social reach across platforms.</td>
+                    </tr>
+                    <tr>
+                        <td>Growth engine</td>
+                        <td>Product + community. Organic. No paid media at scale.</td>
+                        <td>Apparel drives visibility → supplements drive subscriptions → community drives retention</td>
+                    </tr>
+                    <tr>
+                        <td>Recurring revenue</td>
+                        <td>Clothing only — purchase cycles of 2–4× per year</td>
+                        <td><strong>Monthly supplement subscriptions</strong> — the engine Represent doesn't have</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="represent-edge">
+                <h3>Where INSDR goes further.</h3>
+                <ul>
+                    <li><strong>Supplements add the recurring revenue layer Represent never had.</strong> Clothing drops generate hype but not monthly revenue. Every INSDR subscriber is paying every month between apparel drops — a flywheel Represent can't build.</li>
+                    <li><strong>The philosophy is the product.</strong> Represent sells aesthetics. INSDR sells a worldview — what goes in your body and what goes on it are the same conversation. That's a stickier brand position than style alone.</li>
+                    <li><strong>The Insider Programs are the Owners Club, scaled.</strong> Represent gates product access. INSDR gates knowledge — performance programs, training content, ingredient education. Knowledge creates deeper loyalty than product priority ever could.</li>
+                    <li><strong>Two verticals means two acquisition channels.</strong> Represent grows through apparel only. INSDR can acquire through supplements and convert to apparel, or acquire through apparel and convert to supplements. Each vertical cross-sells the other.</li>
+                    <li><strong>The PFAS moment is coming.</strong> When awareness hits activewear the way it hit cookware, INSDR is already positioned as the clean alternative. Represent has no answer for that conversation. INSDR owns it.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. Footer -->
+    <section class="footer">
+        <div class="inner">
+            <img src="assets/insdr-logo-signal.png" alt="INSDR" style="max-width: 200px; height: auto; margin-bottom: 16px;">
+            <div class="mantra">Invincible. Naturally Sourced. Dosed Right.</div>
+        </div>
+    </section>
+
+    <!-- Floating Mini Player -->
+    <div id="mini-player">
+        <button class="mini-btn" id="miniBtn1" onclick="toggleMusic('btn1')" title="Gonna Fly Now">🔴</button>
+        <button class="mini-btn" id="miniBtn2" onclick="toggleMusic('btn2')" title="Eye of the Tiger">🔵</button>
     </div>
 
-  </main>
+    <script>
+        // ============================================
+        // YOUTUBE PLAYER (unchanged)
+        // ============================================
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+        var players = {};
+        var activeBtn = null;
+        var tracks = {
+            btn1: { id: 'ioE_O7Lm0I4', name: 'Gonna Fly Now' },
+            btn2: { id: 'btPJPFnesV4', name: 'Eye of the Tiger' }
+        };
+
+        function onYouTubeIframeAPIReady() {
+            Object.keys(tracks).forEach(function(key) {
+                var container = document.createElement('div');
+                container.id = 'yt-' + key;
+                container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;';
+                document.body.appendChild(container);
+
+                players[key] = new YT.Player('yt-' + key, {
+                    height: '1',
+                    width: '1',
+                    videoId: tracks[key].id,
+                    playerVars: { autoplay: 0, controls: 0, disablekb: 1, fs: 0, modestbranding: 1 },
+                    events: {
+                        'onStateChange': function(event) {
+                            if (event.data === YT.PlayerState.ENDED) {
+                                resetBtn(key);
+                                activeBtn = null;
+                                syncMiniPlayer();
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        function resetBtn(key) {
+            var num = key.slice(3);
+            document.getElementById('playLabel' + num).textContent = tracks[key].name;
+            document.getElementById('playBtn' + num).classList.remove('playing');
+        }
+
+        function setPlaying(key) {
+            var num = key.slice(3);
+            document.getElementById('playLabel' + num).textContent = 'Now playing';
+            document.getElementById('playBtn' + num).classList.add('playing');
+        }
+
+        function syncMiniPlayer() {
+            document.getElementById('miniBtn1').classList.toggle('active', activeBtn === 'btn1');
+            document.getElementById('miniBtn2').classList.toggle('active', activeBtn === 'btn2');
+        }
+
+        function toggleMusic(key) {
+            if (!players[key]) return;
+
+            if (activeBtn === key) {
+                players[key].pauseVideo();
+                resetBtn(key);
+                activeBtn = null;
+            } else {
+                if (activeBtn) {
+                    players[activeBtn].pauseVideo();
+                    resetBtn(activeBtn);
+                }
+                players[key].playVideo();
+                setPlaying(key);
+                activeBtn = key;
+            }
+            syncMiniPlayer();
+        }
+
+        // ============================================
+        // FEATURE 4: SCROLL PROGRESS BAR
+        // ============================================
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = progress + '%';
+        });
+
+        // ============================================
+        // FEATURE 1: SCROLL-TRIGGERED REVEAL ANIMATIONS
+        // ============================================
+        (function() {
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                revealObserver.observe(el);
+            });
+        })();
+
+        // ============================================
+        // FEATURE 2: COUNTING STATS
+        // ============================================
+        (function() {
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function animateCount(el) {
+                if (el.dataset.counted) return;
+                el.dataset.counted = 'true';
+
+                var target = parseFloat(el.dataset.target);
+                var format = el.dataset.format;
+                var suffix = el.dataset.suffix || '';
+                var duration = 1500;
+                var startTime = null;
+
+                function formatValue(val, fmt) {
+                    if (fmt === 'percent') {
+                        var decimals = (target % 1 !== 0) ? 1 : 0;
+                        return val.toFixed(decimals) + '%';
+                    } else if (fmt === 'dollar-b') {
+                        var dec = (target % 1 !== 0) ? 1 : 0;
+                        return '$' + val.toFixed(dec) + 'B';
+                    } else if (fmt === 'dollar-arrow') {
+                        return '$' + Math.round(val) + 'B';
+                    } else if (fmt === 'dollar-range') {
+                        return '$' + Math.round(val);
+                    }
+                    return val;
+                }
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var elapsed = timestamp - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+                    var eased = easeOutQuart(progress);
+                    var current = eased * target;
+
+                    if (progress < 1) {
+                        el.innerHTML = formatValue(current, format);
+                        requestAnimationFrame(step);
+                    } else {
+                        // Show final display value (original HTML with arrows/ranges)
+                        if (format === 'dollar-arrow') {
+                            el.innerHTML = '$' + Math.round(target) + 'B &rarr; $' + suffix;
+                        } else if (format === 'dollar-range') {
+                            el.innerHTML = '$600&ndash;$1,400';
+                        } else {
+                            el.innerHTML = formatValue(target, format);
+                        }
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            var statObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var statsInSection = entry.target.querySelectorAll('.stat-number[data-target]');
+                        statsInSection.forEach(function(statEl) {
+                            animateCount(statEl);
+                        });
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe market section and biz-key-stat
+            var marketSection = document.querySelector('.market-section');
+            var bizSection = document.querySelector('.biz-model-section');
+            if (marketSection) statObserver.observe(marketSection);
+            if (bizSection) statObserver.observe(bizSection);
+        })();
+
+        // ============================================
+        // FEATURE 6: FLYWHEEL CARD STAGGER
+        // ============================================
+        (function() {
+            var flywheelEl = document.querySelector('.flywheel');
+            if (!flywheelEl) return;
+
+            var flywheelObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var cards = entry.target.querySelectorAll('.flywheel-card');
+                        cards.forEach(function(card, index) {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(24px)';
+                            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                            setTimeout(function() {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, index * 120);
+                        });
+                        flywheelObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            flywheelObserver.observe(flywheelEl);
+        })();
+
+        // ============================================
+        // FEATURE 7: FLOATING MINI PLAYER VISIBILITY
+        // ============================================
+        (function() {
+            var heroSection = document.querySelector('.hero');
+            var miniPlayer = document.getElementById('mini-player');
+            if (!heroSection || !miniPlayer) return;
+
+            var heroObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        miniPlayer.classList.remove('visible');
+                    } else {
+                        miniPlayer.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0 });
+
+            heroObserver.observe(heroSection);
+        })();
+    </script>
 </body>
 </html>
